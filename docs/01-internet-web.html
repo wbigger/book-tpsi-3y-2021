@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Internet &amp; Web - TPSI - Terzo anno</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Materiale di supporto alle lezioni.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html" class="active"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">TPSI - Terzo anno</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/wbigger/book-tpsi-3y.git" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.w50p {
+    width: 50%;
+}
+
+.w100p {
+    width: 100%;
+}
+
+figcaption {
+    text-align: center;
+}
+</style>
+<h1 id="internet--web"><a class="header" href="#internet--web">Internet &amp; Web</a></h1>
+<p>Prima di cominciare con lo studio dell'HTML, cerchiamo di capire un po' il contesto in cui è nato e si è sviluppato.</p>
+<p>Quando parliamo di <em>web</em> stiamo parlando di un insieme di tecnologie specifiche, quelle appunto definite dal consorzio del <em>&quot;World Wide Web&quot;</em>, abbreviato in <em>w3</em>. Il sito ufficiale del consorzio e <a href="https://www.w3.org/">www.w3.org</a>.</p>
+<p>Ma andiamo con ordine: il web è un <em>servizio</em> che si appoggia alla rete Internet per funzionare. Le due cose non devono essere confuse!</p>
+<h2 id="internet-una-rete-di-computer-globale"><a class="header" href="#internet-una-rete-di-computer-globale">Internet: una rete di computer globale</a></h2>
+<p>Negli anni '60 del secolo scorso c'è stata un'enorme diffusione dei calcolatori elettronici soprattutto presso centri di ricerca universitaria ed istituzioni pubbliche. Il problema di connettere tra di loro tutti questi computer era diventata urgente, e vari standard erano nati per risolvere questo problema.</p>
+<p>La soluzione che poi ha preso il sopravvento è stata quella ideata da <a href="https://it.wikipedia.org/wiki/Vint_Cerf">Vinton Gray Cerf</a> e <a href="https://it.wikipedia.org/wiki/Robert_Kahn">Robert Kahn</a> nel 1972 circa, mentre lavoravano presso il DARPA (Agenzia per i Progetti di ricerca avanzata per la Difesa), in America, hanno messo le basi per questa tecnologia ed i relativi protocolli.</p>
+<figure class="center">
+  <img class="w100p" title="vint-bob" alt="vint-bob" src="assets/vint-bob.jpg">
+  <figcaption>Fig.1 - Vint Cerf a sinistra, Bob Kahn a destra</figcaption>
+</figure>
+<p>L'idea è stata quella di assegnare ad ogni macchina un indirizzo, chiamato <strong>IP Address</strong>, (IP sta per Internet Protocol) formato da 4 byte, che lo identifica univocamente all'<em>interno di una sottorete</em>. All'indirizzo IP deve sempre essere associato un altro numero, chiamato maschera di sottorete (<strong>subnet mask</strong>), anch'esso di 4 byte, che definisce la grandezza della sottorete in cui ci troviamo. Le reti sono connesse tra di loro da dei dispositivi di rete dedicate, tipicamente dei <strong>router</strong> (instradatori). </p>
+<p>Uno dei motivi per cui Internet ha avuto una così grande diffusione è stata la convinzione dei fondatori che le tecnologie alla base della comunicazione tra i computer dovesse essere libera ed aperta, ovvero tutti potessero usarla senza pagare un costo di licenza e contribuire al suo miglioramento. A tal fine, per esempio, nel 1986 fu istituita la <em>Internet Engineering Task Force (<a href="https://it.wikipedia.org/wiki/Internet_Engineering_Task_Force">IETF</a>)</em>, un organismo internazionale caratterizzato da forti principi di apertura e condivisione. L'IETF usa il sistema delle <a href="https://it.wikipedia.org/wiki/Request_for_Comments">RFC</a> per la discussione e l'approvazione dei propri standard, che prevede la discussione e l'approvazione. Nel 2005 Vint Cerf e Bob Kahn hanno ricevuto la Medaglia Presidenziale per la libertà per il loro contributo alla nascita di Internet.</p>
+<p>Una nota sull'uso della parola &quot;Internet&quot;: tecnicamente, una qualsiasi rete di computer connessi tra di loro con indirizzi IP è una rete Internet. Tuttavia, nell'uso quotidiano usiamo questa parola per indicare la rete <em>globale</em> di computer. In questo testo si specificherà &quot;rete Internet globale&quot; quando necessario per evitare fraintendimenti.</p>
+<h1 id="web"><a class="header" href="#web">Web</a></h1>
+<p>Il World Wide Web è nato nel 1989 sotto la guida del londinese <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a>. A quel tempo, Berners-Lee lavorava presso il CERN di Ginevra, un centro di ricerca internazionale. Come i suoi colleghi, si trovava ad affrontare il problema di reperire le informazioni su Internet; gli strumenti che a quel tempo aveva a disposizione erano protocolli come FTP, SSH, SCP che non permettevano una facile consultazione delle risorse.</p>
+<p>L'idea di Berners-Lee per risolvere il problema è stato quello di creare delle <em>pagine</em> con uno stile (corsivo, grassetto, titolo, ...) che puntassero a delle <em>risorse</em> (immagini, file, altre pagine, ...). In questo modo si creava una rete di pagine e risorse che somigliava appunto ad una rete.</p>
+<p>Per lo stile delle pagine inventò lo standard <em>HyperText Markup Language (HTML)</em>, per il protocollo di comunicazione creò l'<em>HTTP (Hypertext Transfer Protocol)</em> e per identificare univocamente una risorsa sul web ideò l'<em>Uniform Resource Locator (URL)</em>.</p>
+<!--
+Nel 1994 Tim Burners-Lee fonda il [w3consortium](https://www.w3.org/) (w3c) con lo scopo di standardizzare le nuove tecnologie emergenti per il World Wide Web. Gli standard per HTML continuano fino al 2001, quando differenti opinioni si scontrano: da una parte w3c propendeva per lo standard XHTML, dall'altra un gruppo di persone ed aziende stava proponendo uno standard chiamato HTML5 e formato da 3 elementi: HTML+CSS+JS. La diatriba si concluderà nel 2014 con la pubblicazione dello standard HTML5 da parte del w3c.
+
+## HTML5: HTML+CSS+JS
+Lo standard HTML5 si basa su tre tecnologie fondamentali:
+- le pagine **html**, che definiscono la **struttura** della pagina
+- i fogli di stile **css**, che definiscono come la pagina deve essere visualizzata
+- i file **js**, ovvero JavaScript, che definiscono il comportamento dinamico del sito
+
+Per ora concentriamoci sui primi due: HTML e CSS. Di seguito i punti su cui consiglio di prestare maggiore attenzione, con i relativi link su w3school o altri siti di riferimento.
+
+### HTML
+Importanti:
+- [elementi block e inline](https://www.w3schools.com/html/html_blocks.asp)
+- [layout](https://www.w3schools.com/html/html_layout.asp)
+- [liste](https://www.w3schools.com/html/html_lists.asp)
+- [come collegare i fogli di stile](https://www.w3schools.com/html/html_css.asp)
+
+> Approfondimenti:
+> - [responsive web design](https://www.w3schools.com/html/html_responsive.asp)
+
+### CSS
+Importanti:
+- [sintassi e selettori CSS](https://www.w3schools.com/css/css_syntax.asp)
+- [box model](https://www.w3schools.com/css/css_boxmodel.asp)
+
+> Approfondimenti:
+> - [layout inline-block](https://www.w3schools.com/css/css_inline-block.asp)
+> - [proprietà display e visibilità](https://www.w3schools.com/css/css_display_visibility.asp)
+> - [flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
+> - [responsive tables](https://css-tricks.com/tag/responsive-tables/) (vari articoli, fatevi una cultura)
+> - [transition basics](https://www.w3schools.com/css/css3_transitions.asp)
+> - [transitions vs animations](https://cssanimation.rocks/transition-vs-animation/)
+
+> Altri link interessanti:
+> - [csszengarden](http://csszengarden.com): esempi di come può cambiare la stessa pagina HTML con differenti CSS
+> - [uplabs](https://www.uplabs.com/): sito dove potete trovare molti esempi di layout
+
+### JavaScript
+Importanti:
+- [Code conventions](https://crockford.com/javascript/code.html)
+-->
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

@@ -1,0 +1,13 @@
+[book]
+title = "TPSI - Terzo anno"
+author = ["Claudio Capobianco"]
+description = "Materiale di supporto alle lezioni."
+
+[build]
+build-dir = "docs"
+create-missing = true
+
+
+[output.html]
+additional-css = ["custom.css"]
+git-repository-url = "https://github.com/wbigger/book-tpsi-3y.git"
