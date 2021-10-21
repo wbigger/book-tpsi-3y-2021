@@ -1,22 +1,3 @@
-<style>
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.w50p {
-    width: 50%;
-}
-
-.w100p {
-    width: 100%;
-}
-
-figcaption {
-    text-align: center;
-}
-</style>
 # Internet & Web
 
 Prima di cominciare con lo studio dell'HTML, cerchiamo di capire un po' il contesto in cui è nato e si è sviluppato.
@@ -24,7 +5,6 @@ Prima di cominciare con lo studio dell'HTML, cerchiamo di capire un po' il conte
 Quando parliamo di _web_ stiamo parlando di un insieme di tecnologie specifiche, quelle appunto definite dal consorzio del _"World Wide Web"_, abbreviato in _w3_. Il sito ufficiale del consorzio e [www.w3.org](https://www.w3.org/).
 
 Ma andiamo con ordine: il web è un _servizio_ che si appoggia alla rete Internet per funzionare. Le due cose non devono essere confuse!
-
 
 ## Internet: una rete di computer globale
 Negli anni '60 del secolo scorso c'è stata un'enorme diffusione dei calcolatori elettronici soprattutto presso centri di ricerca universitaria ed istituzioni pubbliche. Il problema di connettere tra di loro tutti questi computer era diventata urgente, e vari standard erano nati per risolvere questo problema.
@@ -49,7 +29,7 @@ L'idea di Berners-Lee per risolvere il problema è stato quello di creare delle 
 
 Per lo stile delle pagine inventò lo standard _HyperText Markup Language (HTML)_, per il protocollo di comunicazione creò l'_HTTP (Hypertext Transfer Protocol)_ e per identificare univocamente una risorsa sul web ideò l'_Uniform Resource Locator (URL)_.
 
-<!--
+
 Nel 1994 Tim Burners-Lee fonda il [w3consortium](https://www.w3.org/) (w3c) con lo scopo di standardizzare le nuove tecnologie emergenti per il World Wide Web. Gli standard per HTML continuano fino al 2001, quando differenti opinioni si scontrano: da una parte w3c propendeva per lo standard XHTML, dall'altra un gruppo di persone ed aziende stava proponendo uno standard chiamato HTML5 e formato da 3 elementi: HTML+CSS+JS. La diatriba si concluderà nel 2014 con la pubblicazione dello standard HTML5 da parte del w3c.
 
 ## HTML5: HTML+CSS+JS
@@ -58,9 +38,8 @@ Lo standard HTML5 si basa su tre tecnologie fondamentali:
 - i fogli di stile **css**, che definiscono come la pagina deve essere visualizzata
 - i file **js**, ovvero JavaScript, che definiscono il comportamento dinamico del sito
 
-Per ora concentriamoci sui primi due: HTML e CSS. Di seguito i punti su cui consiglio di prestare maggiore attenzione, con i relativi link su w3school o altri siti di riferimento.
-
-### HTML
+Nei prossimi capitoli affronteremo nel dettaglio i primi due: HTML e CSS. 
+<!-- ### HTML
 Importanti:
 - [elementi block e inline](https://www.w3schools.com/html/html_blocks.asp)
 - [layout](https://www.w3schools.com/html/html_layout.asp)
@@ -90,4 +69,4 @@ Importanti:
 ### JavaScript
 Importanti:
 - [Code conventions](https://crockford.com/javascript/code.html)
--->
+--> -->
