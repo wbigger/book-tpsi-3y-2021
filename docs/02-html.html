@@ -139,10 +139,11 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="html"><a class="header" href="#html">HTML</a></h1>
-<p>Tutta la storia del web ebbe inizio con delle pagine rappresentate da un singolo file con estensione <code>.html</code> che comprendeva tutte le informazioni necessarie per visualizzare la pagina. All'inizio, nei primi anni '90 del secolo scorso, le pagine erano statiche e lo stile per visualizzare gli elementi non era distinto dalle altre informazioni della pagina.</p>
-<p>Tim Berners Lee dal 1989 al 1993 lavorò in team per proporre le nuove tecnologie web come uno standard di Internet, e finalmente nel 1993 divenne a tutti gli effetti uno standard IETF (Internet Engineering Task Force).</p>
-<p>Le versioni dello standard si sono succedute velocemente fino alla versione 4.01 del 2001, dove viene separato il contenuto HTML dallo stile CSS, ma ancora non era chiaro come rendere dinamiche le pagine. L'idea era quella di abbandonare l'HTML a favore di XML, un formato più &quot;rigido&quot; anche se più ricco.</p>
-<p>Diverse grandi aziende, tra cui Apple, Mozilla, Opera e Google, non erano d'accordo con le decisioni del w3c e fondarono un nuovo gruppo di lavoro chiamato <a href="https://whatwg.org/">WHATWG</a> (Web Hypertext Application Technology Working Group). Cominciò così una collaborazione/scontro tra w3c e WHATWG che arrivò ad approvare lo standard HTML5 nel 2014 (14 anni dopo la versione HTML4!), che sostanzialmente ha preso la linea del WHATWG che conosciamo oggi. La diatriba si è conclusa definitivamente nel 2019 con la cessione dell'authority sullo standard da parte del w3c a favore di WHATWG (vedi <a href="https://html.spec.whatwg.org/#history-2">qui</a> per maggiori dettagli).</p>
+<h2 id="breve-storia"><a class="header" href="#breve-storia">Breve storia</a></h2>
+<p>Tutta la storia del web ebbe inizio con delle pagine rappresentate da un singolo file con estensione <code>.html</code>. Questo file comprendeva tutte le informazioni necessarie per visualizzare la pagina. Nei primi anni '90 del secolo scorso, le pagine erano statiche e lo stile per visualizzare gli elementi non era distinto dalle altre informazioni della pagina.</p>
+<p>Tim Berners Lee dal 1989 al 1993 lavorò in team per proporre le nuove tecnologie web come uno standard di Internet, e finalmente nel 1993 divenne a tutti gli effetti uno standard IETF (Internet Engineering Task Force). Nell'ottobre 1994 Berners-Lee fonda il World Wide Web Consortium (W3C) al Massachusetts Institute of Technology di Boston.</p>
+<p>Il lavoro del consorzio continua rilasciando nuove versioni a ritmo serrato, introducendo per esempio il CSS nel 1996, fino alla versione 4.01 del 2001. A questo punto si voleva dare una grossa svolta alle tecnologie web, abbandonando l'HTML a favore di XML, un formato più ricco ma anche molto più rigido e non retrocompatibile.</p>
+<p>Diverse grandi aziende, tra cui Apple, Mozilla, Opera e Google, non erano d'accordo con le decisioni del w3c e fondarono un nuovo gruppo di lavoro chiamato <a href="https://whatwg.org/">WHATWG</a> (Web Hypertext Application Technology Working Group). Cominciò così una collaborazione/scontro tra w3c e WHATWG che arrivò ad approvare lo standard HTML5 nel 2014 (14 anni dopo la versione HTML4!), che sostanzialmente ha recepito la linea del WHATWG che conosciamo oggi. La diatriba si è conclusa definitivamente nel 2019 con la cessione dell'authority sullo standard da parte del w3c a favore di WHATWG (vedi <a href="https://html.spec.whatwg.org/#history-2">qui</a> per maggiori dettagli).</p>
 <p>È importante sapere anche che HTML5 è considerato l'<em>ultima</em> versione di HTML, perché è considerato un <a href="https://html.spec.whatwg.org/">Living standard</a>, quindi non ha più rilasci di versione congelate ma è in continua evoluzione.</p>
 <h2 id="cosa-significa-struttura-di-una-pagina"><a class="header" href="#cosa-significa-struttura-di-una-pagina">Cosa significa &quot;struttura&quot; di una pagina?</a></h2>
 <p>Abbiamo detto che l'HTML definisce la &quot;struttura&quot; della pagina. Ma cosa significa esattamente?</p>
@@ -165,6 +166,11 @@
 <p>Un'altra cosa importante da capire a questo momento è come gli elementi di una pagina HTML si relazionano tra loro. Gli elementi sono organizzati con una struttura ad albero, o a scatole cinesi, in cui si parte da un elemento base a cui si agganciano tutti gli altri.</p>
 <p>Nella metafora ad albero, l'elemento base viene chiamato <em>radice</em> (anche se forse sarebbe più corretto chiamarlo tronco), da cui partono vari <em>rami</em> che finiscono con delle <em>foglie</em>.</p>
 <p>Nella metafora a scatole cinesi, c'è una scatola esterna che contiene una o più scatole al suo interno, che a loro volta possono contenere altre scatole, e così via finché non arriviamo alle scatole più interne che saranno vuote.</p>
+<p>Riprendendo l'esempio della pagina del linguaggio di programmazione Rust, possiamo vedere che è stata organizzata nel seguente modo.</p>
+<figure>
+  <img class="w50p" title="rust page cut" alt="rust page cut" src="assets/rust-cut.png">
+</figure>
+<p>Questa operazione di suddividere la pagina web in sottoparti viene chiamata <strong>cutting</strong> (taglio) della pagina, ed è un'operazione che si svolge a dopo la fase di design e prima di quella di implementazione vera e propria.</p>
 
                     </main>
 

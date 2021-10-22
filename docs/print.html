@@ -156,51 +156,21 @@
 <h1 id="web"><a class="header" href="#web">Web</a></h1>
 <p>Il World Wide Web è nato nel 1989 sotto la guida del londinese <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a>. A quel tempo, Berners-Lee lavorava presso il CERN di Ginevra, un centro di ricerca internazionale. Come i suoi colleghi, si trovava ad affrontare il problema di reperire le informazioni su Internet; gli strumenti che a quel tempo aveva a disposizione erano protocolli come FTP, SSH, SCP che non permettevano una facile consultazione delle risorse.</p>
 <p>L'idea di Berners-Lee per risolvere il problema è stato quello di creare delle <em>pagine</em> con uno stile (corsivo, grassetto, titolo, ...) che puntassero a delle <em>risorse</em> (immagini, file, altre pagine, ...). In questo modo si creava una rete di pagine e risorse che somigliava appunto ad una rete.</p>
-<p>Per lo stile delle pagine inventò lo standard <em>HyperText Markup Language (HTML)</em>, per il protocollo di comunicazione creò l'<em>HTTP (Hypertext Transfer Protocol)</em> e per identificare univocamente una risorsa sul web ideò l'<em>Uniform Resource Locator (URL)</em>.</p>
-<p>Nel 1994 Tim Burners-Lee fonda il <a href="https://www.w3.org/">w3consortium</a> (w3c) con lo scopo di standardizzare le nuove tecnologie emergenti per il World Wide Web. Gli standard per HTML continuano fino al 2001, quando differenti opinioni si scontrano: da una parte w3c propendeva per lo standard XHTML, dall'altra un gruppo di persone ed aziende stava proponendo uno standard chiamato HTML5 e formato da 3 elementi: HTML+CSS+JS. La diatriba si concluderà nel 2014 con la pubblicazione dello standard HTML5 da parte del w3c.</p>
-<h2 id="html5-htmlcssjs"><a class="header" href="#html5-htmlcssjs">HTML5: HTML+CSS+JS</a></h2>
-<p>Lo standard HTML5 si basa su tre tecnologie fondamentali:</p>
+<p>Per lo stile delle pagine inventò lo standard <em>HyperText Markup Language</em> (<strong>HTML</strong>), per il protocollo di comunicazione creò l'<em>Hypertext Transfer Protocol</em> (<strong>HTTP</strong>) e per identificare univocamente una risorsa sul web ideò l'<em>Uniform Resource Locator</em> (<strong>URL</strong>).</p>
+<p>Nel 1994 Tim Burners-Lee fonda il <a href="https://www.w3.org/">w3consortium</a> (<strong>w3c</strong>) con lo scopo di standardizzare le nuove tecnologie emergenti per il World Wide Web.</p>
+<p>Fin dai primi anni di fondazione del w3c fu chiaro che per far crescere in maniera organica il web, il solo formato HTML non era sufficiente. Sono state create quindi un insieme di tre tecnologie, ognuna con un compito diverso che si coordinano fra loro:</p>
 <ul>
 <li>le pagine <strong>html</strong>, che definiscono la <strong>struttura</strong> della pagina</li>
 <li>i fogli di stile <strong>css</strong>, che definiscono come la pagina deve essere visualizzata</li>
 <li>i file <strong>js</strong>, ovvero JavaScript, che definiscono il comportamento dinamico del sito</li>
 </ul>
 <p>Nei prossimi capitoli affronteremo nel dettaglio i primi due: HTML e CSS. </p>
-<!-- ### HTML
-Importanti:
-- [elementi block e inline](https://www.w3schools.com/html/html_blocks.asp)
-- [layout](https://www.w3schools.com/html/html_layout.asp)
-- [liste](https://www.w3schools.com/html/html_lists.asp)
-- [come collegare i fogli di stile](https://www.w3schools.com/html/html_css.asp)
-
-> Approfondimenti:
-> - [responsive web design](https://www.w3schools.com/html/html_responsive.asp)
-
-### CSS
-Importanti:
-- [sintassi e selettori CSS](https://www.w3schools.com/css/css_syntax.asp)
-- [box model](https://www.w3schools.com/css/css_boxmodel.asp)
-
-> Approfondimenti:
-> - [layout inline-block](https://www.w3schools.com/css/css_inline-block.asp)
-> - [proprietà display e visibilità](https://www.w3schools.com/css/css_display_visibility.asp)
-> - [flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
-> - [responsive tables](https://css-tricks.com/tag/responsive-tables/) (vari articoli, fatevi una cultura)
-> - [transition basics](https://www.w3schools.com/css/css3_transitions.asp)
-> - [transitions vs animations](https://cssanimation.rocks/transition-vs-animation/)
-
-> Altri link interessanti:
-> - [csszengarden](http://csszengarden.com): esempi di come può cambiare la stessa pagina HTML con differenti CSS
-> - [uplabs](https://www.uplabs.com/): sito dove potete trovare molti esempi di layout
-
-### JavaScript
-Importanti:
-- [Code conventions](https://crockford.com/javascript/code.html)
---> --><div style="break-before: page; page-break-before: always;"></div><h1 id="html"><a class="header" href="#html">HTML</a></h1>
-<p>Tutta la storia del web ebbe inizio con delle pagine rappresentate da un singolo file con estensione <code>.html</code> che comprendeva tutte le informazioni necessarie per visualizzare la pagina. All'inizio, nei primi anni '90 del secolo scorso, le pagine erano statiche e lo stile per visualizzare gli elementi non era distinto dalle altre informazioni della pagina.</p>
-<p>Tim Berners Lee dal 1989 al 1993 lavorò in team per proporre le nuove tecnologie web come uno standard di Internet, e finalmente nel 1993 divenne a tutti gli effetti uno standard IETF (Internet Engineering Task Force).</p>
-<p>Le versioni dello standard si sono succedute velocemente fino alla versione 4.01 del 2001, dove viene separato il contenuto HTML dallo stile CSS, ma ancora non era chiaro come rendere dinamiche le pagine. L'idea era quella di abbandonare l'HTML a favore di XML, un formato più &quot;rigido&quot; anche se più ricco.</p>
-<p>Diverse grandi aziende, tra cui Apple, Mozilla, Opera e Google, non erano d'accordo con le decisioni del w3c e fondarono un nuovo gruppo di lavoro chiamato <a href="https://whatwg.org/">WHATWG</a> (Web Hypertext Application Technology Working Group). Cominciò così una collaborazione/scontro tra w3c e WHATWG che arrivò ad approvare lo standard HTML5 nel 2014 (14 anni dopo la versione HTML4!), che sostanzialmente ha preso la linea del WHATWG che conosciamo oggi. La diatriba si è conclusa definitivamente nel 2019 con la cessione dell'authority sullo standard da parte del w3c a favore di WHATWG (vedi <a href="https://html.spec.whatwg.org/#history-2">qui</a> per maggiori dettagli).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html"><a class="header" href="#html">HTML</a></h1>
+<h2 id="breve-storia"><a class="header" href="#breve-storia">Breve storia</a></h2>
+<p>Tutta la storia del web ebbe inizio con delle pagine rappresentate da un singolo file con estensione <code>.html</code>. Questo file comprendeva tutte le informazioni necessarie per visualizzare la pagina. Nei primi anni '90 del secolo scorso, le pagine erano statiche e lo stile per visualizzare gli elementi non era distinto dalle altre informazioni della pagina.</p>
+<p>Tim Berners Lee dal 1989 al 1993 lavorò in team per proporre le nuove tecnologie web come uno standard di Internet, e finalmente nel 1993 divenne a tutti gli effetti uno standard IETF (Internet Engineering Task Force). Nell'ottobre 1994 Berners-Lee fonda il World Wide Web Consortium (W3C) al Massachusetts Institute of Technology di Boston.</p>
+<p>Il lavoro del consorzio continua rilasciando nuove versioni a ritmo serrato, introducendo per esempio il CSS nel 1996, fino alla versione 4.01 del 2001. A questo punto si voleva dare una grossa svolta alle tecnologie web, abbandonando l'HTML a favore di XML, un formato più ricco ma anche molto più rigido e non retrocompatibile.</p>
+<p>Diverse grandi aziende, tra cui Apple, Mozilla, Opera e Google, non erano d'accordo con le decisioni del w3c e fondarono un nuovo gruppo di lavoro chiamato <a href="https://whatwg.org/">WHATWG</a> (Web Hypertext Application Technology Working Group). Cominciò così una collaborazione/scontro tra w3c e WHATWG che arrivò ad approvare lo standard HTML5 nel 2014 (14 anni dopo la versione HTML4!), che sostanzialmente ha recepito la linea del WHATWG che conosciamo oggi. La diatriba si è conclusa definitivamente nel 2019 con la cessione dell'authority sullo standard da parte del w3c a favore di WHATWG (vedi <a href="https://html.spec.whatwg.org/#history-2">qui</a> per maggiori dettagli).</p>
 <p>È importante sapere anche che HTML5 è considerato l'<em>ultima</em> versione di HTML, perché è considerato un <a href="https://html.spec.whatwg.org/">Living standard</a>, quindi non ha più rilasci di versione congelate ma è in continua evoluzione.</p>
 <h2 id="cosa-significa-struttura-di-una-pagina"><a class="header" href="#cosa-significa-struttura-di-una-pagina">Cosa significa &quot;struttura&quot; di una pagina?</a></h2>
 <p>Abbiamo detto che l'HTML definisce la &quot;struttura&quot; della pagina. Ma cosa significa esattamente?</p>
@@ -223,6 +193,11 @@ Importanti:
 <p>Un'altra cosa importante da capire a questo momento è come gli elementi di una pagina HTML si relazionano tra loro. Gli elementi sono organizzati con una struttura ad albero, o a scatole cinesi, in cui si parte da un elemento base a cui si agganciano tutti gli altri.</p>
 <p>Nella metafora ad albero, l'elemento base viene chiamato <em>radice</em> (anche se forse sarebbe più corretto chiamarlo tronco), da cui partono vari <em>rami</em> che finiscono con delle <em>foglie</em>.</p>
 <p>Nella metafora a scatole cinesi, c'è una scatola esterna che contiene una o più scatole al suo interno, che a loro volta possono contenere altre scatole, e così via finché non arriviamo alle scatole più interne che saranno vuote.</p>
+<p>Riprendendo l'esempio della pagina del linguaggio di programmazione Rust, possiamo vedere che è stata organizzata nel seguente modo.</p>
+<figure>
+  <img class="w50p" title="rust page cut" alt="rust page cut" src="assets/rust-cut.png">
+</figure>
+<p>Questa operazione di suddividere la pagina web in sottoparti viene chiamata <strong>cutting</strong> (taglio) della pagina, ed è un'operazione che si svolge a dopo la fase di design e prima di quella di implementazione vera e propria.</p>
 
                     </main>
 
