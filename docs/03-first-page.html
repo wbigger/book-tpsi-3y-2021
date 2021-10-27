@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Internet &amp; Web - TPSI - Terzo anno</title>
+        <title>La mia prima pagina - TPSI - Terzo anno</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Materiale di supporto alle lezioni.">
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html" class="active"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">4.</strong> Comandi linux</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html" class="active"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">4.</strong> Comandi linux</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,38 +138,104 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="internet--web"><a class="header" href="#internet--web">Internet &amp; Web</a></h1>
-<p>Prima di cominciare con lo studio dell'HTML, cerchiamo di capire un po' il contesto in cui è nato e si è sviluppato.</p>
-<p>Quando parliamo di <em>web</em> stiamo parlando di un insieme di tecnologie specifiche, quelle appunto definite dal consorzio del <em>&quot;World Wide Web&quot;</em>, abbreviato in <em>w3</em>. Il sito ufficiale del consorzio e <a href="https://www.w3.org/">www.w3.org</a>.</p>
-<p>Ma andiamo con ordine: il web è un <em>servizio</em> che si appoggia alla rete Internet per funzionare. Le due cose non devono essere confuse!</p>
-<h2 id="internet-una-rete-di-computer-globale"><a class="header" href="#internet-una-rete-di-computer-globale">Internet: una rete di computer globale</a></h2>
-<p>Negli anni '60 del secolo scorso c'è stata un'enorme diffusione dei calcolatori elettronici soprattutto presso centri di ricerca universitaria ed istituzioni pubbliche. Il problema di connettere tra di loro tutti questi computer era diventata urgente, e vari standard erano nati per risolvere questo problema.</p>
-<p>La soluzione che poi ha preso il sopravvento è stata quella ideata da <a href="https://it.wikipedia.org/wiki/Vint_Cerf">Vinton Gray Cerf</a> e <a href="https://it.wikipedia.org/wiki/Robert_Kahn">Robert Kahn</a> nel 1972 circa, mentre lavoravano presso il DARPA (Agenzia per i Progetti di ricerca avanzata per la Difesa), in America, hanno messo le basi per questa tecnologia ed i relativi protocolli.</p>
-<figure class="center">
-  <img class="w100p" title="vint-bob" alt="vint-bob" src="assets/vint-bob.jpg">
-  <figcaption>Fig.1 - Vint Cerf a sinistra, Bob Kahn a destra</figcaption>
-</figure>
-<p>L'idea è stata quella di assegnare ad ogni macchina un indirizzo, chiamato <strong>IP Address</strong>, (IP sta per Internet Protocol) formato da 4 byte, che lo identifica univocamente all'<em>interno di una sottorete</em>. All'indirizzo IP deve sempre essere associato un altro numero, chiamato maschera di sottorete (<strong>subnet mask</strong>), anch'esso di 4 byte, che definisce la grandezza della sottorete in cui ci troviamo. Le reti sono connesse tra di loro da dei dispositivi di rete dedicate, tipicamente dei <strong>router</strong> (instradatori). </p>
-<p>Uno dei motivi per cui Internet ha avuto una così grande diffusione è stata la convinzione dei fondatori che le tecnologie alla base della comunicazione tra i computer dovesse essere libera ed aperta, ovvero tutti potessero usarla senza pagare un costo di licenza e contribuire al suo miglioramento. A tal fine, per esempio, nel 1986 fu istituita la <em>Internet Engineering Task Force (<a href="https://it.wikipedia.org/wiki/Internet_Engineering_Task_Force">IETF</a>)</em>, un organismo internazionale caratterizzato da forti principi di apertura e condivisione. L'IETF usa il sistema delle <a href="https://it.wikipedia.org/wiki/Request_for_Comments">RFC</a> per la discussione e l'approvazione dei propri standard, che prevede la discussione e l'approvazione. Nel 2005 Vint Cerf e Bob Kahn hanno ricevuto la Medaglia Presidenziale per la libertà per il loro contributo alla nascita di Internet.</p>
-<p>Una nota sull'uso della parola &quot;Internet&quot;: tecnicamente, una qualsiasi rete di computer connessi tra di loro con indirizzi IP è una rete Internet. Tuttavia, nell'uso quotidiano usiamo questa parola per indicare la rete <em>globale</em> di computer. In questo testo si specificherà &quot;rete Internet globale&quot; quando necessario per evitare fraintendimenti.</p>
-<h1 id="web"><a class="header" href="#web">Web</a></h1>
-<p>Il World Wide Web è nato nel 1989 sotto la guida del londinese <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a>. A quel tempo, Berners-Lee lavorava presso il CERN di Ginevra, un centro di ricerca internazionale. Come i suoi colleghi, si trovava ad affrontare il problema di reperire le informazioni su Internet; gli strumenti che a quel tempo aveva a disposizione erano protocolli come FTP, SSH, SCP che non permettevano una facile consultazione delle risorse.</p>
-<p>L'idea di Berners-Lee per risolvere il problema è stato quello di creare delle <em>pagine</em> con uno stile (corsivo, grassetto, titolo, ...) che puntassero a delle <em>risorse</em> (immagini, file, altre pagine, ...). In questo modo si creava una rete di pagine e risorse che somigliava appunto ad una rete.</p>
-<p>Per lo stile delle pagine inventò lo standard <em>HyperText Markup Language</em> (<strong>HTML</strong>), per il protocollo di comunicazione creò l'<em>Hypertext Transfer Protocol</em> (<strong>HTTP</strong>) e per identificare univocamente una risorsa sul web ideò l'<em>Uniform Resource Locator</em> (<strong>URL</strong>).</p>
-<p>Nel 1994 Tim Burners-Lee fonda il <a href="https://www.w3.org/">w3consortium</a> (<strong>w3c</strong>) con lo scopo di standardizzare le nuove tecnologie emergenti per il World Wide Web.</p>
-<p>Fin dai primi anni di fondazione del w3c fu chiaro che per far crescere in maniera organica il web, il solo formato HTML non era sufficiente. Sono state create quindi un insieme di tre tecnologie, ognuna con un compito diverso che si coordinano fra loro:</p>
+                        <h1 id="la-mia-prima-pagina"><a class="header" href="#la-mia-prima-pagina">La mia prima pagina</a></h1>
+<p>In questo tutorial, non vogliamo solo creare una pagina ma mettere le basi per un progetto completo.</p>
+<p>Useremo:</p>
 <ul>
-<li>le pagine <strong>html</strong>, che definiscono la <strong>struttura</strong> della pagina</li>
-<li>i fogli di stile <strong>css</strong>, che definiscono come la pagina deve essere visualizzata</li>
-<li>i file <strong>js</strong>, ovvero JavaScript, che definiscono il comportamento dinamico del sito</li>
+<li>GitHub per il repository</li>
+<li>Git Bash come terminale</li>
+<li>il server studenti della scuola come web server</li>
 </ul>
-<p>Nei prossimi capitoli affronteremo nel dettaglio i primi due: HTML e CSS. </p>
+<h2 id="creare-laccount-su-github"><a class="header" href="#creare-laccount-su-github">Creare l'account su GitHub</a></h2>
+<p>Per prima cosa andate su sito di <a href="www.github.com">GitHub</a> e, se non l'avete già fatto, create un account. Ovviamente scegliete il piano gratuito, è più che sufficiente per i nostri scopi.</p>
+<h2 id="scaricare-git-bash"><a class="header" href="#scaricare-git-bash">Scaricare Git Bash</a></h2>
+<p>Su Windows, si consiglia di usare Git Bash come terminale, scaricabile da <a href="https://git-scm.com/download/">qui</a>.</p>
+<p>Durante l'installazione potete premere sempre &quot;Next&quot;, come se non ci fosse un domani.</p>
+<blockquote>
+<p>Se nei computer di scuola dovesse chiedervi la password da amministratore, tornate all'inizio, deselezionate la spunta in basso &quot;Show only new options&quot;, e quando vi fa scegliere la cartella di installazione selezionate la vostra cartella home. Quindi premete sempre avanti, alla fine vi chiederà comunque la password da amministratore ma anche se premete &quot;Cancel&quot; procederà comunque all'installazione. Attenzione che se vi trovate in questa situazione, vi dovete ricordare di specificare il percorso git alle varie applicazioni che ne fanno uso (per esempio Visual Studio Code).</p>
+</blockquote>
+<p>Dopo averlo installato, apritelo, vi compare un simpatico schermo nero: siete pronti a cominciare la vostra avventura da programmatori.</p>
+<blockquote>
+<p>Se avete un computer Apple o Linux, non avete bisogno di installare nulla perché c'è già un terminale integrato. Con Apple, se volete potete scaricare iTerm, che ha più funzionalità del terminale integrato.</p>
+</blockquote>
+<h2 id="accesso-al-web-server"><a class="header" href="#accesso-al-web-server">Accesso al web server</a></h2>
+<p>Prima di tutto, vi serve sapere il vostro nome utente. Il nome utente è composto da:</p>
+<ul>
+<li>una lettera assegnata dal professore alla classe, per esempio nel vostro caso è la lettera <code>c</code></li>
+<li><code>_utente</code></li>
+<li>due numeri che identificano la vostra posizione in rubrica, ad esempio <code>01</code>,<code>12</code>, etc.</li>
+</ul>
+<p>Un esempio di nome utente è ad esempio <code>c_utente26</code></p>
+<p>Dal terminale, digitate:</p>
+<pre><code class="language-sh">ssh nome_utente@studenti.marconicloud.it
+</code></pre>
+<p>Digitate la password. Anche se non la vedete per motivi di sicurezza, la legge ugualmente, abbiate fede.</p>
+<p>In questo modo avete fatto l'accesso alla vostra cartella sul serve studenti.</p>
+<h2 id="creazione-del-repository-su-github"><a class="header" href="#creazione-del-repository-su-github">Creazione del repository su GitHub</a></h2>
+<p>Sulla pagina di GitHub del vostro account, cliccate sul + in alto a destra e premete su New repository.</p>
+<p>Mettete le seguenti cose:</p>
+<ul>
+<li>nome: <code>error503</code></li>
+<li>descrizione: <code>TPSI 2021</code></li>
+<li>lasciate su Public</li>
+<li>cliccate su Add README.md</li>
+<li>cliccate su Add License e selezionate <a href="https://choosealicense.com/licenses/gpl-3.0/">GNU</a> oppure <a href="https://choosealicense.com/licenses/mit/">MIT</a>.</li>
+</ul>
+<p>Sulla pagina che vi compare, andate sul bottoncione verde &quot;Code&quot;, quindi copiate il link del repository.</p>
+<h2 id="clonazione-del-progetto-sul-web-server"><a class="header" href="#clonazione-del-progetto-sul-web-server">Clonazione del progetto sul web server</a></h2>
+<p>Tornate sul terminale, controllate di stare sul server remoto (il prompt dei comandi deve mostrare @serverStudenti), quindi scrivete:</p>
+<pre><code class="language-sh">git clone https://........
+</code></pre>
+<p>Dove <code>https://.......</code> è il link che avete appena copiato. Vi creerà una cartella nel punto in cui vi trovate chiamata <code>error503</code>. Entrateci dentro:</p>
+<pre><code class="language-sh">cd error503
+</code></pre>
+<p>Ora create il vostro primo file <code>index.html</code> usando il comando <code>nano</code>:</p>
+<pre><code class="language-sh">nano index.html
+</code></pre>
+<p>Create la pagina web come da progetto grafico:</p>
+<figure class="center">
+  <img class="w100p" title="error503" alt="error503" src="assets/error503.jpg">
+</figure>
+<p>Dopo aver salvato il file, controllate che la pagina sia corretta andando dal browser sul link: https://studenti.marconicloud.it/nome_utente/error503, facendo ovviamente attenzione a sostituire <code>nome_utente</code> con il vostro nome utente.</p>
+<p>Se è tutto OK, potete passare alla parte di sincronizzazione delle modifiche con GitHub.</p>
+<h2 id="sincronizzare-le-modifiche"><a class="header" href="#sincronizzare-le-modifiche">Sincronizzare le modifiche</a></h2>
+<p>Per prima cosa, dobbiamo dire a git che effettivamente vogliamo sincronizzare il file <code>index.html</code>. Questo si fa con <code>git add</code>:</p>
+<pre><code class="language-sh">git add index.html
+</code></pre>
+<p>Quindi, dobbiamo confermare che siamo proprio sicuri di voler salvare in modo permanente le modifiche all'interno del nostro repository. Questo si fa con <code>git commit</code>:</p>
+<pre><code class="language-sh">git commit
+</code></pre>
+<blockquote>
+<p>La prima volta che vi trovate su un nuovo computer, vi chiederà chi siete. Seguite le informazioni su schermo, quindi ripetete il commit.</p>
+</blockquote>
+<p>Vi si aprirà nuovamente nano, chiedendovi di mettere un commento per il commit. I commenti cominciano sempre con un verbo, quindi potete mettere &quot;Aggiunto index.html&quot;. Salvate ed uscite da nano.</p>
+<p>Ci siamo quasi! Le modifiche fatte finora sono solo in locale, non sono ancora sincronizzate con il server remoto di GitHub; questa operazione si chiama <code>push</code>. Prima di poter fare il push però, GitHub richiede che venga generato un token di autorizzazione; infatti da agosto 2021 non è più possibile usare la password per motivi di sicurezza.</p>
+<p>Andate su github.com, cliccate in alto a destra sull'immagine del vostro account e scegliete &quot;Settings&quot; nel menù a tendina che si apre. Andate nella barra a sinistra su &quot;Developers settings&quot;, quindi su Personal access tokens. In alto a destra premete su &quot;Generate new token&quot;. </p>
+<p>Mettete le seguenti informazioni:</p>
+<ul>
+<li>note: Server studenti marconi</li>
+<li>expiration: 90 giorni</li>
+<li>scopes: selezionate &quot;repo&quot;, si selezionano automaticamente anche le caselle al suo interno</li>
+</ul>
+<p>Ora in fondo alla pagina premete su &quot;Generate token&quot;.</p>
+<p>Vi verrà visualizzato un token, <strong>non</strong> chiudete questa pagina che fra poco vi serve e se chiudete la pagina non potrete più recuperarlo!</p>
+<p>Tornate sul terminale. Diciamo a git di salvarsi le credenziali che stiamo per inserire, in modo da non doverle ripetere ogni volta:</p>
+<pre><code class="language-sh">git config --global credential.helper store
+</code></pre>
+<p>Ora siamo finalmente pronti per fare il push!</p>
+<pre><code class="language-sh">git push
+</code></pre>
+<p>Vi chiederà nome utente e password. Attenzione che <strong>come password dovete inserire il token</strong> che abbiamo generato poco fa.</p>
+<p>Finalmente, è fatta! Se tutto è andato bene potrete vedere la vostra pagina index.html anche su GitHub.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="next" href="02-html.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="prev" href="02-html.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="linux.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -178,7 +244,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="next" href="02-html.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="prev" href="02-html.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="linux.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

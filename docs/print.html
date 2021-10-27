@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">4.</strong> Comandi linux</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -198,7 +198,257 @@
 <p>Questa operazione di suddividere la pagina web in sottoparti viene chiamata <strong>cutting</strong> (taglio) della pagina, ed è un'operazione che si svolge a dopo la fase di design e prima di quella di implementazione vera e propria.</p>
 <h3 id="altri-esempi"><a class="header" href="#altri-esempi">Altri esempi</a></h3>
 <img title="w3schools page cut" alt="w3schools page cut" src="assets/w3schools-cut.png">
-<img title="justeat page cut" alt="justeat page cut" src="assets/justeat-cut.png">
+<img title="justeat page cut" alt="justeat page cut" src="assets/justeat-cut.png"><div style="break-before: page; page-break-before: always;"></div><h1 id="la-mia-prima-pagina"><a class="header" href="#la-mia-prima-pagina">La mia prima pagina</a></h1>
+<p>In questo tutorial, non vogliamo solo creare una pagina ma mettere le basi per un progetto completo.</p>
+<p>Useremo:</p>
+<ul>
+<li>GitHub per il repository</li>
+<li>Git Bash come terminale</li>
+<li>il server studenti della scuola come web server</li>
+</ul>
+<h2 id="creare-laccount-su-github"><a class="header" href="#creare-laccount-su-github">Creare l'account su GitHub</a></h2>
+<p>Per prima cosa andate su sito di <a href="www.github.com">GitHub</a> e, se non l'avete già fatto, create un account. Ovviamente scegliete il piano gratuito, è più che sufficiente per i nostri scopi.</p>
+<h2 id="scaricare-git-bash"><a class="header" href="#scaricare-git-bash">Scaricare Git Bash</a></h2>
+<p>Su Windows, si consiglia di usare Git Bash come terminale, scaricabile da <a href="https://git-scm.com/download/">qui</a>.</p>
+<p>Durante l'installazione potete premere sempre &quot;Next&quot;, come se non ci fosse un domani.</p>
+<blockquote>
+<p>Se nei computer di scuola dovesse chiedervi la password da amministratore, tornate all'inizio, deselezionate la spunta in basso &quot;Show only new options&quot;, e quando vi fa scegliere la cartella di installazione selezionate la vostra cartella home. Quindi premete sempre avanti, alla fine vi chiederà comunque la password da amministratore ma anche se premete &quot;Cancel&quot; procederà comunque all'installazione. Attenzione che se vi trovate in questa situazione, vi dovete ricordare di specificare il percorso git alle varie applicazioni che ne fanno uso (per esempio Visual Studio Code).</p>
+</blockquote>
+<p>Dopo averlo installato, apritelo, vi compare un simpatico schermo nero: siete pronti a cominciare la vostra avventura da programmatori.</p>
+<blockquote>
+<p>Se avete un computer Apple o Linux, non avete bisogno di installare nulla perché c'è già un terminale integrato. Con Apple, se volete potete scaricare iTerm, che ha più funzionalità del terminale integrato.</p>
+</blockquote>
+<h2 id="accesso-al-web-server"><a class="header" href="#accesso-al-web-server">Accesso al web server</a></h2>
+<p>Prima di tutto, vi serve sapere il vostro nome utente. Il nome utente è composto da:</p>
+<ul>
+<li>una lettera assegnata dal professore alla classe, per esempio nel vostro caso è la lettera <code>c</code></li>
+<li><code>_utente</code></li>
+<li>due numeri che identificano la vostra posizione in rubrica, ad esempio <code>01</code>,<code>12</code>, etc.</li>
+</ul>
+<p>Un esempio di nome utente è ad esempio <code>c_utente26</code></p>
+<p>Dal terminale, digitate:</p>
+<pre><code class="language-sh">ssh nome_utente@studenti.marconicloud.it
+</code></pre>
+<p>Digitate la password. Anche se non la vedete per motivi di sicurezza, la legge ugualmente, abbiate fede.</p>
+<p>In questo modo avete fatto l'accesso alla vostra cartella sul serve studenti.</p>
+<h2 id="creazione-del-repository-su-github"><a class="header" href="#creazione-del-repository-su-github">Creazione del repository su GitHub</a></h2>
+<p>Sulla pagina di GitHub del vostro account, cliccate sul + in alto a destra e premete su New repository.</p>
+<p>Mettete le seguenti cose:</p>
+<ul>
+<li>nome: <code>error503</code></li>
+<li>descrizione: <code>TPSI 2021</code></li>
+<li>lasciate su Public</li>
+<li>cliccate su Add README.md</li>
+<li>cliccate su Add License e selezionate <a href="https://choosealicense.com/licenses/gpl-3.0/">GNU</a> oppure <a href="https://choosealicense.com/licenses/mit/">MIT</a>.</li>
+</ul>
+<p>Sulla pagina che vi compare, andate sul bottoncione verde &quot;Code&quot;, quindi copiate il link del repository.</p>
+<h2 id="clonazione-del-progetto-sul-web-server"><a class="header" href="#clonazione-del-progetto-sul-web-server">Clonazione del progetto sul web server</a></h2>
+<p>Tornate sul terminale, controllate di stare sul server remoto (il prompt dei comandi deve mostrare @serverStudenti), quindi scrivete:</p>
+<pre><code class="language-sh">git clone https://........
+</code></pre>
+<p>Dove <code>https://.......</code> è il link che avete appena copiato. Vi creerà una cartella nel punto in cui vi trovate chiamata <code>error503</code>. Entrateci dentro:</p>
+<pre><code class="language-sh">cd error503
+</code></pre>
+<p>Ora create il vostro primo file <code>index.html</code> usando il comando <code>nano</code>:</p>
+<pre><code class="language-sh">nano index.html
+</code></pre>
+<p>Create la pagina web come da progetto grafico:</p>
+<figure class="center">
+  <img class="w100p" title="error503" alt="error503" src="assets/error503.jpg">
+</figure>
+<p>Dopo aver salvato il file, controllate che la pagina sia corretta andando dal browser sul link: https://studenti.marconicloud.it/nome_utente/error503, facendo ovviamente attenzione a sostituire <code>nome_utente</code> con il vostro nome utente.</p>
+<p>Se è tutto OK, potete passare alla parte di sincronizzazione delle modifiche con GitHub.</p>
+<h2 id="sincronizzare-le-modifiche"><a class="header" href="#sincronizzare-le-modifiche">Sincronizzare le modifiche</a></h2>
+<p>Per prima cosa, dobbiamo dire a git che effettivamente vogliamo sincronizzare il file <code>index.html</code>. Questo si fa con <code>git add</code>:</p>
+<pre><code class="language-sh">git add index.html
+</code></pre>
+<p>Quindi, dobbiamo confermare che siamo proprio sicuri di voler salvare in modo permanente le modifiche all'interno del nostro repository. Questo si fa con <code>git commit</code>:</p>
+<pre><code class="language-sh">git commit
+</code></pre>
+<blockquote>
+<p>La prima volta che vi trovate su un nuovo computer, vi chiederà chi siete. Seguite le informazioni su schermo, quindi ripetete il commit.</p>
+</blockquote>
+<p>Vi si aprirà nuovamente nano, chiedendovi di mettere un commento per il commit. I commenti cominciano sempre con un verbo, quindi potete mettere &quot;Aggiunto index.html&quot;. Salvate ed uscite da nano.</p>
+<p>Ci siamo quasi! Le modifiche fatte finora sono solo in locale, non sono ancora sincronizzate con il server remoto di GitHub; questa operazione si chiama <code>push</code>. Prima di poter fare il push però, GitHub richiede che venga generato un token di autorizzazione; infatti da agosto 2021 non è più possibile usare la password per motivi di sicurezza.</p>
+<p>Andate su github.com, cliccate in alto a destra sull'immagine del vostro account e scegliete &quot;Settings&quot; nel menù a tendina che si apre. Andate nella barra a sinistra su &quot;Developers settings&quot;, quindi su Personal access tokens. In alto a destra premete su &quot;Generate new token&quot;. </p>
+<p>Mettete le seguenti informazioni:</p>
+<ul>
+<li>note: Server studenti marconi</li>
+<li>expiration: 90 giorni</li>
+<li>scopes: selezionate &quot;repo&quot;, si selezionano automaticamente anche le caselle al suo interno</li>
+</ul>
+<p>Ora in fondo alla pagina premete su &quot;Generate token&quot;.</p>
+<p>Vi verrà visualizzato un token, <strong>non</strong> chiudete questa pagina che fra poco vi serve e se chiudete la pagina non potrete più recuperarlo!</p>
+<p>Tornate sul terminale. Diciamo a git di salvarsi le credenziali che stiamo per inserire, in modo da non doverle ripetere ogni volta:</p>
+<pre><code class="language-sh">git config --global credential.helper store
+</code></pre>
+<p>Ora siamo finalmente pronti per fare il push!</p>
+<pre><code class="language-sh">git push
+</code></pre>
+<p>Vi chiederà nome utente e password. Attenzione che <strong>come password dovete inserire il token</strong> che abbiamo generato poco fa.</p>
+<p>Finalmente, è fatta! Se tutto è andato bene potrete vedere la vostra pagina index.html anche su GitHub.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="comandi-linux"><a class="header" href="#comandi-linux">Comandi linux</a></h1>
+<h2 id="echo"><a class="header" href="#echo">echo</a></h2>
+<p>Ritorna un'&quot;eco&quot; del suo argomento sul terminale.</p>
+<pre><code class="language-sh">$ echo ciao
+ciao
+</code></pre>
+<h2 id="touch"><a class="header" href="#touch">touch</a></h2>
+<p>Crea un file o, se già esiste, ne aggiorna la data di ultima modifica.</p>
+<pre><code class="language-sh">$ touch ciao
+</code></pre>
+<h2 id="cat"><a class="header" href="#cat">cat</a></h2>
+<p>Abbreviazione di &quot;concatenate&quot;, mostra il contenuto di un file.</p>
+<pre><code class="language-sh">$ cat ciao
+</code></pre>
+<h2 id="redirect"><a class="header" href="#redirect">Redirect</a></h2>
+<p>Il carattere <code>&gt;</code> redirige l'output di un comando verso un file, invece del terminale. Se il file non esiste, viene creato. Se il file esiste, viene sovrascritto.</p>
+<pre><code class="language-sh">$ echo &quot;buongiorno&quot; &gt; buongiorno.txt
+</code></pre>
+<p>Se si vuole aggiungere il testo alla fine del file senza sovrascriverlo, si può usare il <code>&gt;&gt;</code>.</p>
+<pre><code class="language-sh">$ echo &quot;buongiorno&quot; &gt;&gt; buongiorno.txt
+$ cat buongiorno.txt
+buongiorno
+buongiorno
+</code></pre>
+<h2 id="ls"><a class="header" href="#ls">ls</a></h2>
+<p>Elenca i file nella cartella corrente</p>
+<pre><code class="language-sh">$ ls
+buongiorno.txt	ciao
+</code></pre>
+<p>L'opzione <code>-l</code> mostra i dettagli del file.</p>
+<pre><code class="language-sh">$ ls -l
+total 8
+-rw-r--r--  1 claudio  staff   11 Oct 12 07:03 buongiorno.txt
+-rw-r--r--  1 claudio  staff    0 Oct 12 07:00 ciao
+</code></pre>
+<p>Aggiungendo anche l'opzione <code>-h</code> mostra i dettagli del file in un formato più leggibile per l'essere umano (&quot;human&quot;). Notare la B alla fine della quinta colonna, che sta per &quot;Byte&quot;.</p>
+<pre><code class="language-sh">$ ls -lh
+total 8
+total 8
+-rw-r--r--  1 claudio  staff    11B Oct 12 07:03 buongiorno.txt
+-rw-r--r--  1 claudio  staff     0B Oct 12 07:00 ciao
+</code></pre>
+<p>Un'altra opzione utile è <code>-a</code>, per visualizzare anche i file nascosti. Su linux, un file è nascosto semplicemente se inizia con il carattere punto (<code>.</code>).</p>
+<pre><code class="language-sh">$ ls -lha
+total 8
+drwxr-xr-x  4 claudio  staff   128B Oct 12 07:03 .
+drwxr-xr-x  4 claudio  staff   128B Oct 12 07:00 ..
+-rw-r--r--  1 claudio  staff    11B Oct 12 07:03 buongiorno.txt
+-rw-r--r--  1 claudio  staff     0B Oct 12 07:00 ciao
+</code></pre>
+<h2 id="pwd"><a class="header" href="#pwd">pwd</a></h2>
+<p>Abbreviazione di Print Working Directory, visualizza la directory corrente.</p>
+<pre><code class="language-sh">$ pwd
+/Users/claudio/try/bash
+</code></pre>
+<h2 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h2>
+<p>Abbreviazione di &quot;make directory&quot;, crea una nuova cartella.</p>
+<pre><code class="language-sh">$ mkdir food
+$ ls -l
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+</code></pre>
+<p>Si può capire che è una cartella perché il primo carattere nella riga di &quot;food&quot; è una <code>d</code> che sta appunto per &quot;directory&quot;. I file hanno invece un trattino. Alcuni terminali mostrano le cartelle anche con un colore diverso.</p>
+<h2 id="cd"><a class="header" href="#cd">cd</a></h2>
+<p>Abbreviazione di &quot;change directory&quot;, permette di spostarsi tra cartelle.</p>
+<pre><code class="language-sh">$ cd food
+$ pwd
+/Users/claudio/try/bash/food
+</code></pre>
+<p>Usando <code>cd</code> senza argomenti, torno alla &quot;home directory&quot;, che viene anche rappresentata con il simbolo <code>~</code> (si legge tilde).</p>
+<pre><code class="language-sh">$ cd
+$ pwd
+/Users/claudio/
+$ cd ~ # comando equivalente al precedente
+$ pwd
+/Users/claudio/
+</code></pre>
+<p>Per tornare alla directory precedente, si può usare il simbolo <code>-</code> (trattino).</p>
+<pre><code class="language-sh">$ cd -
+$ pwd
+/Users/claudio/try/bash/food
+</code></pre>
+<p>Per salire di una directory si può usare il doppio punto.</p>
+<pre><code class="language-sh">$ cd ..
+$ pwd
+/Users/claudio/try/bash
+</code></pre>
+<h2 id="cp"><a class="header" href="#cp">cp</a></h2>
+<p>Copia un file, abbreviazione di copy.</p>
+<pre><code class="language-sh">$ cp ciao hello
+$ ls
+total 8
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hello
+</code></pre>
+<h2 id="mv"><a class="header" href="#mv">mv</a></h2>
+<p>Sposta un file da una cartella ad un'altra. Se la cartella di partenza e destinazione coincidono, semplicemente rinomina il file.</p>
+<pre><code class="language-sh">$ mv hello hola
+$ ls
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hola
+</code></pre>
+<h2 id="rm"><a class="header" href="#rm">rm</a></h2>
+<p>Elimina un file, abbreviazione di remove.</p>
+<pre><code class="language-sh">$ rm hola
+$ ls
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+</code></pre>
+<h2 id="top"><a class="header" href="#top">top</a></h2>
+<p>Visualizza i processi attualmente in esecuzione nella macchina.</p>
+<pre><code class="language-sh">$ top
+</code></pre>
+<p>Viene visualizzata una tabella a schermo intero. Per uscire, premere la combinazione di tasti <code>ctrl-c</code></p>
+<h2 id="kill"><a class="header" href="#kill">kill</a></h2>
+<p>Termina (uccide) un processo in esecuzione. Come argomento deve avere il numero del processo (PID - process ID) che viene visualizzato ad esempio con top.</p>
+<pre><code class="language-sh">$ kill 11459 # termina il processo con PID 11459
+</code></pre>
+<h2 id="yes"><a class="header" href="#yes">yes</a></h2>
+<p>Stampa su terminale una stringa all'infinito. Di default stampa 'y' ma si può personalizzare passandogli un argomento.</p>
+<pre><code class="language-sh">$ yes marconi
+marconi
+marconi
+marconi
+....
+</code></pre>
+<p>Anche in questo caso uscire con <code>ctrl-c</code></p>
+<h2 id="devnull"><a class="header" href="#devnull">/dev/null</a></h2>
+<p>Un file speciale all'interno del file system linux che è un pozzo senza fondo.</p>
+<pre><code class="language-sh">$ yes &gt; /dev/null ## l'output di yes viene sostanzialmente scartato
+</code></pre>
+<h2 id="ctrl-c"><a class="header" href="#ctrl-c">ctrl-c</a></h2>
+<p>Termina (uccide) il processo corrente.</p>
+<h2 id="variabili-di-ambiente"><a class="header" href="#variabili-di-ambiente">Variabili di ambiente</a></h2>
+<p>Ogni terminale usa delle variabili che sono definite automaticamente quando viene aperto. Queste variabili vengono dette <em>variabili di ambiente</em>. Per visualizzarle si può usare il comando <code>env</code>.</p>
+<pre><code class="language-sh">$ env
+TERM_SESSION_ID=w1t0p0:3B371076-0F20-4C26-ACD4-4656F13F9AEA
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.P5eh4I2m5h/Listeners
+LC_TERMINAL_VERSION=3.4.10
+COLORFGBG=7;0
+......continua.......
+</code></pre>
+<p>Per visualizzare una sola variabile, si può usare <code>echo</code> e la variabile deve essere preceduta dal carattere dollaro.</p>
+<pre><code class="language-sh">$ echo $SHELL
+/bin/bash
+</code></pre>
+<p>Per assegnare una variabile, si può usare il comando <code>export</code>.</p>
+<pre><code class="language-sh">$ export PS1=&quot;test&gt;&quot;
+</code></pre>
+<p>Di seguito alcune variabili di ambiente che abbiamo visto:</p>
+<ul>
+<li>$TERM: quale standard rispetta l'applicazione terminale in uso, di solito è <code>xterm</code> o <code>xterm-256color</code></li>
+<li>$SHELL: quale shell sto utilizzando, su Ubuntu di default è bash (quella sviluppata da GNU)</li>
+<li>$PS1: il prompt dei comandi, ovvero tutto quello che c'è prima del dollaro (dollaro compreso), solitamente include la directory corrente ed il nome utente</li>
+</ul>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

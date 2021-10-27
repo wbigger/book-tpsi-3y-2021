@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Comandi linux - TPSI - Terzo anno</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Materiale di supporto alle lezioni.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html" class="active"><strong aria-hidden="true">4.</strong> Comandi linux</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">TPSI - Terzo anno</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/wbigger/book-tpsi-3y.git" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="comandi-linux"><a class="header" href="#comandi-linux">Comandi linux</a></h1>
+<h2 id="echo"><a class="header" href="#echo">echo</a></h2>
+<p>Ritorna un'&quot;eco&quot; del suo argomento sul terminale.</p>
+<pre><code class="language-sh">$ echo ciao
+ciao
+</code></pre>
+<h2 id="touch"><a class="header" href="#touch">touch</a></h2>
+<p>Crea un file o, se già esiste, ne aggiorna la data di ultima modifica.</p>
+<pre><code class="language-sh">$ touch ciao
+</code></pre>
+<h2 id="cat"><a class="header" href="#cat">cat</a></h2>
+<p>Abbreviazione di &quot;concatenate&quot;, mostra il contenuto di un file.</p>
+<pre><code class="language-sh">$ cat ciao
+</code></pre>
+<h2 id="redirect"><a class="header" href="#redirect">Redirect</a></h2>
+<p>Il carattere <code>&gt;</code> redirige l'output di un comando verso un file, invece del terminale. Se il file non esiste, viene creato. Se il file esiste, viene sovrascritto.</p>
+<pre><code class="language-sh">$ echo &quot;buongiorno&quot; &gt; buongiorno.txt
+</code></pre>
+<p>Se si vuole aggiungere il testo alla fine del file senza sovrascriverlo, si può usare il <code>&gt;&gt;</code>.</p>
+<pre><code class="language-sh">$ echo &quot;buongiorno&quot; &gt;&gt; buongiorno.txt
+$ cat buongiorno.txt
+buongiorno
+buongiorno
+</code></pre>
+<h2 id="ls"><a class="header" href="#ls">ls</a></h2>
+<p>Elenca i file nella cartella corrente</p>
+<pre><code class="language-sh">$ ls
+buongiorno.txt	ciao
+</code></pre>
+<p>L'opzione <code>-l</code> mostra i dettagli del file.</p>
+<pre><code class="language-sh">$ ls -l
+total 8
+-rw-r--r--  1 claudio  staff   11 Oct 12 07:03 buongiorno.txt
+-rw-r--r--  1 claudio  staff    0 Oct 12 07:00 ciao
+</code></pre>
+<p>Aggiungendo anche l'opzione <code>-h</code> mostra i dettagli del file in un formato più leggibile per l'essere umano (&quot;human&quot;). Notare la B alla fine della quinta colonna, che sta per &quot;Byte&quot;.</p>
+<pre><code class="language-sh">$ ls -lh
+total 8
+total 8
+-rw-r--r--  1 claudio  staff    11B Oct 12 07:03 buongiorno.txt
+-rw-r--r--  1 claudio  staff     0B Oct 12 07:00 ciao
+</code></pre>
+<p>Un'altra opzione utile è <code>-a</code>, per visualizzare anche i file nascosti. Su linux, un file è nascosto semplicemente se inizia con il carattere punto (<code>.</code>).</p>
+<pre><code class="language-sh">$ ls -lha
+total 8
+drwxr-xr-x  4 claudio  staff   128B Oct 12 07:03 .
+drwxr-xr-x  4 claudio  staff   128B Oct 12 07:00 ..
+-rw-r--r--  1 claudio  staff    11B Oct 12 07:03 buongiorno.txt
+-rw-r--r--  1 claudio  staff     0B Oct 12 07:00 ciao
+</code></pre>
+<h2 id="pwd"><a class="header" href="#pwd">pwd</a></h2>
+<p>Abbreviazione di Print Working Directory, visualizza la directory corrente.</p>
+<pre><code class="language-sh">$ pwd
+/Users/claudio/try/bash
+</code></pre>
+<h2 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h2>
+<p>Abbreviazione di &quot;make directory&quot;, crea una nuova cartella.</p>
+<pre><code class="language-sh">$ mkdir food
+$ ls -l
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+</code></pre>
+<p>Si può capire che è una cartella perché il primo carattere nella riga di &quot;food&quot; è una <code>d</code> che sta appunto per &quot;directory&quot;. I file hanno invece un trattino. Alcuni terminali mostrano le cartelle anche con un colore diverso.</p>
+<h2 id="cd"><a class="header" href="#cd">cd</a></h2>
+<p>Abbreviazione di &quot;change directory&quot;, permette di spostarsi tra cartelle.</p>
+<pre><code class="language-sh">$ cd food
+$ pwd
+/Users/claudio/try/bash/food
+</code></pre>
+<p>Usando <code>cd</code> senza argomenti, torno alla &quot;home directory&quot;, che viene anche rappresentata con il simbolo <code>~</code> (si legge tilde).</p>
+<pre><code class="language-sh">$ cd
+$ pwd
+/Users/claudio/
+$ cd ~ # comando equivalente al precedente
+$ pwd
+/Users/claudio/
+</code></pre>
+<p>Per tornare alla directory precedente, si può usare il simbolo <code>-</code> (trattino).</p>
+<pre><code class="language-sh">$ cd -
+$ pwd
+/Users/claudio/try/bash/food
+</code></pre>
+<p>Per salire di una directory si può usare il doppio punto.</p>
+<pre><code class="language-sh">$ cd ..
+$ pwd
+/Users/claudio/try/bash
+</code></pre>
+<h2 id="cp"><a class="header" href="#cp">cp</a></h2>
+<p>Copia un file, abbreviazione di copy.</p>
+<pre><code class="language-sh">$ cp ciao hello
+$ ls
+total 8
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hello
+</code></pre>
+<h2 id="mv"><a class="header" href="#mv">mv</a></h2>
+<p>Sposta un file da una cartella ad un'altra. Se la cartella di partenza e destinazione coincidono, semplicemente rinomina il file.</p>
+<pre><code class="language-sh">$ mv hello hola
+$ ls
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hola
+</code></pre>
+<h2 id="rm"><a class="header" href="#rm">rm</a></h2>
+<p>Elimina un file, abbreviazione di remove.</p>
+<pre><code class="language-sh">$ rm hola
+$ ls
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+</code></pre>
+<h2 id="top"><a class="header" href="#top">top</a></h2>
+<p>Visualizza i processi attualmente in esecuzione nella macchina.</p>
+<pre><code class="language-sh">$ top
+</code></pre>
+<p>Viene visualizzata una tabella a schermo intero. Per uscire, premere la combinazione di tasti <code>ctrl-c</code></p>
+<h2 id="kill"><a class="header" href="#kill">kill</a></h2>
+<p>Termina (uccide) un processo in esecuzione. Come argomento deve avere il numero del processo (PID - process ID) che viene visualizzato ad esempio con top.</p>
+<pre><code class="language-sh">$ kill 11459 # termina il processo con PID 11459
+</code></pre>
+<h2 id="yes"><a class="header" href="#yes">yes</a></h2>
+<p>Stampa su terminale una stringa all'infinito. Di default stampa 'y' ma si può personalizzare passandogli un argomento.</p>
+<pre><code class="language-sh">$ yes marconi
+marconi
+marconi
+marconi
+....
+</code></pre>
+<p>Anche in questo caso uscire con <code>ctrl-c</code></p>
+<h2 id="devnull"><a class="header" href="#devnull">/dev/null</a></h2>
+<p>Un file speciale all'interno del file system linux che è un pozzo senza fondo.</p>
+<pre><code class="language-sh">$ yes &gt; /dev/null ## l'output di yes viene sostanzialmente scartato
+</code></pre>
+<h2 id="ctrl-c"><a class="header" href="#ctrl-c">ctrl-c</a></h2>
+<p>Termina (uccide) il processo corrente.</p>
+<h2 id="variabili-di-ambiente"><a class="header" href="#variabili-di-ambiente">Variabili di ambiente</a></h2>
+<p>Ogni terminale usa delle variabili che sono definite automaticamente quando viene aperto. Queste variabili vengono dette <em>variabili di ambiente</em>. Per visualizzarle si può usare il comando <code>env</code>.</p>
+<pre><code class="language-sh">$ env
+TERM_SESSION_ID=w1t0p0:3B371076-0F20-4C26-ACD4-4656F13F9AEA
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.P5eh4I2m5h/Listeners
+LC_TERMINAL_VERSION=3.4.10
+COLORFGBG=7;0
+......continua.......
+</code></pre>
+<p>Per visualizzare una sola variabile, si può usare <code>echo</code> e la variabile deve essere preceduta dal carattere dollaro.</p>
+<pre><code class="language-sh">$ echo $SHELL
+/bin/bash
+</code></pre>
+<p>Per assegnare una variabile, si può usare il comando <code>export</code>.</p>
+<pre><code class="language-sh">$ export PS1=&quot;test&gt;&quot;
+</code></pre>
+<p>Di seguito alcune variabili di ambiente che abbiamo visto:</p>
+<ul>
+<li>$TERM: quale standard rispetta l'applicazione terminale in uso, di solito è <code>xterm</code> o <code>xterm-256color</code></li>
+<li>$SHELL: quale shell sto utilizzando, su Ubuntu di default è bash (quella sviluppata da GNU)</li>
+<li>$PS1: il prompt dei comandi, ovvero tutto quello che c'è prima del dollaro (dollaro compreso), solitamente include la directory corrente ed il nome utente</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="03-first-page.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="03-first-page.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
