@@ -16,7 +16,7 @@ Su Windows, si consiglia di usare Git Bash come terminale, scaricabile da [qui](
 
 Durante l'installazione potete premere sempre "Next", come se non ci fosse un domani.
 
-> Se nei computer di scuola dovesse chiedervi la password da amministratore, tornate all'inizio, deselezionate la spunta in basso "Show only new options", e quando vi fa scegliere la cartella di installazione selezionate la vostra cartella home. Quindi premete sempre avanti, alla fine vi chiederà comunque la password da amministratore ma anche se premete "Cancel" procederà comunque all'installazione. Attenzione che se vi trovate in questa situazione, vi dovete ricordare di specificare il percorso git alle varie applicazioni che ne fanno uso (per esempio Visual Studio Code).
+> Se nei computer di scuola dovesse chiedervi la password da amministratore, tornate all'inizio, deselezionate la spunta in basso "Show only new options", e quando vi fa scegliere la cartella di installazione selezionate la vostra cartella home. Quindi premete sempre avanti, alla fine vi chiederà comunque la password da amministratore ma anche se premete "Cancel" procederà comunque all'installazione. Attenzione che se vi trovate in questa situazione, vi dovrete ricordare di specificare il percorso git alle varie applicazioni che ne fanno uso (per esempio Visual Studio Code).
 
 Dopo averlo installato, apritelo, vi compare un simpatico schermo nero: siete pronti a cominciare la vostra avventura da programmatori.
 
@@ -28,7 +28,7 @@ Prima di tutto, vi serve sapere il vostro nome utente. Il nome utente è compost
 - `_utente`
 - due numeri che identificano la vostra posizione in rubrica, ad esempio `01`,`12`, etc.
 
-Un esempio di nome utente è ad esempio `c_utente26`
+Un nome utente valido è ad esempio `c_utente26`
 
 Dal terminale, digitate:
 ```sh
