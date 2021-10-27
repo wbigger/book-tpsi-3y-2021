@@ -48,8 +48,12 @@ Nella metafora a scatole cinesi, c'è una scatola esterna che contiene una o pi�
 
 Riprendendo l'esempio della pagina del linguaggio di programmazione Rust, possiamo vedere che è stata organizzata nel seguente modo.
 
-<figure>
-  <img class="w50p" title="rust page cut" alt="rust page cut" src="assets/rust-cut.png">
-</figure>
+
+<img title="rust page cut" alt="rust page cut" src="assets/rust-cut-labels.png">
 
 Questa operazione di suddividere la pagina web in sottoparti viene chiamata **cutting** (taglio) della pagina, ed è un'operazione che si svolge a dopo la fase di design e prima di quella di implementazione vera e propria.
+
+### Altri esempi
+<img title="w3schools page cut" alt="w3schools page cut" src="assets/w3schools-cut.png">
+
+<img title="justeat page cut" alt="justeat page cut" src="assets/justeat-cut.png">

@@ -194,11 +194,11 @@
 <p>Nella metafora ad albero, l'elemento base viene chiamato <em>radice</em> (anche se forse sarebbe più corretto chiamarlo tronco), da cui partono vari <em>rami</em> che finiscono con delle <em>foglie</em>.</p>
 <p>Nella metafora a scatole cinesi, c'è una scatola esterna che contiene una o più scatole al suo interno, che a loro volta possono contenere altre scatole, e così via finché non arriviamo alle scatole più interne che saranno vuote.</p>
 <p>Riprendendo l'esempio della pagina del linguaggio di programmazione Rust, possiamo vedere che è stata organizzata nel seguente modo.</p>
-<figure>
-  <img class="w50p" title="rust page cut" alt="rust page cut" src="assets/rust-cut.png">
-</figure>
+<img title="rust page cut" alt="rust page cut" src="assets/rust-cut-labels.png">
 <p>Questa operazione di suddividere la pagina web in sottoparti viene chiamata <strong>cutting</strong> (taglio) della pagina, ed è un'operazione che si svolge a dopo la fase di design e prima di quella di implementazione vera e propria.</p>
-
+<h3 id="altri-esempi"><a class="header" href="#altri-esempi">Altri esempi</a></h3>
+<img title="w3schools page cut" alt="w3schools page cut" src="assets/w3schools-cut.png">
+<img title="justeat page cut" alt="justeat page cut" src="assets/justeat-cut.png">
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -213,6 +213,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
