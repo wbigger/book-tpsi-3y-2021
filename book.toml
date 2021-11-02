@@ -10,4 +10,4 @@ create-missing = true
 
 [output.html]
 additional-css = ["custom.css"]
-git-repository-url = "https://github.com/wbigger/book-tpsi-3y.git"
+git-repository-url = "https://github.com/wbigger/book-tpsi-3y-2021.git"
