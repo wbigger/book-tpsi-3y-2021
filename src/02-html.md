@@ -42,11 +42,21 @@ Ogni singolo elemento della pagina è identificato nella pagina HTML sorgente co
 ## Organizzazione degli elementi della pagina
 Un'altra cosa importante da capire a questo momento è come gli elementi di una pagina HTML si relazionano tra loro. Gli elementi sono organizzati con una struttura ad albero, o a scatole cinesi, in cui si parte da un elemento base a cui si agganciano tutti gli altri.
 
-Nella metafora ad albero, l'elemento base viene chiamato _radice_ (anche se forse sarebbe più corretto chiamarlo tronco), da cui partono vari _rami_ che finiscono con delle _foglie_.
+Nella metafora ad albero, l'elemento base viene chiamato _radice_ (anche se forse sarebbe più corretto chiamarlo tronco), da cui partono vari _rami_ che finiscono con delle _foglie_. Molto spesso l'albero viene rappresentato rovesciato, con il tronco in alto.
+```
+             <body>                <-- radice
+            /      \
+       <nav>        <h1>           <-- rami o foglie
+      /     \
+ <img>       <ul>                  <-- foglie
+```
 
-Nella metafora a scatole cinesi, c'è una scatola esterna che contiene una o più scatole al suo interno, che a loro volta possono contenere altre scatole, e così via finché non arriviamo alle scatole più interne che saranno vuote.
+Nella metafora a scatole cinesi, c'è una scatola esterna che contiene una o più scatole al suo interno, che a loro volta possono contenere altre scatole, e così via finché non 
+arriviamo alle scatole più interne che saranno vuote.
 
-Riprendendo l'esempio della pagina del linguaggio di programmazione Rust, possiamo vedere che è stata organizzata nel seguente modo.
+<img title="boxes" alt="boxes" src="assets/boxes.png">
+
+Riprendendo l'esempio della pagina del linguaggio di programmazione Rust ed usando la metafora delle scatole, possiamo vedere che è stata organizzata nel seguente modo.
 
 
 <img title="rust page cut" alt="rust page cut" src="assets/rust-cut-labels.png">

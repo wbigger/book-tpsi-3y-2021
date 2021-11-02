@@ -112,7 +112,7 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/wbigger/book-tpsi-3y.git" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/wbigger/book-tpsi-3y-2021.git" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                     </div>
@@ -191,9 +191,17 @@
 </figure>
 <h2 id="organizzazione-degli-elementi-della-pagina"><a class="header" href="#organizzazione-degli-elementi-della-pagina">Organizzazione degli elementi della pagina</a></h2>
 <p>Un'altra cosa importante da capire a questo momento è come gli elementi di una pagina HTML si relazionano tra loro. Gli elementi sono organizzati con una struttura ad albero, o a scatole cinesi, in cui si parte da un elemento base a cui si agganciano tutti gli altri.</p>
-<p>Nella metafora ad albero, l'elemento base viene chiamato <em>radice</em> (anche se forse sarebbe più corretto chiamarlo tronco), da cui partono vari <em>rami</em> che finiscono con delle <em>foglie</em>.</p>
-<p>Nella metafora a scatole cinesi, c'è una scatola esterna che contiene una o più scatole al suo interno, che a loro volta possono contenere altre scatole, e così via finché non arriviamo alle scatole più interne che saranno vuote.</p>
-<p>Riprendendo l'esempio della pagina del linguaggio di programmazione Rust, possiamo vedere che è stata organizzata nel seguente modo.</p>
+<p>Nella metafora ad albero, l'elemento base viene chiamato <em>radice</em> (anche se forse sarebbe più corretto chiamarlo tronco), da cui partono vari <em>rami</em> che finiscono con delle <em>foglie</em>. Molto spesso l'albero viene rappresentato rovesciato, con il tronco in alto.</p>
+<pre><code>             &lt;body&gt;                &lt;-- radice
+            /      \
+       &lt;nav&gt;        &lt;h1&gt;           &lt;-- rami o foglie
+      /     \
+ &lt;img&gt;       &lt;ul&gt;                  &lt;-- foglie
+</code></pre>
+<p>Nella metafora a scatole cinesi, c'è una scatola esterna che contiene una o più scatole al suo interno, che a loro volta possono contenere altre scatole, e così via finché non 
+arriviamo alle scatole più interne che saranno vuote.</p>
+<img title="boxes" alt="boxes" src="assets/boxes.png">
+<p>Riprendendo l'esempio della pagina del linguaggio di programmazione Rust ed usando la metafora delle scatole, possiamo vedere che è stata organizzata nel seguente modo.</p>
 <img title="rust page cut" alt="rust page cut" src="assets/rust-cut-labels.png">
 <p>Questa operazione di suddividere la pagina web in sottoparti viene chiamata <strong>cutting</strong> (taglio) della pagina, ed è un'operazione che si svolge a dopo la fase di design e prima di quella di implementazione vera e propria.</p>
 <h3 id="altri-esempi"><a class="header" href="#altri-esempi">Altri esempi</a></h3>
