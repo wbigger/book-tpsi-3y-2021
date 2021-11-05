@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Internet &amp; Web - TPSI - Terzo anno</title>
+        <title>Sintassi HTML - TPSI - Terzo anno</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Materiale di supporto alle lezioni.">
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">5.</strong> Comandi linux</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html" class="active"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">5.</strong> Comandi linux</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,38 +138,26 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="internet--web"><a class="header" href="#internet--web">Internet &amp; Web</a></h1>
-<p>Prima di cominciare con lo studio dell'HTML, cerchiamo di capire un po' il contesto in cui è nato e si è sviluppato.</p>
-<p>Quando parliamo di <em>web</em> stiamo parlando di un insieme di tecnologie specifiche, quelle appunto definite dal consorzio del <em>&quot;World Wide Web&quot;</em>, abbreviato in <em>w3</em>. Il sito ufficiale del consorzio e <a href="https://www.w3.org/">www.w3.org</a>.</p>
-<p>Ma andiamo con ordine: il web è un <em>servizio</em> che si appoggia alla rete Internet per funzionare. Le due cose non devono essere confuse!</p>
-<h2 id="internet-una-rete-di-computer-globale"><a class="header" href="#internet-una-rete-di-computer-globale">Internet: una rete di computer globale</a></h2>
-<p>Negli anni '60 del secolo scorso c'è stata un'enorme diffusione dei calcolatori elettronici soprattutto presso centri di ricerca universitaria ed istituzioni pubbliche. Il problema di connettere tra di loro tutti questi computer era diventata urgente, e vari standard erano nati per risolvere questo problema.</p>
-<p>La soluzione che poi ha preso il sopravvento è stata quella ideata da <a href="https://it.wikipedia.org/wiki/Vint_Cerf">Vinton Gray Cerf</a> e <a href="https://it.wikipedia.org/wiki/Robert_Kahn">Robert Kahn</a> nel 1972 circa, mentre lavoravano presso il DARPA (Agenzia per i Progetti di ricerca avanzata per la Difesa), in America, hanno messo le basi per questa tecnologia ed i relativi protocolli.</p>
-<figure class="center">
-  <img class="w100p" title="vint-bob" alt="vint-bob" src="assets/vint-bob.jpg">
-  <figcaption>Fig.1 - Vint Cerf a sinistra, Bob Kahn a destra</figcaption>
-</figure>
-<p>L'idea è stata quella di assegnare ad ogni macchina un indirizzo, chiamato <strong>IP Address</strong>, (IP sta per Internet Protocol) formato da 4 byte, che lo identifica univocamente all'<em>interno di una sottorete</em>. All'indirizzo IP deve sempre essere associato un altro numero, chiamato maschera di sottorete (<strong>subnet mask</strong>), anch'esso di 4 byte, che definisce la grandezza della sottorete in cui ci troviamo. Le reti sono connesse tra di loro da dei dispositivi di rete dedicate, tipicamente dei <strong>router</strong> (instradatori). </p>
-<p>Uno dei motivi per cui Internet ha avuto una così grande diffusione è stata la convinzione dei fondatori che le tecnologie alla base della comunicazione tra i computer dovesse essere libera ed aperta, ovvero tutti potessero usarla senza pagare un costo di licenza e contribuire al suo miglioramento. A tal fine, per esempio, nel 1986 fu istituita la <em>Internet Engineering Task Force (<a href="https://it.wikipedia.org/wiki/Internet_Engineering_Task_Force">IETF</a>)</em>, un organismo internazionale caratterizzato da forti principi di apertura e condivisione. L'IETF usa il sistema delle <a href="https://it.wikipedia.org/wiki/Request_for_Comments">RFC</a> per la discussione e l'approvazione dei propri standard, che prevede la discussione e l'approvazione. Nel 2005 Vint Cerf e Bob Kahn hanno ricevuto la Medaglia Presidenziale per la libertà per il loro contributo alla nascita di Internet.</p>
-<p>Una nota sull'uso della parola &quot;Internet&quot;: tecnicamente, una qualsiasi rete di computer connessi tra di loro con indirizzi IP è una rete Internet. Tuttavia, nell'uso quotidiano usiamo questa parola per indicare la rete <em>globale</em> di computer. In questo testo si specificherà &quot;rete Internet globale&quot; quando necessario per evitare fraintendimenti.</p>
-<h1 id="web"><a class="header" href="#web">Web</a></h1>
-<p>Il World Wide Web è nato nel 1989 sotto la guida del londinese <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a>. A quel tempo, Berners-Lee lavorava presso il CERN di Ginevra, un centro di ricerca internazionale. Come i suoi colleghi, si trovava ad affrontare il problema di reperire le informazioni su Internet; gli strumenti che a quel tempo aveva a disposizione erano protocolli come FTP, SSH, SCP che non permettevano una facile consultazione delle risorse.</p>
-<p>L'idea di Berners-Lee per risolvere il problema è stato quello di creare delle <em>pagine</em> con uno stile (corsivo, grassetto, titolo, ...) che puntassero a delle <em>risorse</em> (immagini, file, altre pagine, ...). In questo modo si creava una rete di pagine e risorse che somigliava appunto ad una rete.</p>
-<p>Per lo stile delle pagine inventò lo standard <em>HyperText Markup Language</em> (<strong>HTML</strong>), per il protocollo di comunicazione creò l'<em>Hypertext Transfer Protocol</em> (<strong>HTTP</strong>) e per identificare univocamente una risorsa sul web ideò l'<em>Uniform Resource Locator</em> (<strong>URL</strong>).</p>
-<p>Nel 1994 Tim Burners-Lee fonda il <a href="https://www.w3.org/">w3consortium</a> (<strong>w3c</strong>) con lo scopo di standardizzare le nuove tecnologie emergenti per il World Wide Web.</p>
-<p>Fin dai primi anni di fondazione del w3c fu chiaro che per far crescere in maniera organica il web, il solo formato HTML non era sufficiente. Sono state create quindi un insieme di tre tecnologie, ognuna con un compito diverso che si coordinano fra loro:</p>
+                        <h1 id="sintassi-html"><a class="header" href="#sintassi-html">Sintassi HTML</a></h1>
+<p>Dopo essersi riscaldati un po' con un &quot;splash project&quot;, vediamo di razionalizzare ed assimilare correttamente quello che abbiamo fatto.</p>
+<p>Una pagina HTML è formata da un insieme di <em>elementi</em>. Prendiamo ad esempio il titolo.</p>
+<pre><code class="language-html">&lt;h1&gt;Error 503&lt;/h1&gt;
+</code></pre>
+<p>Tutto insieme questo è chiamato elemento. Scomponiamo questo elemento nelle sue parti.</p>
 <ul>
-<li>le pagine <strong>html</strong>, che definiscono la <strong>struttura</strong> della pagina</li>
-<li>i fogli di stile <strong>css</strong>, che definiscono come la pagina deve essere visualizzata</li>
-<li>i file <strong>js</strong>, ovvero JavaScript, che definiscono il comportamento dinamico del sito</li>
+<li><code>&lt;h1&gt;</code>: tag di apertura</li>
+<li><code>Error 503</code>: contenuto</li>
+<li><code>&lt;/h1&gt;</code>: tag di chiusura</li>
 </ul>
-<p>Nei prossimi capitoli affronteremo nel dettaglio i primi due: HTML e CSS. </p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="next" href="02-html.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="prev" href="03-first-page.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="linux.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -178,7 +166,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="next" href="02-html.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="prev" href="03-first-page.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="linux.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

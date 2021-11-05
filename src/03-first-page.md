@@ -118,5 +118,10 @@ Vi chiederà nome utente e password. Attenzione che **come password dovete inser
 
 Finalmente, è fatta! Se tutto è andato bene potrete vedere la vostra pagina index.html anche su GitHub.
 
+## Video tutorial
+Di seguito le stesse operazioni in un video tutorial.
+
+<iframe src="https://drive.google.com/file/d/1GTQyvvf01qAFK_DJzdLylhoca-Pdv_pm/preview" width="640" height="480" allow="autoplay"></iframe>
+
 
 
