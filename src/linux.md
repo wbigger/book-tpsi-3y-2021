@@ -150,35 +150,6 @@ $ ls
 -rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
 drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
 ```
-## top
-Visualizza i processi attualmente in esecuzione nella macchina.
-```sh
-$ top
-```
-Viene visualizzata una tabella a schermo intero. Per uscire, premere la combinazione di tasti `ctrl-c`
-
-## kill
-Termina (uccide) un processo in esecuzione. Come argomento deve avere il numero del processo (PID - process ID) che viene visualizzato ad esempio con top.
-```sh
-$ kill 11459 # termina il processo con PID 11459
-```
-## yes
-Stampa su terminale una stringa all'infinito. Di default stampa 'y' ma si può personalizzare passandogli un argomento.
-```sh
-$ yes marconi
-marconi
-marconi
-marconi
-....
-```
-
-Anche in questo caso uscire con `ctrl-c`
-
-## /dev/null
-Un file speciale all'interno del file system linux che è un pozzo senza fondo.
-```sh
-$ yes > /dev/null ## l'output di yes viene sostanzialmente scartato
-```
 
 ## ctrl-c
 Termina (uccide) il processo corrente.
@@ -212,3 +183,39 @@ Di seguito alcune variabili di ambiente che abbiamo visto:
 - $PS1: il prompt dei comandi, ovvero tutto quello che c'è prima del dollaro (dollaro compreso), solitamente include la directory corrente ed il nome utente
 
 
+# SSH
+Per collegarsi via ssh alla macchina remota, da terminale potete digitare:
+```sh
+$ ssh nome_utente@server
+```
+
+Ad esempio 
+```sh
+$ ssh c_utenteNN@studenti.marconicloud.it
+```
+
+Se, dopo il primo accesso, volete tornare a questo comando senza doverlo ridigitare, potete:
+- premere freccetta su, fino ad arrivare al comando
+- digitare `ctrl-r` e cominciare a digitare il comando, per eseguire una ricerca nello storico dei comandi
+
+## Uso del file .ssh/config
+Se si vuole aggiungere in modo stabile il server remoto ai propri preferiti, è possibile aggiungerlo al file `.ssh/config`.
+
+Per fare questo, aprite un terminale e scrivete:
+```sh
+$ cd # per tornare alla home directory
+$ cd .ssh # per entrare nella cartella nascosta .ssh
+$ nano config 
+```
+
+A questo punto aggiungete al file le seguenti righe:
+```
+Host marconi
+  HostName studenti.marconicloud.it
+  User k_utenteNN
+```
+
+Da ora in poi per collegarvi al server, potete digitare semplicemente:
+```sh
+ssh marconi
+```

@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html" class="active"><strong aria-hidden="true">5.</strong> Comandi linux</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html" class="active"><strong aria-hidden="true">6.</strong> Comandi linux</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -253,28 +253,6 @@ $ ls
 -rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
 drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
 </code></pre>
-<h2 id="top"><a class="header" href="#top">top</a></h2>
-<p>Visualizza i processi attualmente in esecuzione nella macchina.</p>
-<pre><code class="language-sh">$ top
-</code></pre>
-<p>Viene visualizzata una tabella a schermo intero. Per uscire, premere la combinazione di tasti <code>ctrl-c</code></p>
-<h2 id="kill"><a class="header" href="#kill">kill</a></h2>
-<p>Termina (uccide) un processo in esecuzione. Come argomento deve avere il numero del processo (PID - process ID) che viene visualizzato ad esempio con top.</p>
-<pre><code class="language-sh">$ kill 11459 # termina il processo con PID 11459
-</code></pre>
-<h2 id="yes"><a class="header" href="#yes">yes</a></h2>
-<p>Stampa su terminale una stringa all'infinito. Di default stampa 'y' ma si può personalizzare passandogli un argomento.</p>
-<pre><code class="language-sh">$ yes marconi
-marconi
-marconi
-marconi
-....
-</code></pre>
-<p>Anche in questo caso uscire con <code>ctrl-c</code></p>
-<h2 id="devnull"><a class="header" href="#devnull">/dev/null</a></h2>
-<p>Un file speciale all'interno del file system linux che è un pozzo senza fondo.</p>
-<pre><code class="language-sh">$ yes &gt; /dev/null ## l'output di yes viene sostanzialmente scartato
-</code></pre>
 <h2 id="ctrl-c"><a class="header" href="#ctrl-c">ctrl-c</a></h2>
 <p>Termina (uccide) il processo corrente.</p>
 <h2 id="variabili-di-ambiente"><a class="header" href="#variabili-di-ambiente">Variabili di ambiente</a></h2>
@@ -299,12 +277,39 @@ COLORFGBG=7;0
 <li>$SHELL: quale shell sto utilizzando, su Ubuntu di default è bash (quella sviluppata da GNU)</li>
 <li>$PS1: il prompt dei comandi, ovvero tutto quello che c'è prima del dollaro (dollaro compreso), solitamente include la directory corrente ed il nome utente</li>
 </ul>
+<h1 id="ssh"><a class="header" href="#ssh">SSH</a></h1>
+<p>Per collegarsi via ssh alla macchina remota, da terminale potete digitare:</p>
+<pre><code class="language-sh">$ ssh nome_utente@server
+</code></pre>
+<p>Ad esempio </p>
+<pre><code class="language-sh">$ ssh c_utenteNN@studenti.marconicloud.it
+</code></pre>
+<p>Se, dopo il primo accesso, volete tornare a questo comando senza doverlo ridigitare, potete:</p>
+<ul>
+<li>premere freccetta su, fino ad arrivare al comando</li>
+<li>digitare <code>ctrl-r</code> e cominciare a digitare il comando, per eseguire una ricerca nello storico dei comandi</li>
+</ul>
+<h2 id="uso-del-file-sshconfig"><a class="header" href="#uso-del-file-sshconfig">Uso del file .ssh/config</a></h2>
+<p>Se si vuole aggiungere in modo stabile il server remoto ai propri preferiti, è possibile aggiungerlo al file <code>.ssh/config</code>.</p>
+<p>Per fare questo, aprite un terminale e scrivete:</p>
+<pre><code class="language-sh">$ cd # per tornare alla home directory
+$ cd .ssh # per entrare nella cartella nascosta .ssh
+$ nano config 
+</code></pre>
+<p>A questo punto aggiungete al file le seguenti righe:</p>
+<pre><code>Host marconi
+  HostName studenti.marconicloud.it
+  User k_utenteNN
+</code></pre>
+<p>Da ora in poi per collegarvi al server, potete digitare semplicemente:</p>
+<pre><code class="language-sh">ssh marconi
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="04-html-syntax.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="05-css.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -313,7 +318,7 @@ COLORFGBG=7;0
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="04-html-syntax.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="05-css.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
             </nav>

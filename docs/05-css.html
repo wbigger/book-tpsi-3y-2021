@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Sintassi HTML - TPSI - Terzo anno</title>
+        <title>CSS - TPSI - Terzo anno</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Materiale di supporto alle lezioni.">
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html" class="active"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">6.</strong> Comandi linux</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html" class="active"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">6.</strong> Comandi linux</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,83 +138,152 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="sintassi-html"><a class="header" href="#sintassi-html">Sintassi HTML</a></h1>
-<p>Dopo essersi riscaldati un po' con un &quot;splash project&quot;, vediamo di razionalizzare ed assimilare correttamente quello che abbiamo fatto.</p>
-<p>Una pagina HTML è formata da un insieme di <em>elementi</em>. Prendiamo ad esempio il titolo.</p>
-<pre><code class="language-html">&lt;h1&gt;Error 503&lt;/h1&gt;
-</code></pre>
-<p>Tutto insieme questo è chiamato <strong>elemento</strong>. </p>
-<p>Scomponiamo questo elemento nelle sue parti.</p>
-<ul>
-<li><code>&lt;h1&gt;</code>: <strong>tag di apertura</strong></li>
-<li><code>Error 503</code>: <strong>contenuto</strong></li>
-<li><code>&lt;/h1&gt;</code>: <strong>tag di chiusura</strong></li>
-</ul>
-<h2 id="attributi"><a class="header" href="#attributi">Attributi</a></h2>
-<p>Un elemento può avere uno o più attributi, ad esempio:</p>
-<pre><code class="language-html">&lt;a href=&quot;demo.html&quot;&gt;questo è un link&lt;/a&gt;
-</code></pre>
-<p>Gli attributi servono per specificare caratteristiche dell'elemento a cui si riferiscono. Ad esempio, l'attributo <code>src</code> serve per specificare il percorso dell'immagine da visualizzare.</p>
-<p>Ogni attributo consiste di un <strong>nome</strong> ed un <strong>valore</strong> separati da un <code>=</code>. Il valore può essere senza apici se non contiene nessun carattere speciale o spazio, altrimenti deve avere apici singoli o doppi. In ogni caso, per convenzione, si preferisce mettere sempre gli apici intorno al valore degli attributi.</p>
-<p>Alcuni attributi possono non avere nessun valore, come nell'esempio successivo. In questo caso si parla di <em>attributi booleani</em>.</p>
-<pre><code class="language-html">&lt;input name=&quot;address&quot; disabled&gt;
-</code></pre>
-<h2 id="void-elements"><a class="header" href="#void-elements">Void elements</a></h2>
-<p>Alcuni elementi possono non avere un contenuto, come nel caso seguente.</p>
-<pre><code class="language-html">&lt;img src=&quot;logo.png&quot;&gt;
-</code></pre>
-<p>Gli elementi senza contenuto non hanno un tag di chiusura. Questo tipo di elementi si chiama <a href="https://html.spec.whatwg.org/#void-elements">void element</a>. Al link precedente trovate la lista esatta di quali elementi sono void.</p>
+                        <style>
+.centered {
+	text-align: center;
+}
+
+img.right_side {
+  float: right;
+  margin:5px 5px 0px 20px;
+  width: 30%;
+}
+img.left_side {
+  float:left;
+  margin:5px 20px 0px 5px;
+  width: 20%;
+}
+
+p.clear {
+  clear: both;  
+}
+p.img-container {
+  margin-bottom: 15px;
+}
+
+p.img-container::after {
+  margin-bottom: 15px;
+  overflow: hidden;
+  clear: both;
+}
+</style>
+<h1 id="css"><a class="header" href="#css">CSS</a></h1>
+<p class="img-container">
+L'HTML è fin da subito nato come uno standard aperto: questo all'inizio ha creato delle difficoltà, ma con il passare del tempo si è rivelato un aspetto vincente.
+<img class="right_side" title="CSS logo" alt="CSS logo" src="assets/css-logo.png" width="15%">
+</p>
+<p>La definizione del CSS è un tipico esempio di quanto detto. Nei primi anni di diffusione (1993-1996) le aziende che crearono i primi browser (Netscape e Internet Explorer in particolare) aggiunsero diverse estensioni proprietarie dell'HTML, generando confusione e difficoltà per gli sviluppatori di pagine web. In altre parole, ciò che funzionava su un browser non funzionava su un altro. Il W3C decise di affrontare questo problema creando un gruppo di lavoro che produsse uno standard nel 1996 chiamato appunto <em>Cascading Style Sheet</em> (CSS).</p>
 <blockquote>
-<p>Nota: HTML5 non richiede nessuna sintassi particolare per chiudere gli elementi void. Per retro-compatibilità con le precedenti versioni di HTML, comunque, è permesso chiudere il tag anche con '/&gt;'</p>
+<p>Per maggiori dettagli sulla storia del CSS si rimanda a <a href="https://www.w3.org/Style/CSS20/history.html">questa</a> pagina.</p>
 </blockquote>
-<h2 id="elementi-annidati"><a class="header" href="#elementi-annidati">Elementi annidati</a></h2>
-<p>Gli elementi possono essere annidati fra loro.</p>
-<pre><code class="language-html">&lt;p&gt;&lt;span&gt;Hello World&lt;/span&gt;&lt;/p&gt;
+<p>Con il passare degli anni, questa divisione si rivelò estremamente efficace. In particolare, riuscì in modo eccellente a risolvere il problema della diversa dimensione degli schermi dei palmari prima e degli smartphone poi.</p>
+<p>CSS include moltissime funzionalità che permette l'animazione degli elementi nelle pagine, le trasformazioni (es. traslazione, rotazione, scalatura), i gradienti e molte altre cose.</p>
+<h1 id="concetti-base"><a class="header" href="#concetti-base">Concetti base</a></h1>
+<h2 id="sintassi"><a class="header" href="#sintassi">Sintassi</a></h2>
+<p>Cominciamo con la sintassi e la nomenclatura dei vari componenti di un foglio di stile.</p>
+<p>Un foglio di stile CSS è formato da un insieme di <strong>regole</strong>. Ogni regola ha la seguente struttura:</p>
+<p class="centered">
+<img style="width:85%; margin:15px 0" title="CSS selector" alt="CSS selector" src="assets/css-selector.gif" >
+</p>
+<p>Vediamola nel dettaglio. </p>
+<ol>
+<li>la regola comincia con un <strong>selettore</strong>, che serve per selezionare su <strong>quali elementi verrà applicata la regola</strong></li>
+<li>la seconda parte della regola è la <strong>dichiarazione</strong>, racchiusa in <strong>parentesi graffe</strong></li>
+<li>all'interno della dichiarazione c'è una lista di <strong>proprietà</strong>, separate da <strong>punto e virgola</strong></li>
+<li>ogni proprietà ha un <strong>nome</strong> ed un <strong>valore</strong>, separati tra loro dai <strong>due punti</strong></li>
+</ol>
+<p>Vediamo alcuni esempi:</p>
+<pre><code class="language-css">/* cambia il colore dello sfondo di tutta la pagina */
+body {
+  background-color: blue;
+}
+
+/* cambia il colore del testo di tutti i paragrafi */
+p {
+  color: red;
+}
 </code></pre>
-<p>Qui possiamo vedere che:</p>
+<p>Di seguito dettagliamo alcune caratteristiche importanti del CSS.</p>
+<h2 id="specificità"><a class="header" href="#specificità">Specificità</a></h2>
+<p>Come detto, CSS è l'acronimo di &quot;Cascading Style Sheet&quot;, che si può tradurre come &quot;fogli di stile a cascata&quot;. Questo perché è del tutto lecito includere più fogli di stile, o avere più regole all'interno dello stesso foglio di stile, che si riferiscono allo stesso elemento.</p>
+<p>Tutte le regole che si potrebbero applicare ad un certo elemento, si chiamano <em>matching rules</em> e si dice che queste regole entrano in competizione tra di loro. Quale vince?</p>
+<p>La risposta è: <em>la regola con specificità più alta</em> per quel determinato elemento. Il calcolo della specificità non è banale, ma per ora ci basta sapere che, a parità di altre condizioni, viene applicata la regola definita <em>per ultima</em>.</p>
+<h2 id="elementi-inline-e-block"><a class="header" href="#elementi-inline-e-block">Elementi inline e block</a></h2>
+<p>Un altro concetto fondamentale del CSS è che un elemento può essere di uno di questi due tipi:</p>
 <ul>
-<li><code>&lt;span&gt;Hello World&lt;/span&gt;</code> è il contenuto dell'elemento con tag <code>&lt;p&gt;</code> (paragrafo)</li>
-<li><code>Hello World</code> è il contenuto dell'elemento <code>span</code></li>
+<li><strong>inline</strong>: si adatta al contenuto</li>
+<li><strong>block</strong>: si adatta al contenitore</li>
 </ul>
-<p>Non può mai succedere invece che gli elementi si intersechino fra di loro, come nell'esempio che segue.</p>
-<pre><code class="language-html">&lt;p&gt;&lt;span&gt;Questo è mooolto sbagliato!&lt;/p&gt;&lt;/span&gt;
+<p>Alcuni elementi sono nativamente inline, ed altri nativamente block.</p>
+<p>Ad esempio, i paragrafi sono block e gli span sono inline:</p>
+<pre><code class="language-html">&lt;style&gt;
+  p {
+    background-color: red;
+  }
+  span {
+    background-color: blue;
+  }
+&lt;/style&gt;
+
+&lt;p&gt;&lt;span&gt;ciao&lt;/span&gt;&lt;/p&gt;
 </code></pre>
-<h2 id="doctype-head-body"><a class="header" href="#doctype-head-body">Doctype, head, body</a></h2>
-<p>La pagina error404 che abbiamo scritto finora funziona, ma manca di alcune informazioni importanti che aiutano il browser a visualizzare correttamente il contenuto della pagina web. Vediamoli ora nel dettaglio.</p>
-<h3 id="doctype-declaration"><a class="header" href="#doctype-declaration">Doctype declaration</a></h3>
-<p>Tutte le pagine HTML devono cominciare con una &quot;dichiarazione&quot; (declaration) che dice esplicitamente al browser che quella che sta leggendo è effettivamente una pagina HTML. Il browser prova ad indovinarlo dall'estensione, ma è richiesto che lo si scriva esplicitamente, per evitare errori.</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-</code></pre>
-<p>Questa dichiarazione è simile ad un tag, ma con l'aggiunta di un punto esclamativo subito dopo la parentesi angolare aperta. Questa strategia di usare un punto esclamativo (<em>bang</em> nel dialetto geek) per specificare il tipo di file è molto usata nei linguaggi di programmazione, e la vedrete anche negli script per la shell.</p>
-<h3 id="tag-html"><a class="header" href="#tag-html">Tag <html></a></h3>
-<p>Come abbiamo detto nel capitolo precedente, la struttura di una pagina HTML è come un albero, che parte da un tronco. Questo tronco è rappresentato dal tag <code>&lt;html&gt;</code>.</p>
-<pre><code class="language-html">&lt;html&gt;
-&lt;/html&gt;
-</code></pre>
-<p>Il tag html ha l'attributo &quot;lang&quot; che è importante specificare per permettere al browser di capire in che lingua è scritta la pagina, ad esempio italiano, inglese, cinese, etc.</p>
-<pre><code class="language-html">&lt;html lang=&quot;it&quot;&gt;
-&lt;/html&gt;
-</code></pre>
-<p>Dal tag html si dipartono due rami: <code>&lt;head&gt;</code> e <code>&lt;body&gt;</code>.</p>
-<h3 id="tag-head"><a class="header" href="#tag-head">Tag <head></a></h3>
-<p>Il tag <code>&lt;head&gt;</code> contiene tutti i <strong>metadati</strong>. I metadati sono dei dati che riguardano la pagina, ma non vengono visualizzati direttamente all'interno di essa. Vediamo i più importanti:</p>
+<p>Questo è il risultato:</p>
+<img title="Inline block" alt="inline block" src="assets/inline-block.png">
+<p>Quando nella scrittura della pagina mi servono alcuni elementi inline o block per agganciarli al CSS ma senza un particolare valore semantico, posso usare i seguenti tag:</p>
 <ul>
-<li><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>: specifica la codifica dei caratteri; in generale sarà sempre UTF-8 (unicode)</li>
-<li><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code>: rende il sito responsive, ovvero capace di adattare il contenuto alle dimensioni dello schermo</li>
-<li><code>&lt;title&gt;Document&lt;/title&gt;</code>: specifica il titolo della pagina, che ad esempio nei browser viene visualizzato all'interno del tab in alto</li>
+<li><code>&lt;span&gt;</code> come generico elemento inline</li>
+<li><code>&lt;div&gt;</code> come generico elemento block</li>
 </ul>
-<p>Altri metadati che possono essere inclusi nel tag <code>&lt;head&gt;</code> sono ad esempio lo stile e, in alcuni casi, gli script.</p>
-<h3 id="tag-body"><a class="header" href="#tag-body">Tag <body></a></h3>
-<p>All'interno del tag body troviamo tutti gli elementi che verranno effettivamente <em>renderizzati</em> all'interno della nostra pagina: intestazioni, paragrafi, immagini, suoni, video, barre di navigazione, sezioni, etc. etc.</p>
+<p>In ogni caso, è sempre possibile cambiare il comportamento di default di un elemento attraverso la proprietà CSS &quot;display&quot;:</p>
+<pre><code class="language-css">/* la seguente regola trasforma i paragrafi in elementi inline */
+p {
+  display: inline;
+}
+</code></pre>
+<blockquote>
+<p>Nota: esiste anche un valore ibrido inline-block, utile in alcune situazioni, per maggiori informazioni vedete <a href="https://www.w3schools.com/css/css_inline-block.asp">qui</a></p>
+</blockquote>
+<h2 id="box-model"><a class="header" href="#box-model">Box model</a></h2>
+<p>L'ultimo concetto CSS che presentiamo in questo pagina è il modello a scatole, in inglese &quot;box model&quot;.</p>
+<p>Come abbiamo detto, possiamo immaginare la nostra pagina come tante scatole. Come è fatta ognuna di queste scatole?</p>
+<p>Ogni scatola è composta delle seguenti parti:</p>
+<ul>
+<li>il <strong>contenuto</strong> vero e proprio, ad esempio il testo, l'immagine o altri elementi annidati, che vogliamo visualizzare</li>
+<li>il <strong>padding</strong>: l'imballaggio, sta all'interno della nostra scatola, quindi coprirà anche l'eventuale colore o immagine di sfondo</li>
+<li>il <strong>border</strong>: la confezione, ovvero il rettangolo che include padding e contenuto</li>
+<li>il <strong>margin</strong>: il margine tra una scatola e l'altra</li>
+</ul>
+<style>
+.container {
+  display: flex;
+}
+.item {
+  background-color: rgba(200, 200, 200, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+<div class="container">
+  <div class="item"><img src="assets/box-content.jpg"><br>Contenuto</div>
+  <div class="item"><img src="assets/box-padding.jpg"><br>Padding</div>
+  <div class="item"><img src="assets/box-border.jpg"><br>Bordo</div> 
+  <div class="item"><img src="assets/box-margin.png"><br>Margine</div> 
+</div>
+<p>Per visualizzare il box model nel browser, andate su ispeziona, ve lo trovate tra i pannelli sviluppatore</p>
+<img src="assets/box-inspect.png">
+<p>Fate attenzione che, generalmente, i margini tra due elementi si sommano: se un elemento ha margine destro pari a 10px, e il successivo ha margine sinistro pari a 15px, il margine totale tra i due elementi sarà 25px.</p>
+<p>A questa regola generale ci sono alcune eccezioni. Ad esempio, se ci sono più elementi figli con lo stesso tag, i margini superiore ed inferiore possono <em>collassare</em> tra loro. Per maggiori informazioni, vedete <a href="https://www.w3schools.com/css/css_margin_collapse.asp">qui</a>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="03-first-page.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="04-html-syntax.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="05-css.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="linux.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -223,10 +292,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="03-first-page.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="04-html-syntax.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="05-css.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="linux.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
