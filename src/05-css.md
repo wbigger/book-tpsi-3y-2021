@@ -161,3 +161,87 @@ Fate attenzione che, generalmente, i margini tra due elementi si sommano: se un 
 
 A questa regola generale ci sono alcune eccezioni. Ad esempio, se ci sono più elementi figli con lo stesso tag, i margini superiore ed inferiore possono _collassare_ tra loro. Per maggiori informazioni, vedete [qui](https://www.w3schools.com/css/css_margin_collapse.asp).
 
+
+### Impostare i valori del box model
+Per impostare i valori del box model esistono le seguenti proprietà CSS:
+- `padding`: per impostare il padding
+- `border`: per impostare il bordo
+- `margin`: per impostare il margine
+
+<details closed> 
+<summary>Esempi</summary>
+Nel seguente esempio imposto i valori in tutte e quattro le direzioni intorno all'elemento selezionato.
+
+```css
+p {
+  padding: 5px;
+  border: 0px;
+  margin: 5px;
+  
+}
+```
+
+</details>
+
+Di solito voglio però controllare in modo più fine il valore in una specifica direzione, ad esempio solo in alto, o solo a sinistra. Per fare questo, ognuna di queste proprietà ha a sua volta quattro sotto proprietà:
+- `-top`: sopra l'elemento
+- `-right`: a sinistra dell'elemento
+- `-bottom`: a destra dell'elemento
+- `-left`: a sinistra dell'elemento
+
+<details closed> 
+<summary>Esempi</summary>
+Nel seguente esempio imposto i valori solo nelle direzioni scelte.
+
+```css
+p {
+  padding-left: 5px;
+  border-top: 0px;
+  border-bottom: 0px;
+  margin-right: 5px;
+}
+```
+
+</details>
+
+Se voglio impostare tutti e quattro i valori per una data proprietà in un colpo solo, esiste una versione abbreviata, in cui specifico tutti i valori nella stessa linea. Mi devo ricordare che i valori sono messi **come i numeri di un orologio** analogico: parto dall'alto e giro in senso orario, quindi nell'ordine sono top, right, bottom, left.
+
+<details closed> 
+<summary>Esempi</summary>
+Nel seguente esempio imposto tutti e quattro i valori in una sola linea.
+
+```css
+p {
+  background-color: red;
+  padding: 0px 15px 30px 50px;
+}
+```
+
+<style>
+  .css-inline {
+    background-color: red;
+    padding: 0px 15px 30px 50px;
+  }
+</style>
+
+Il risultato:
+<p>
+<span class="css-inline">ciao</span>
+</p>
+
+
+</details>
+
+### Dove metto il tag style?
+Lo stile è considerato un metadato, quindi come tutti i metadati la [documentazione ufficiale](https://html.spec.whatwg.org/multipage/semantics.html#the-style-element) richiede di metterlo all'interno del tag `<html>`, di solito subito prima del tag di chiusura.
+
+```html
+<head>
+  <style>
+    /* mettere qui lo stile */
+  <style>
+</head>
+```
+
+Ci sono altri modi per includere un foglio di stile salvato come un file `.css` a sé stante, li vedremo successivamente.
+

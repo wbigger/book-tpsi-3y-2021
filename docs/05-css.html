@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html" class="active"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">6.</strong> Comandi linux</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html" class="active"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">6.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">7.</strong> HMTL template</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -275,6 +275,71 @@ p {
 <img src="assets/box-inspect.png">
 <p>Fate attenzione che, generalmente, i margini tra due elementi si sommano: se un elemento ha margine destro pari a 10px, e il successivo ha margine sinistro pari a 15px, il margine totale tra i due elementi sarà 25px.</p>
 <p>A questa regola generale ci sono alcune eccezioni. Ad esempio, se ci sono più elementi figli con lo stesso tag, i margini superiore ed inferiore possono <em>collassare</em> tra loro. Per maggiori informazioni, vedete <a href="https://www.w3schools.com/css/css_margin_collapse.asp">qui</a>.</p>
+<h3 id="impostare-i-valori-del-box-model"><a class="header" href="#impostare-i-valori-del-box-model">Impostare i valori del box model</a></h3>
+<p>Per impostare i valori del box model esistono le seguenti proprietà CSS:</p>
+<ul>
+<li><code>padding</code>: per impostare il padding</li>
+<li><code>border</code>: per impostare il bordo</li>
+<li><code>margin</code>: per impostare il margine</li>
+</ul>
+<details closed> 
+<summary>Esempi</summary>
+Nel seguente esempio imposto i valori in tutte e quattro le direzioni intorno all'elemento selezionato.
+<pre><code class="language-css">p {
+  padding: 5px;
+  border: 0px;
+  margin: 5px;
+  
+}
+</code></pre>
+</details>
+<p>Di solito voglio però controllare in modo più fine il valore in una specifica direzione, ad esempio solo in alto, o solo a sinistra. Per fare questo, ognuna di queste proprietà ha a sua volta quattro sotto proprietà:</p>
+<ul>
+<li><code>-top</code>: sopra l'elemento</li>
+<li><code>-right</code>: a sinistra dell'elemento</li>
+<li><code>-bottom</code>: a destra dell'elemento</li>
+<li><code>-left</code>: a sinistra dell'elemento</li>
+</ul>
+<details closed> 
+<summary>Esempi</summary>
+Nel seguente esempio imposto i valori solo nelle direzioni scelte.
+<pre><code class="language-css">p {
+  padding-left: 5px;
+  border-top: 0px;
+  border-bottom: 0px;
+  margin-right: 5px;
+}
+</code></pre>
+</details>
+<p>Se voglio impostare tutti e quattro i valori per una data proprietà in un colpo solo, esiste una versione abbreviata, in cui specifico tutti i valori nella stessa linea. Mi devo ricordare che i valori sono messi <strong>come i numeri di un orologio</strong> analogico: parto dall'alto e giro in senso orario, quindi nell'ordine sono top, right, bottom, left.</p>
+<details closed> 
+<summary>Esempi</summary>
+Nel seguente esempio imposto tutti e quattro i valori in una sola linea.
+<pre><code class="language-css">p {
+  background-color: red;
+  padding: 0px 15px 30px 50px;
+}
+</code></pre>
+<style>
+  .css-inline {
+    background-color: red;
+    padding: 0px 15px 30px 50px;
+  }
+</style>
+<p>Il risultato:</p>
+<p>
+<span class="css-inline">ciao</span>
+</p>
+</details>
+<h3 id="dove-metto-il-tag-style"><a class="header" href="#dove-metto-il-tag-style">Dove metto il tag style?</a></h3>
+<p>Lo stile è considerato un metadato, quindi come tutti i metadati la <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element">documentazione ufficiale</a> richiede di metterlo all'interno del tag <code>&lt;html&gt;</code>, di solito subito prima del tag di chiusura.</p>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;style&gt;
+    /* mettere qui lo stile */
+  &lt;style&gt;
+&lt;/head&gt;
+</code></pre>
+<p>Ci sono altri modi per includere un foglio di stile salvato come un file <code>.css</code> a sé stante, li vedremo successivamente.</p>
 
                     </main>
 
