@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-error404.html"><strong aria-hidden="true">6.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html" class="active"><strong aria-hidden="true">7.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">8.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">9.</strong> Git</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-selectors.html"><strong aria-hidden="true">6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="07-error404.html"><strong aria-hidden="true">7.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html" class="active"><strong aria-hidden="true">8.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">9.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">10.</strong> Git</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -309,7 +309,7 @@ $ nano config
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="06-error404.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="07-error404.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                             <a rel="next" href="index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
@@ -321,7 +321,7 @@ $ nano config
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="06-error404.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="07-error404.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                     <a rel="next" href="index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
@@ -331,6 +331,20 @@ $ nano config
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
