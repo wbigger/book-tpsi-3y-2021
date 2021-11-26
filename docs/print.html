@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">6.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">7.</strong> HMTL template</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-error404.html"><strong aria-hidden="true">6.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">7.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">8.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">9.</strong> Git</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -207,7 +207,7 @@ arriviamo alle scatole più interne che saranno vuote.</p>
 <h3 id="altri-esempi"><a class="header" href="#altri-esempi">Altri esempi</a></h3>
 <img title="w3schools page cut" alt="w3schools page cut" src="assets/w3schools-cut.png">
 <img title="justeat page cut" alt="justeat page cut" src="assets/justeat-cut.png"><div style="break-before: page; page-break-before: always;"></div><h1 id="la-mia-prima-pagina"><a class="header" href="#la-mia-prima-pagina">La mia prima pagina</a></h1>
-<p>In questo tutorial, non vogliamo solo creare una pagina ma mettere le basi per un progetto completo.</p>
+<p>In questo tutorial, oltre a creare una pagina vogliamo mettere le basi per un progetto completo.</p>
 <p>Useremo:</p>
 <ul>
 <li>GitHub per il repository</li>
@@ -260,10 +260,17 @@ arriviamo alle scatole più interne che saranno vuote.</p>
 <p>Ora create il vostro primo file <code>index.html</code> usando il comando <code>nano</code>:</p>
 <pre><code class="language-sh">nano index.html
 </code></pre>
-<p>Create la pagina web come da progetto grafico:</p>
+<h2 id="modifica-del-progetto"><a class="header" href="#modifica-del-progetto">Modifica del progetto</a></h2>
+<p>Il progetto grafico della nostra pagina web è il seguente:</p>
 <figure class="center">
   <img class="w100p" title="error503" alt="error503" src="assets/error503.jpg">
 </figure>
+<p>In questa pagina possiamo vedere che ci sono solo due elementi: un titolo con sotto un paragrafo. Per il titolo, possiamo usare il tag <a href="https://www.w3schools.com/tags/tag_hn.asp">h1</a>, mentre per il paragrafo il tag <a href="https://www.w3schools.com/tags/tag_p.asp">p</a>.</p>
+<p>La pagina verrà come segue:</p>
+<pre><code class="language-html">&lt;h1&gt;503 Service Unavailable&lt;/h1&gt;
+&lt;p&gt;No server is available to handle this request.&lt;/p&gt;
+</code></pre>
+<p>Mi raccomando controllate che sia la correttezza delle parole e la capitalizzazione delle lettere (maiuscole e minuscole). In questa fase, dal punto di vista visivo dovete solo riportare fedelmente quanto previsto dal progetto grafico, senza inventare o modificare nulla.</p>
 <p>Dopo aver salvato il file, controllate che la pagina sia corretta andando dal browser sul link: https://studenti.marconicloud.it/nome_utente/error503, facendo ovviamente attenzione a sostituire <code>nome_utente</code> con il vostro nome utente.</p>
 <p>Se è tutto OK, potete passare alla parte di sincronizzazione delle modifiche con GitHub.</p>
 <h2 id="sincronizzare-le-modifiche"><a class="header" href="#sincronizzare-le-modifiche">Sincronizzare le modifiche</a></h2>
@@ -295,8 +302,8 @@ arriviamo alle scatole più interne che saranno vuote.</p>
 </code></pre>
 <p>Vi chiederà nome utente e password. Attenzione che <strong>come password dovete inserire il token</strong> che abbiamo generato poco fa.</p>
 <p>Finalmente, è fatta! Se tutto è andato bene potrete vedere la vostra pagina index.html anche su GitHub.</p>
-<h2 id="video-tutorial"><a class="header" href="#video-tutorial">Video tutorial</a></h2>
-<p>Di seguito le stesse operazioni in un video tutorial.</p>
+<h2 id="video-tutorial-per-la-creazione-di-un-progetto-su-github"><a class="header" href="#video-tutorial-per-la-creazione-di-un-progetto-su-github">Video tutorial per la creazione di un progetto su GitHub</a></h2>
+<p>Di seguito le stesse operazioni per la creazione di un progetto su GitHub in un video tutorial. Il progetto nel video si chiama error404, ma le operazioni sono le stesse.</p>
 <iframe src="https://drive.google.com/file/d/1GTQyvvf01qAFK_DJzdLylhoca-Pdv_pm/preview" width="640" height="480" allow="autoplay"></iframe>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sintassi-html"><a class="header" href="#sintassi-html">Sintassi HTML</a></h1>
 <p>Dopo essersi riscaldati un po' con un &quot;splash project&quot;, vediamo di razionalizzare ed assimilare correttamente quello che abbiamo fatto.</p>
@@ -346,7 +353,7 @@ arriviamo alle scatole più interne che saranno vuote.</p>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 </code></pre>
 <p>Questa dichiarazione è simile ad un tag, ma con l'aggiunta di un punto esclamativo subito dopo la parentesi angolare aperta. Questa strategia di usare un punto esclamativo (<em>bang</em> nel dialetto geek) per specificare il tipo di file è molto usata nei linguaggi di programmazione, e la vedrete anche negli script per la shell.</p>
-<h3 id="tag-html"><a class="header" href="#tag-html">Tag <html></a></h3>
+<h3 id="tag-html"><a class="header" href="#tag-html">Tag <code>&lt;html&gt;</code></a></h3>
 <p>Come abbiamo detto nel capitolo precedente, la struttura di una pagina HTML è come un albero, che parte da un tronco. Questo tronco è rappresentato dal tag <code>&lt;html&gt;</code>.</p>
 <pre><code class="language-html">&lt;html&gt;
 &lt;/html&gt;
@@ -356,7 +363,7 @@ arriviamo alle scatole più interne che saranno vuote.</p>
 &lt;/html&gt;
 </code></pre>
 <p>Dal tag html si dipartono due rami: <code>&lt;head&gt;</code> e <code>&lt;body&gt;</code>.</p>
-<h3 id="tag-head"><a class="header" href="#tag-head">Tag <head></a></h3>
+<h3 id="tag-head"><a class="header" href="#tag-head">Tag <code>&lt;head&gt;</code></a></h3>
 <p>Il tag <code>&lt;head&gt;</code> contiene tutti i <strong>metadati</strong>. I metadati sono dei dati che riguardano la pagina, ma non vengono visualizzati direttamente all'interno di essa. Vediamo i più importanti:</p>
 <ul>
 <li><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>: specifica la codifica dei caratteri; in generale sarà sempre UTF-8 (unicode)</li>
@@ -364,7 +371,7 @@ arriviamo alle scatole più interne che saranno vuote.</p>
 <li><code>&lt;title&gt;Document&lt;/title&gt;</code>: specifica il titolo della pagina, che ad esempio nei browser viene visualizzato all'interno del tab in alto</li>
 </ul>
 <p>Altri metadati che possono essere inclusi nel tag <code>&lt;head&gt;</code> sono ad esempio lo stile e, in alcuni casi, gli script.</p>
-<h3 id="tag-body"><a class="header" href="#tag-body">Tag <body></a></h3>
+<h3 id="tag-body"><a class="header" href="#tag-body">Tag <code>&lt;body&gt;</code></a></h3>
 <p>All'interno del tag body troviamo tutti gli elementi che verranno effettivamente <em>renderizzati</em> all'interno della nostra pagina: intestazioni, paragrafi, immagini, suoni, video, barre di navigazione, sezioni, etc. etc.</p>
 <div style="break-before: page; page-break-before: always;"></div><style>
 .centered {
@@ -562,12 +569,15 @@ Nel seguente esempio imposto tutti e quattro i valori in una sola linea.
 <h3 id="dove-metto-il-tag-style"><a class="header" href="#dove-metto-il-tag-style">Dove metto il tag style?</a></h3>
 <p>Lo stile è considerato un metadato, quindi come tutti i metadati la <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element">documentazione ufficiale</a> richiede di metterlo all'interno del tag <code>&lt;html&gt;</code>, di solito subito prima del tag di chiusura.</p>
 <pre><code class="language-html">&lt;head&gt;
+  &lt;!-- altri metadati qui --&gt;
   &lt;style&gt;
     /* mettere qui lo stile */
   &lt;style&gt;
 &lt;/head&gt;
 </code></pre>
 <p>Ci sono altri modi per includere un foglio di stile salvato come un file <code>.css</code> a sé stante, li vedremo successivamente.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="progetto-error404"><a class="header" href="#progetto-error404">Progetto: error404</a></h1>
+<p>Video tutorial: work in progress...</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comandi-linux"><a class="header" href="#comandi-linux">Comandi linux</a></h1>
 <h2 id="echo"><a class="header" href="#echo">echo</a></h2>
 <p>Ritorna un'&quot;eco&quot; del suo argomento sul terminale.</p>
@@ -749,7 +759,23 @@ $ nano config
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<p>Questo è il template generato da Visual Studio Code, quando create un nuovo file <em>vuoto</em> con estensione <code>.html</code> e premete il punto esclamativo.</p>
+<p>Questo è il template generato da Visual Studio Code, quando create un nuovo file con estensione <code>.html</code> e premete il punto esclamativo nel file <em>vuoto</em>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git-reference"><a class="header" href="#git-reference">Git reference</a></h1>
+<p>Potete trovare una guida scritta da me <a href="https://docs.google.com/presentation/d/1o42cReRBknnztQC9EXVKnv1EcsKUH925bhDBi5_bCwA/edit#slide=id.g26d59fe837_1_0">qui</a>.</p>
+<h2 id="operazioni-comuni"><a class="header" href="#operazioni-comuni">Operazioni comuni</a></h2>
+<p>Per aggiungere un file:</p>
+<pre><code class="language-sh">git add nomefile
+</code></pre>
+<p>Per committare i file aggiunti:</p>
+<pre><code class="language-sh">git commit
+</code></pre>
+<p>e scrivere un messaggio di commit, che deve iniziare con un verbo.</p>
+<p>Per inviare le modifiche locali al server remoto (GitHub):</p>
+<pre><code class="language-sh">git push
+</code></pre>
+<p>Per prendere le modifiche dal server remoto e portarle nel computer locali:</p>
+<pre><code class="language-sh">git pull
+</code></pre>
 
                     </main>
 

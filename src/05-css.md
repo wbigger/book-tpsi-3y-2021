@@ -237,6 +237,7 @@ Lo stile è considerato un metadato, quindi come tutti i metadati la [documentaz
 
 ```html
 <head>
+  <!-- altri metadati qui -->
   <style>
     /* mettere qui lo stile */
   <style>

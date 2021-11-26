@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>La mia prima pagina - TPSI - Terzo anno</title>
+        <title>La mia prima pagina: error503 - TPSI - Terzo anno</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Materiale di supporto alle lezioni.">
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html" class="active"><strong aria-hidden="true">3.</strong> La mia prima pagina</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">6.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">7.</strong> HMTL template</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html" class="active"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-error404.html"><strong aria-hidden="true">6.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">7.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">8.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">9.</strong> Git</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -139,7 +139,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="la-mia-prima-pagina"><a class="header" href="#la-mia-prima-pagina">La mia prima pagina</a></h1>
-<p>In questo tutorial, non vogliamo solo creare una pagina ma mettere le basi per un progetto completo.</p>
+<p>In questo tutorial, oltre a creare una pagina vogliamo mettere le basi per un progetto completo.</p>
 <p>Useremo:</p>
 <ul>
 <li>GitHub per il repository</li>
@@ -192,10 +192,17 @@
 <p>Ora create il vostro primo file <code>index.html</code> usando il comando <code>nano</code>:</p>
 <pre><code class="language-sh">nano index.html
 </code></pre>
-<p>Create la pagina web come da progetto grafico:</p>
+<h2 id="modifica-del-progetto"><a class="header" href="#modifica-del-progetto">Modifica del progetto</a></h2>
+<p>Il progetto grafico della nostra pagina web è il seguente:</p>
 <figure class="center">
   <img class="w100p" title="error503" alt="error503" src="assets/error503.jpg">
 </figure>
+<p>In questa pagina possiamo vedere che ci sono solo due elementi: un titolo con sotto un paragrafo. Per il titolo, possiamo usare il tag <a href="https://www.w3schools.com/tags/tag_hn.asp">h1</a>, mentre per il paragrafo il tag <a href="https://www.w3schools.com/tags/tag_p.asp">p</a>.</p>
+<p>La pagina verrà come segue:</p>
+<pre><code class="language-html">&lt;h1&gt;503 Service Unavailable&lt;/h1&gt;
+&lt;p&gt;No server is available to handle this request.&lt;/p&gt;
+</code></pre>
+<p>Mi raccomando controllate che sia la correttezza delle parole e la capitalizzazione delle lettere (maiuscole e minuscole). In questa fase, dal punto di vista visivo dovete solo riportare fedelmente quanto previsto dal progetto grafico, senza inventare o modificare nulla.</p>
 <p>Dopo aver salvato il file, controllate che la pagina sia corretta andando dal browser sul link: https://studenti.marconicloud.it/nome_utente/error503, facendo ovviamente attenzione a sostituire <code>nome_utente</code> con il vostro nome utente.</p>
 <p>Se è tutto OK, potete passare alla parte di sincronizzazione delle modifiche con GitHub.</p>
 <h2 id="sincronizzare-le-modifiche"><a class="header" href="#sincronizzare-le-modifiche">Sincronizzare le modifiche</a></h2>
@@ -227,8 +234,8 @@
 </code></pre>
 <p>Vi chiederà nome utente e password. Attenzione che <strong>come password dovete inserire il token</strong> che abbiamo generato poco fa.</p>
 <p>Finalmente, è fatta! Se tutto è andato bene potrete vedere la vostra pagina index.html anche su GitHub.</p>
-<h2 id="video-tutorial"><a class="header" href="#video-tutorial">Video tutorial</a></h2>
-<p>Di seguito le stesse operazioni in un video tutorial.</p>
+<h2 id="video-tutorial-per-la-creazione-di-un-progetto-su-github"><a class="header" href="#video-tutorial-per-la-creazione-di-un-progetto-su-github">Video tutorial per la creazione di un progetto su GitHub</a></h2>
+<p>Di seguito le stesse operazioni per la creazione di un progetto su GitHub in un video tutorial. Il progetto nel video si chiama error404, ma le operazioni sono le stesse.</p>
 <iframe src="https://drive.google.com/file/d/1GTQyvvf01qAFK_DJzdLylhoca-Pdv_pm/preview" width="640" height="480" allow="autoplay"></iframe>
 
                     </main>

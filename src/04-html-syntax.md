@@ -67,7 +67,7 @@ Tutte le pagine HTML devono cominciare con una "dichiarazione" (declaration) che
 
 Questa dichiarazione è simile ad un tag, ma con l'aggiunta di un punto esclamativo subito dopo la parentesi angolare aperta. Questa strategia di usare un punto esclamativo (_bang_ nel dialetto geek) per specificare il tipo di file è molto usata nei linguaggi di programmazione, e la vedrete anche negli script per la shell.
 
-### Tag <html>
+### Tag `<html>`
 Come abbiamo detto nel capitolo precedente, la struttura di una pagina HTML è come un albero, che parte da un tronco. Questo tronco è rappresentato dal tag `<html>`.
 
 ```html
@@ -84,7 +84,7 @@ Il tag html ha l'attributo "lang" che è importante specificare per permettere a
 
 Dal tag html si dipartono due rami: `<head>` e `<body>`.
 
-### Tag <head>
+### Tag `<head>`
 Il tag `<head>` contiene tutti i **metadati**. I metadati sono dei dati che riguardano la pagina, ma non vengono visualizzati direttamente all'interno di essa. Vediamo i più importanti:
 - `<meta charset="UTF-8">`: specifica la codifica dei caratteri; in generale sarà sempre UTF-8 (unicode)
 - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: rende il sito responsive, ovvero capace di adattare il contenuto alle dimensioni dello schermo
@@ -92,6 +92,6 @@ Il tag `<head>` contiene tutti i **metadati**. I metadati sono dei dati che rigu
 
 Altri metadati che possono essere inclusi nel tag `<head>` sono ad esempio lo stile e, in alcuni casi, gli script.
 
-### Tag <body>
+### Tag `<body>`
 All'interno del tag body troviamo tutti gli elementi che verranno effettivamente _renderizzati_ all'interno della nostra pagina: intestazioni, paragrafi, immagini, suoni, video, barre di navigazione, sezioni, etc. etc.
 

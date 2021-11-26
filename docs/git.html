@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>HTML panoramica - TPSI - Terzo anno</title>
+        <title>Git - TPSI - Terzo anno</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Materiale di supporto alle lezioni.">
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html" class="active"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-error404.html"><strong aria-hidden="true">6.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">7.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">8.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">9.</strong> Git</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-error404.html"><strong aria-hidden="true">6.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">7.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">8.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html" class="active"><strong aria-hidden="true">9.</strong> Git</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,57 +138,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="html"><a class="header" href="#html">HTML</a></h1>
-<h2 id="breve-storia"><a class="header" href="#breve-storia">Breve storia</a></h2>
-<p>Tutta la storia del web ebbe inizio con delle pagine rappresentate da un singolo file con estensione <code>.html</code>. Questo file comprendeva tutte le informazioni necessarie per visualizzare la pagina. Nei primi anni '90 del secolo scorso, le pagine erano statiche e lo stile per visualizzare gli elementi non era distinto dalle altre informazioni della pagina.</p>
-<p>Tim Berners Lee dal 1989 al 1993 lavorò in team per proporre le nuove tecnologie web come uno standard di Internet, e finalmente nel 1993 divenne a tutti gli effetti uno standard IETF (Internet Engineering Task Force). Nell'ottobre 1994 Berners-Lee fonda il World Wide Web Consortium (W3C) al Massachusetts Institute of Technology di Boston.</p>
-<p>Il lavoro del consorzio continua rilasciando nuove versioni a ritmo serrato, introducendo per esempio il CSS nel 1996, fino alla versione 4.01 del 2001. A questo punto si voleva dare una grossa svolta alle tecnologie web, abbandonando l'HTML a favore di XML, un formato più ricco ma anche molto più rigido e non retrocompatibile.</p>
-<p>Diverse grandi aziende, tra cui Apple, Mozilla, Opera e Google, non erano d'accordo con le decisioni del w3c e fondarono un nuovo gruppo di lavoro chiamato <a href="https://whatwg.org/">WHATWG</a> (Web Hypertext Application Technology Working Group). Cominciò così una collaborazione/scontro tra w3c e WHATWG che arrivò ad approvare lo standard HTML5 nel 2014 (14 anni dopo la versione HTML4!), che sostanzialmente ha recepito la linea del WHATWG che conosciamo oggi. La diatriba si è conclusa definitivamente nel 2019 con la cessione dell'authority sullo standard da parte del w3c a favore di WHATWG (vedi <a href="https://html.spec.whatwg.org/#history-2">qui</a> per maggiori dettagli).</p>
-<p>È importante sapere anche che HTML5 è considerato l'<em>ultima</em> versione di HTML, perché è considerato un <a href="https://html.spec.whatwg.org/">Living standard</a>, quindi non ha più rilasci di versione congelate ma è in continua evoluzione.</p>
-<h2 id="cosa-significa-struttura-di-una-pagina"><a class="header" href="#cosa-significa-struttura-di-una-pagina">Cosa significa &quot;struttura&quot; di una pagina?</a></h2>
-<p>Abbiamo detto che l'HTML definisce la &quot;struttura&quot; della pagina. Ma cosa significa esattamente?</p>
-<p>In poche parole, significa che l'HTML esprime il <em>significato</em> della pagina, non la sua presentazione. La stessa pagina può essere visualizzata in modo diverso in dispositivi diversi (desktop, smartphone, tablet, smartTV, smart watch, realtà virtuale...) o addirittura letta da dispositivi come Google Home o Alexa.</p>
-<p>Inoltre, se diamo un <em>senso</em> agli elementi della pagina, e li organizziamo in maniera opportuna, possiamo anche permettere ai browser di elaborare la pagina ed estrarre informazioni utili per noi. Per esempio potremmo chiedere al browser quali sono le voci del menu, o di andare alla sezione successiva.</p>
-<p>Come ultima cosa (ma non meno importante), i software dei vari motori di ricerca o i web spider possono interpretare con più esattezza la pagina ed estrarre informazioni utili da usare in altri siti o servizi.</p>
-<h2 id="esempi-di-struttura"><a class="header" href="#esempi-di-struttura">Esempi di struttura</a></h2>
-<p>Prendiamo ad esempio il seguente sito, che tratta di un bellissimo linguaggio di programmazione: <a href="https://www.rust-lang.org/">Rust</a>.</p>
-<figure>
-  <img class="w100p" title="rust" alt="rust page" src="assets/rust.png">
-</figure>
-<p>Proviamo ad analizzare la struttura della pagina. Notiamo che nella parte alta della pagina c'è un'intestazione che contiene informazioni particolarmente importanti, come ad esempio il logo e un <em>menù di navigazione</em>, per saltare rapidamente alle diverse sezioni della pagina. Nella parte più a destra dell'intestazione c'è un menù a tendina per scegliere la lingua preferita.</p>
-<p>Subito sotto, c'è una sezione in cui ci sono le informazioni più importanti su cui si vuole attirare l'attenzione del vistatore: il nome del sito, una breve descrizione (<em>tag line</em>), un bottoncione colorato per cominciare e sotto il bottone si specifica l'ultima versione del linguaggio.</p>
-<p>Scorrendo la pagina, si trovano altre sezioni con altre informazioni utili, fino ad arrivare in fondo in cui troviamo un <em>footer</em> con le informazioni legali, alcuni link per approfondire e le icone per i social network.</p>
-<p>Ogni singolo elemento della pagina è identificato nella pagina HTML sorgente con un nome che ne identifica il significato, il che rende molto più semplice visualizzarlo ad esempio per un cellulare, come nella figura di seguito.</p>
-<figure>
-  <img class="w50p" title="rust mobile page" alt="rust mobile page" src="assets/rust-mobile.png">
-</figure>
-<h2 id="organizzazione-degli-elementi-della-pagina"><a class="header" href="#organizzazione-degli-elementi-della-pagina">Organizzazione degli elementi della pagina</a></h2>
-<p>Un'altra cosa importante da capire a questo momento è come gli elementi di una pagina HTML si relazionano tra loro. Gli elementi sono organizzati con una struttura ad albero, o a scatole cinesi, in cui si parte da un elemento base a cui si agganciano tutti gli altri.</p>
-<p>Nella metafora ad albero, l'elemento base viene chiamato <em>radice</em> (anche se forse sarebbe più corretto chiamarlo tronco), da cui partono vari <em>rami</em> che finiscono con delle <em>foglie</em>. Molto spesso l'albero viene rappresentato rovesciato, con il tronco in alto.</p>
-<pre><code>             &lt;body&gt;                &lt;-- radice
-            /      \
-       &lt;nav&gt;        &lt;h1&gt;           &lt;-- rami o foglie
-      /     \
- &lt;img&gt;       &lt;ul&gt;                  &lt;-- foglie
+                        <h1 id="git-reference"><a class="header" href="#git-reference">Git reference</a></h1>
+<p>Potete trovare una guida scritta da me <a href="https://docs.google.com/presentation/d/1o42cReRBknnztQC9EXVKnv1EcsKUH925bhDBi5_bCwA/edit#slide=id.g26d59fe837_1_0">qui</a>.</p>
+<h2 id="operazioni-comuni"><a class="header" href="#operazioni-comuni">Operazioni comuni</a></h2>
+<p>Per aggiungere un file:</p>
+<pre><code class="language-sh">git add nomefile
 </code></pre>
-<p>Nella metafora a scatole cinesi, c'è una scatola esterna che contiene una o più scatole al suo interno, che a loro volta possono contenere altre scatole, e così via finché non 
-arriviamo alle scatole più interne che saranno vuote.</p>
-<img title="boxes" alt="boxes" src="assets/boxes.png">
-<p>Riprendendo l'esempio della pagina del linguaggio di programmazione Rust ed usando la metafora delle scatole, possiamo vedere che è stata organizzata nel seguente modo.</p>
-<img title="rust page cut" alt="rust page cut" src="assets/rust-cut-labels.png">
-<p>Questa operazione di suddividere la pagina web in sottoparti viene chiamata <strong>cutting</strong> (taglio) della pagina, ed è un'operazione che si svolge a dopo la fase di design e prima di quella di implementazione vera e propria.</p>
-<h3 id="altri-esempi"><a class="header" href="#altri-esempi">Altri esempi</a></h3>
-<img title="w3schools page cut" alt="w3schools page cut" src="assets/w3schools-cut.png">
-<img title="justeat page cut" alt="justeat page cut" src="assets/justeat-cut.png">
+<p>Per committare i file aggiunti:</p>
+<pre><code class="language-sh">git commit
+</code></pre>
+<p>e scrivere un messaggio di commit, che deve iniziare con un verbo.</p>
+<p>Per inviare le modifiche locali al server remoto (GitHub):</p>
+<pre><code class="language-sh">git push
+</code></pre>
+<p>Per prendere le modifiche dal server remoto e portarle nel computer locali:</p>
+<pre><code class="language-sh">git pull
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="01-internet-web.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a rel="next" href="03-first-page.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
                     </nav>
@@ -196,11 +168,8 @@ arriviamo alle scatole più interne che saranno vuote.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="01-internet-web.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a rel="next" href="03-first-page.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 

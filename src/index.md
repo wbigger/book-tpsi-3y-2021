@@ -17,4 +17,4 @@ Di seguito un template per una pagina `.html` vuota.
 </html>
 ```
 
-Questo è il template generato da Visual Studio Code, quando create un nuovo file _vuoto_ con estensione `.html` e premete il punto esclamativo.
+Questo è il template generato da Visual Studio Code, quando create un nuovo file con estensione `.html` e premete il punto esclamativo nel file _vuoto_.

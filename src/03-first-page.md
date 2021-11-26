@@ -1,6 +1,6 @@
 # La mia prima pagina
 
-In questo tutorial, non vogliamo solo creare una pagina ma mettere le basi per un progetto completo.
+In questo tutorial, oltre a creare una pagina vogliamo mettere le basi per un progetto completo.
 
 Useremo:
  - GitHub per il repository
@@ -67,10 +67,23 @@ Ora create il vostro primo file `index.html` usando il comando `nano`:
 nano index.html
 ```
 
-Create la pagina web come da progetto grafico:
+## Modifica del progetto
+Il progetto grafico della nostra pagina web è il seguente:
+
 <figure class="center">
   <img class="w100p" title="error503" alt="error503" src="assets/error503.jpg">
 </figure>
+
+In questa pagina possiamo vedere che ci sono solo due elementi: un titolo con sotto un paragrafo. Per il titolo, possiamo usare il tag [h1](https://www.w3schools.com/tags/tag_hn.asp), mentre per il paragrafo il tag [p](https://www.w3schools.com/tags/tag_p.asp).
+
+La pagina verrà come segue:
+
+```html
+<h1>503 Service Unavailable</h1>
+<p>No server is available to handle this request.</p>
+```
+
+Mi raccomando controllate che sia la correttezza delle parole e la capitalizzazione delle lettere (maiuscole e minuscole). In questa fase, dal punto di vista visivo dovete solo riportare fedelmente quanto previsto dal progetto grafico, senza inventare o modificare nulla.
 
 Dopo aver salvato il file, controllate che la pagina sia corretta andando dal browser sul link: https://studenti.marconicloud.it/nome_utente/error503, facendo ovviamente attenzione a sostituire `nome_utente` con il vostro nome utente.
 
@@ -118,10 +131,7 @@ Vi chiederà nome utente e password. Attenzione che **come password dovete inser
 
 Finalmente, è fatta! Se tutto è andato bene potrete vedere la vostra pagina index.html anche su GitHub.
 
-## Video tutorial
-Di seguito le stesse operazioni in un video tutorial.
+## Video tutorial per la creazione di un progetto su GitHub
+Di seguito le stesse operazioni per la creazione di un progetto su GitHub in un video tutorial. Il progetto nel video si chiama error404, ma le operazioni sono le stesse.
 
 <iframe src="https://drive.google.com/file/d/1GTQyvvf01qAFK_DJzdLylhoca-Pdv_pm/preview" width="640" height="480" allow="autoplay"></iframe>
-
-
-
