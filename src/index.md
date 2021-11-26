@@ -1,4 +1,4 @@
-# HMTL template
+# HTML template
 
 Di seguito un template per una pagina `.html` vuota.
 
