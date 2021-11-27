@@ -59,7 +59,6 @@ Se voglio invece mettere più selettori insieme, posso separarli da virgola. Ad 
 ```css
 h1, h2 {}
 ```
-
 ### Discendente
 Posso selezionare tutti gli elementi _discendenti_ di un elemento, mettendo semplicemente uno spazio. Per discendenti si intende figli, nipoti, pro-nipiti, etc.
 
@@ -72,26 +71,78 @@ Per selezionare solo i paragrafi all'interno dell'elemento con id pari a news:
 ### Figlio
 Per selezionare solo gli elementi che sono _figli diretti_ di un altro elemento uso il simbolo `>`:
 
+Per esempio se voglio selezionare solo i paragrafi immediatamente dentro #news (e non i paragrafi all'interno di altri sotto-elementi), posso scrivere:
+
 ```css
-#news p {}
+#news > p {}
 ```
 
-In questo caso selezionerò solo i paragrafi immediatamente dentro #news, e non eventuali paragrafi all'interno di sotto-elementi.
 
-### Classi o combinatori: quali usare?
+### Classi, id o combinatori: quali usare?
 Spesso ci si chiede: meglio aggiungere una classe o un id agli elementi che voglio selezionare, oppure trovarli con un combinatore?
 
 Come al solito, dipende, non c'è una risposta univoca. Alcune domande potrebbero essere:
 - qual è il modo più semplice?
 - come potrebbe cambiare il codice della pagina in futuro?
-- qual è la specificità della regola? considerate che i combinatori non influiscono sulla specificità
+- qual è la specificità della regola?
 
 L'esperienza in questi casi è fondamentale. Quindi... esercitatevi!
+
+## Specificità dei selettori
+I selettori hanno ognuno una propria specificità. Di seguito sono elencati dalla specificità più bassa alla più alta:
+
+- Tag (es. `h1`)
+- Classi (es. `.btn-green`)
+- ID (es. `#avatar`)
+
+In altre parole, come intuibile, le regole selezionate con l'ID avranno la precedenza sulle altre, seguite da quelle selezionate con le classi e poi dai generici tag. Il selettore universale ha specificità nulla (più bassa di tutte).
+
+Ad esempio, ipotizziamo di avere il seguente paragrafo:
+```html
+<p id="esempio" class="esempio">Ciao</p>
+```
+
+con il seguente CSS:
+```css
+#esempio { 
+    background-color: red;
+}
+
+p {
+    background-color: blue;
+}
+
+.esempio { 
+    background-color: green;
+}
+```
+
+Quale colore assumerà il paragrafo? La regola con l'ID ha la specificità più alta e verrà quindi applicata:
+
+<div id="true-html">
+<p id="esempio" class="esempio">Ciao</p>
+</div>
+<style>
+#true-html>#esempio { 
+    background-color: red;
+}
+#true-html>.esempio { 
+    background-color: green;
+}
+
+#true-html>p {
+    background-color: blue;
+}
+</style>
+
+> In caso di selettori combinati fra loro, esiste una formula per calcolare la specificità, si rimanda [qui](https://www.w3schools.com/css/css_specificity.asp) per maggiori dettagli.
+
+> Per vedere tutte le regole applicate ad un certo elemento potete usare i devTools di Chrome o Firefox; trovate le regole nel tab "style". Per indagare possibili conflitti tra regole, c'è [questa](https://developer.chrome.com/docs/devtools/css/overrides/) guida ufficiale di Chrome.
 
 ## Unità di misura
 Nelle dichiarazioni CSS, ci sono molti modi di specificare le dimensioni sullo schermo. Ne vediamo alcune fra le più comuni. Per maggiori dettagli vedi [qui](https://www.w3schools.com/cssref/css_units.asp).
 
-### Pixels
+### Pixels (px)
 Il modo più semplice è specificare il numero di pixels:
 
 ```css
@@ -102,7 +153,7 @@ Il modo più semplice è specificare il numero di pixels:
 
 Questa unità può essere adatta per fissare degli elementi nello schermo, come ad esempio bottoni fluttuanti, o per specificare la distanza tra elementi vicini. Però non è responsive: al cambiare della dimensione dello schermo la distanza rimane sempre la stessa, e questo spesso non è quello che vogliamo.
 
-### Percentuale
+### Percentuale (%)
 Si può impostare la dimensione come percentuale dell'elemento _contenitore_. Ad esempio, se voglio che il mio paragrafo occupi il 50% della dimensione del proprio contenitore, posso scrivere:
 
 ```css
@@ -113,7 +164,7 @@ p {
 
 In questo caso però devo stare attento alla dimensione del contenitore: se il contenitore si adatta al contenuto, ed il contenuto si adatta al contenitore in percentuale, c'è qualcosa che non va. Devo quindi fare sempre attenzione che il contenitore abbia una grandezza nota al browser, per esempio impostando una dimensione fissa in pixel.
 
-### Relativo alla dimensione del testo
+### Relativo alla dimensione del testo (rem)
 In molti casi può essere utile avere delle dimensioni che si adattano alla grandezza del testo; in questo caso si usa `rem`:
 
 ```css

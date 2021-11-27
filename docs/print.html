@@ -621,35 +621,80 @@ Nel seguente esempio imposto tutti e quattro i valori in una sola linea.
 </code></pre>
 <h3 id="figlio"><a class="header" href="#figlio">Figlio</a></h3>
 <p>Per selezionare solo gli elementi che sono <em>figli diretti</em> di un altro elemento uso il simbolo <code>&gt;</code>:</p>
-<pre><code class="language-css">#news p {}
+<p>Per esempio se voglio selezionare solo i paragrafi immediatamente dentro #news (e non i paragrafi all'interno di altri sotto-elementi), posso scrivere:</p>
+<pre><code class="language-css">#news &gt; p {}
 </code></pre>
-<p>In questo caso selezionerò solo i paragrafi immediatamente dentro #news, e non eventuali paragrafi all'interno di sotto-elementi.</p>
-<h3 id="classi-o-combinatori-quali-usare"><a class="header" href="#classi-o-combinatori-quali-usare">Classi o combinatori: quali usare?</a></h3>
+<h3 id="classi-id-o-combinatori-quali-usare"><a class="header" href="#classi-id-o-combinatori-quali-usare">Classi, id o combinatori: quali usare?</a></h3>
 <p>Spesso ci si chiede: meglio aggiungere una classe o un id agli elementi che voglio selezionare, oppure trovarli con un combinatore?</p>
 <p>Come al solito, dipende, non c'è una risposta univoca. Alcune domande potrebbero essere:</p>
 <ul>
 <li>qual è il modo più semplice?</li>
 <li>come potrebbe cambiare il codice della pagina in futuro?</li>
-<li>qual è la specificità della regola? considerate che i combinatori non influiscono sulla specificità</li>
+<li>qual è la specificità della regola?</li>
 </ul>
 <p>L'esperienza in questi casi è fondamentale. Quindi... esercitatevi!</p>
+<h2 id="specificità-dei-selettori"><a class="header" href="#specificità-dei-selettori">Specificità dei selettori</a></h2>
+<p>I selettori hanno ognuno una propria specificità. Di seguito sono elencati dalla specificità più bassa alla più alta:</p>
+<ul>
+<li>Tag (es. <code>h1</code>)</li>
+<li>Classi (es. <code>.btn-green</code>)</li>
+<li>ID (es. <code>#avatar</code>)</li>
+</ul>
+<p>In altre parole, come intuibile, le regole selezionate con l'ID avranno la precedenza sulle altre, seguite da quelle selezionate con le classi e poi dai generici tag. Il selettore universale ha specificità nulla (più bassa di tutte).</p>
+<p>Ad esempio, ipotizziamo di avere il seguente paragrafo:</p>
+<pre><code class="language-html">&lt;p id=&quot;esempio&quot; class=&quot;esempio&quot;&gt;Ciao&lt;/p&gt;
+</code></pre>
+<p>con il seguente CSS:</p>
+<pre><code class="language-css">#esempio { 
+    background-color: red;
+}
+
+p {
+    background-color: blue;
+}
+
+.esempio { 
+    background-color: green;
+}
+</code></pre>
+<p>Quale colore assumerà il paragrafo? La regola con l'ID ha la specificità più alta e verrà quindi applicata:</p>
+<div id="true-html">
+<p id="esempio" class="esempio">Ciao</p>
+</div>
+<style>
+#true-html>#esempio { 
+    background-color: red;
+}
+#true-html>.esempio { 
+    background-color: green;
+}
+<p>#true-html&gt;p {
+background-color: blue;
+}
+</style></p>
+<blockquote>
+<p>In caso di selettori combinati fra loro, esiste una formula per calcolare la specificità, si rimanda <a href="https://www.w3schools.com/css/css_specificity.asp">qui</a> per maggiori dettagli.</p>
+</blockquote>
+<blockquote>
+<p>Per vedere tutte le regole applicate ad un certo elemento potete usare i devTools di Chrome o Firefox; trovate le regole nel tab &quot;style&quot;. Per indagare possibili conflitti tra regole, c'è <a href="https://developer.chrome.com/docs/devtools/css/overrides/">questa</a> guida ufficiale di Chrome.</p>
+</blockquote>
 <h2 id="unità-di-misura"><a class="header" href="#unità-di-misura">Unità di misura</a></h2>
 <p>Nelle dichiarazioni CSS, ci sono molti modi di specificare le dimensioni sullo schermo. Ne vediamo alcune fra le più comuni. Per maggiori dettagli vedi <a href="https://www.w3schools.com/cssref/css_units.asp">qui</a>.</p>
-<h3 id="pixels"><a class="header" href="#pixels">Pixels</a></h3>
+<h3 id="pixels-px"><a class="header" href="#pixels-px">Pixels (px)</a></h3>
 <p>Il modo più semplice è specificare il numero di pixels:</p>
 <pre><code class="language-css"> p {
     margin-top: 50px;
 }
 </code></pre>
 <p>Questa unità può essere adatta per fissare degli elementi nello schermo, come ad esempio bottoni fluttuanti, o per specificare la distanza tra elementi vicini. Però non è responsive: al cambiare della dimensione dello schermo la distanza rimane sempre la stessa, e questo spesso non è quello che vogliamo.</p>
-<h3 id="percentuale"><a class="header" href="#percentuale">Percentuale</a></h3>
+<h3 id="percentuale-"><a class="header" href="#percentuale-">Percentuale (%)</a></h3>
 <p>Si può impostare la dimensione come percentuale dell'elemento <em>contenitore</em>. Ad esempio, se voglio che il mio paragrafo occupi il 50% della dimensione del proprio contenitore, posso scrivere:</p>
 <pre><code class="language-css">p {
     width: 50%;
 }
 </code></pre>
 <p>In questo caso però devo stare attento alla dimensione del contenitore: se il contenitore si adatta al contenuto, ed il contenuto si adatta al contenitore in percentuale, c'è qualcosa che non va. Devo quindi fare sempre attenzione che il contenitore abbia una grandezza nota al browser, per esempio impostando una dimensione fissa in pixel.</p>
-<h3 id="relativo-alla-dimensione-del-testo"><a class="header" href="#relativo-alla-dimensione-del-testo">Relativo alla dimensione del testo</a></h3>
+<h3 id="relativo-alla-dimensione-del-testo-rem"><a class="header" href="#relativo-alla-dimensione-del-testo-rem">Relativo alla dimensione del testo (rem)</a></h3>
 <p>In molti casi può essere utile avere delle dimensioni che si adattano alla grandezza del testo; in questo caso si usa <code>rem</code>:</p>
 <pre><code class="language-css">#La dimensione del testo di questo paragrafo è il doppio rispetto a quella base.
 p.big {
