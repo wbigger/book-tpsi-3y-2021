@@ -168,7 +168,7 @@ In questo caso però devo stare attento alla dimensione del contenitore: se il c
 In molti casi può essere utile avere delle dimensioni che si adattano alla grandezza del testo; in questo caso si usa `rem`:
 
 ```css
-#La dimensione del testo di questo paragrafo è il doppio rispetto a quella base.
+/* La dimensione del testo di questo paragrafo è il doppio rispetto a quella base. */
 p.big {
     font-size: 2rem;
 }
