@@ -6,7 +6,8 @@
 - [Sintassi HTML](./04-html-syntax.md)
 - [CSS](./05-css.md)
 - [Selettori](./06-selectors.md)
-- [Progetto: error404](./07-error404.md)
+- [Unità e colori](./07-units-colors.md)
+- [Progetto: error404](./08-error404.md)
 -----
 - [Comandi linux](./linux.md)
 - [HMTL template](./index.md)

@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-selectors.html"><strong aria-hidden="true">6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="07-error404.html"><strong aria-hidden="true">7.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">8.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">9.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">10.</strong> Git</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-selectors.html"><strong aria-hidden="true">6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="07-units-colors.html"><strong aria-hidden="true">7.</strong> Unità e colori</a></li><li class="chapter-item expanded "><a href="08-error404.html"><strong aria-hidden="true">8.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">9.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">10.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">11.</strong> Git</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -566,6 +566,48 @@ Nel seguente esempio imposto tutti e quattro i valori in una sola linea.
 <span class="css-inline">ciao</span>
 </p>
 </details>
+<h3 id="centrare-un-elemento-orizzontalmente"><a class="header" href="#centrare-un-elemento-orizzontalmente">Centrare un elemento orizzontalmente</a></h3>
+<p>Per centrare un elemento orizzontalmente, possiamo usare la proprietà <code>margin</code> con valore <code>auto</code>.</p>
+<pre><code class="language-css">p { margin:auto;}
+</code></pre>
+<p>Cosa significa esattamente? Il browser calcola la dimensione del paragrafo, la dimensione del suo contenitore, e imposta i margini a destra e sinistra in modo che siano uguali. Ricordiamo però che, per gli elementi block, la dimensione dell'elemento è esattamente pari a quella del contenitore, quindi verranno impostati entrambi i margini a zero. Per evitare questo, possiamo impostare la dimensione dell'elemento che vogliamo centrare con width: </p>
+<pre><code class="language-css">p {
+  margin:auto;
+  width: 50%;
+  background-color: gray;
+}
+</code></pre>
+<p>Risultato:</p>
+<style>
+  #example-2>p {
+  margin:auto;
+  width: 50%;
+  background-color: gray;
+}
+</style>
+<div id="example-2">
+ <p>Buongiorno a tutti!</p>
+</div>
+<p>Attenzione: in questo caso l'elemento è centrato (come vedete dal colore di sfondo) ma non il testo al suo interno. Per centrare anche il testo all'interno dell'elemento, dobbiamo usare la proprietà <code>text-align:center</code>.</p>
+<pre><code class="language-css">p {
+  /* ... */
+  text-align: center;
+}
+</code></pre>
+<style>
+  #example-3>p {
+  margin:auto;
+  width: 50%;
+  background-color: gray;
+  text-align: center;
+}
+</style>
+<div id="example-3">
+ <p>Buongiorno a tutti!</p>
+</div>
+<blockquote>
+<p>Ci sono molti altri modi per centrare un elemento orizzontalmente e verticalmente. Per una carrellata piuttosto esaustiva si rimanda <a href="https://www.w3schools.com/css/css_align.asp">qui</a>.</p>
+</blockquote>
 <h3 id="dove-metto-il-tag-style"><a class="header" href="#dove-metto-il-tag-style">Dove metto il tag style?</a></h3>
 <p>Lo stile è considerato un metadato, quindi come tutti i metadati la <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element">documentazione ufficiale</a> richiede di metterlo all'interno del tag <code>&lt;html&gt;</code>, di solito subito prima del tag di chiusura.</p>
 <pre><code class="language-html">&lt;head&gt;
@@ -678,6 +720,15 @@ background-color: blue;
 <blockquote>
 <p>Per vedere tutte le regole applicate ad un certo elemento potete usare i devTools di Chrome o Firefox; trovate le regole nel tab &quot;style&quot;. Per indagare possibili conflitti tra regole, c'è <a href="https://developer.chrome.com/docs/devtools/css/overrides/">questa</a> guida ufficiale di Chrome.</p>
 </blockquote>
+<h2 id="riepilogo"><a class="header" href="#riepilogo">Riepilogo</a></h2>
+<p>Ricapitolando, i selettori di base sono di 3 tipi:</p>
+<ul>
+<li>tag: non hanno nessun prefisso, selezionano tutti gli elementi con il tag selezionato. Ad esempio <code>div {background-color:red}</code> colora di rosso lo sfondo di tutti gli elementi con il tag div</li>
+<li>id: ha come prefisso <code>#</code> (cancelletto), seleziona l'elemento che ha come attributo id il valore specificato. Ad esempio <code>#my-title {font-weight:bold}</code> rende grassetto l'elemento che ha come attributo <code>id=&quot;my-title&quot;</code></li>
+<li>class: ha come prefisso <code>.</code> (punto), seleziona tutti gli elementi che hanno come attributo il valore specificato. Ad esempio <code>.small-images {width=5%}</code> imposta la larghezza di tutti gli elementi che hanno come attributo <code>class=&quot;small-images</code> al 5% della larghezza dello schermo.</li>
+</ul>
+<p>Esistono molti altri modi di selezionare gli elementi, ma si basano tutti su questi concetti base. Per maggiori informazioni potete consultare <a href="https://www.w3schools.com/cssref/css_selectors.asp">questa</a> pagina.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unità-e-colori"><a class="header" href="#unità-e-colori">Unità e colori</a></h1>
 <h2 id="unità-di-misura"><a class="header" href="#unità-di-misura">Unità di misura</a></h2>
 <p>Nelle dichiarazioni CSS, ci sono molti modi di specificare le dimensioni sullo schermo. Ne vediamo alcune fra le più comuni. Per maggiori dettagli vedi <a href="https://www.w3schools.com/cssref/css_units.asp">qui</a>.</p>
 <h3 id="pixels-px"><a class="header" href="#pixels-px">Pixels (px)</a></h3>
@@ -693,7 +744,6 @@ background-color: blue;
     width: 50%;
 }
 </code></pre>
-<p>In questo caso però devo stare attento alla dimensione del contenitore: se il contenitore si adatta al contenuto, ed il contenuto si adatta al contenitore in percentuale, c'è qualcosa che non va. Devo quindi fare sempre attenzione che il contenitore abbia una grandezza nota al browser, per esempio impostando una dimensione fissa in pixel.</p>
 <h3 id="relativo-alla-dimensione-del-testo-rem"><a class="header" href="#relativo-alla-dimensione-del-testo-rem">Relativo alla dimensione del testo (rem)</a></h3>
 <p>In molti casi può essere utile avere delle dimensioni che si adattano alla grandezza del testo; in questo caso si usa <code>rem</code>:</p>
 <pre><code class="language-css">/* La dimensione del testo di questo paragrafo è il doppio rispetto a quella base. */
@@ -702,14 +752,36 @@ p.big {
 }
 </code></pre>
 <p>Le dimensioni relative al testo sono molto utili anche perché scalano automaticamente quando si ingrandisce o rimpicciolisce il testo della pagina.</p>
-<h2 id="riepilogo"><a class="header" href="#riepilogo">Riepilogo</a></h2>
-<p>Ricapitolando, i selettori di base sono di 3 tipi:</p>
-<ul>
-<li>tag: non hanno nessun prefisso, selezionano tutti gli elementi con il tag selezionato. Ad esempio <code>div {background-color:red}</code> colora di rosso lo sfondo di tutti gli elementi con il tag div</li>
-<li>id: ha come prefisso <code>#</code> (cancelletto), seleziona l'elemento che ha come attributo id il valore specificato. Ad esempio <code>#my-title {font-weight:bold}</code> rende grassetto l'elemento che ha come attributo <code>id=&quot;my-title&quot;</code></li>
-<li>class: ha come prefisso <code>.</code> (punto), seleziona tutti gli elementi che hanno come attributo il valore specificato. Ad esempio <code>.small-images {width=5%}</code> imposta la larghezza di tutti gli elementi che hanno come attributo <code>class=&quot;small-images</code> al 5% della larghezza dello schermo.</li>
-</ul>
-<p>Esistono molti altri modi di selezionare gli elementi, ma si basano tutti su questi concetti base. Per maggiori informazioni potete consultare <a href="https://www.w3schools.com/cssref/css_selectors.asp">questa</a> pagina.</p>
+<h2 id="colori"><a class="header" href="#colori">Colori</a></h2>
+<p>Per scegliere un colore, abbiamo diverse possibilità.</p>
+<h3 id="nome-del-colore"><a class="header" href="#nome-del-colore">Nome del colore</a></h3>
+<p>Possiamo scegliere un colore usando il nome della paletta CSS.</p>
+<pre><code class="language-css">p {
+    background-color: lightgreen;
+}
+</code></pre>
+<div style="background-color: lightgreen;">Sono verde chiaro</div>
+<p>Potete vedere la lista completa dei colori supportata dalla maggior parte dei browser <a href="https://www.w3schools.com/colors/colors_names.asp">qui</a>.</p>
+<h3 id="rgb"><a class="header" href="#rgb">RGB</a></h3>
+<p>Un altro modo è specificare le componenti RGB:</p>
+<pre><code class="language-css">p {
+    background-color: rgb(200,200,200);
+}
+</code></pre>
+<div style="background-color: rgb(200,200,200);">Sono grigio chiaro</div>
+<p>Questo è particolarmente utile quando si usa ad esempio il color-picker per prendere un colore dallo schermo o da una immagine.</p>
+<h3 id="hex"><a class="header" href="#hex">Hex</a></h3>
+<p>Un altro modo molto usato nel web design, è usare l'RGB ma con valori esadecimali anziché decimali. Le tre cifre RGB in esadecimale si scrivono una di seguito all'altra, senza spazi, precedute da un cancelletto <code>#</code>.</p>
+<pre><code class="language-css">p {
+    background-color: #0000FF;
+}
+</code></pre>
+<div style="background-color: #0000FF;color:white">Sono blu!</div>
+<p>Ricordiamo che un byte esadecimale va da 00 (spento) a FF (255-tutto acceso).</p>
+<p>La conversione tra RGB decimale ed esadecimale è un semplice calcolo matematico, quindi è una questione di comodità e preferenze.</p>
+<blockquote>
+<p>Per convertire tra decimale ed esadecimale, potete usare <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp">questo</a>.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="progetto-error404"><a class="header" href="#progetto-error404">Progetto: error404</a></h1>
 <p>Video tutorial: work in progress...</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comandi-linux"><a class="header" href="#comandi-linux">Comandi linux</a></h1>

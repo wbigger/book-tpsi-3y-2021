@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Progetto: error404 - TPSI - Terzo anno</title>
+        <title>Unità e colori - TPSI - Terzo anno</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Materiale di supporto alle lezioni.">
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-selectors.html"><strong aria-hidden="true">6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="07-error404.html" class="active"><strong aria-hidden="true">7.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">8.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">9.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">10.</strong> Git</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-selectors.html"><strong aria-hidden="true">6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="07-units-colors.html" class="active"><strong aria-hidden="true">7.</strong> Unità e colori</a></li><li class="chapter-item expanded "><a href="08-error404.html"><strong aria-hidden="true">8.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">9.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">10.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">11.</strong> Git</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,8 +138,60 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="progetto-error404"><a class="header" href="#progetto-error404">Progetto: error404</a></h1>
-<p>Video tutorial: work in progress...</p>
+                        <h1 id="unità-e-colori"><a class="header" href="#unità-e-colori">Unità e colori</a></h1>
+<h2 id="unità-di-misura"><a class="header" href="#unità-di-misura">Unità di misura</a></h2>
+<p>Nelle dichiarazioni CSS, ci sono molti modi di specificare le dimensioni sullo schermo. Ne vediamo alcune fra le più comuni. Per maggiori dettagli vedi <a href="https://www.w3schools.com/cssref/css_units.asp">qui</a>.</p>
+<h3 id="pixels-px"><a class="header" href="#pixels-px">Pixels (px)</a></h3>
+<p>Il modo più semplice è specificare il numero di pixels:</p>
+<pre><code class="language-css"> p {
+    margin-top: 50px;
+}
+</code></pre>
+<p>Questa unità può essere adatta per fissare degli elementi nello schermo, come ad esempio bottoni fluttuanti, o per specificare la distanza tra elementi vicini. Però non è responsive: al cambiare della dimensione dello schermo la distanza rimane sempre la stessa, e questo spesso non è quello che vogliamo.</p>
+<h3 id="percentuale-"><a class="header" href="#percentuale-">Percentuale (%)</a></h3>
+<p>Si può impostare la dimensione come percentuale dell'elemento <em>contenitore</em>. Ad esempio, se voglio che il mio paragrafo occupi il 50% della dimensione del proprio contenitore, posso scrivere:</p>
+<pre><code class="language-css">p {
+    width: 50%;
+}
+</code></pre>
+<h3 id="relativo-alla-dimensione-del-testo-rem"><a class="header" href="#relativo-alla-dimensione-del-testo-rem">Relativo alla dimensione del testo (rem)</a></h3>
+<p>In molti casi può essere utile avere delle dimensioni che si adattano alla grandezza del testo; in questo caso si usa <code>rem</code>:</p>
+<pre><code class="language-css">/* La dimensione del testo di questo paragrafo è il doppio rispetto a quella base. */
+p.big {
+    font-size: 2rem;
+}
+</code></pre>
+<p>Le dimensioni relative al testo sono molto utili anche perché scalano automaticamente quando si ingrandisce o rimpicciolisce il testo della pagina.</p>
+<h2 id="colori"><a class="header" href="#colori">Colori</a></h2>
+<p>Per scegliere un colore, abbiamo diverse possibilità.</p>
+<h3 id="nome-del-colore"><a class="header" href="#nome-del-colore">Nome del colore</a></h3>
+<p>Possiamo scegliere un colore usando il nome della paletta CSS.</p>
+<pre><code class="language-css">p {
+    background-color: lightgreen;
+}
+</code></pre>
+<div style="background-color: lightgreen;">Sono verde chiaro</div>
+<p>Potete vedere la lista completa dei colori supportata dalla maggior parte dei browser <a href="https://www.w3schools.com/colors/colors_names.asp">qui</a>.</p>
+<h3 id="rgb"><a class="header" href="#rgb">RGB</a></h3>
+<p>Un altro modo è specificare le componenti RGB:</p>
+<pre><code class="language-css">p {
+    background-color: rgb(200,200,200);
+}
+</code></pre>
+<div style="background-color: rgb(200,200,200);">Sono grigio chiaro</div>
+<p>Questo è particolarmente utile quando si usa ad esempio il color-picker per prendere un colore dallo schermo o da una immagine.</p>
+<h3 id="hex"><a class="header" href="#hex">Hex</a></h3>
+<p>Un altro modo molto usato nel web design, è usare l'RGB ma con valori esadecimali anziché decimali. Le tre cifre RGB in esadecimale si scrivono una di seguito all'altra, senza spazi, precedute da un cancelletto <code>#</code>.</p>
+<pre><code class="language-css">p {
+    background-color: #0000FF;
+}
+</code></pre>
+<div style="background-color: #0000FF;color:white">Sono blu!</div>
+<p>Ricordiamo che un byte esadecimale va da 00 (spento) a FF (255-tutto acceso).</p>
+<p>La conversione tra RGB decimale ed esadecimale è un semplice calcolo matematico, quindi è una questione di comodità e preferenze.</p>
+<blockquote>
+<p>Per convertire tra decimale ed esadecimale, potete usare <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp">questo</a>.</p>
+</blockquote>
 
                     </main>
 
@@ -148,7 +200,7 @@
                             <a rel="prev" href="06-selectors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="linux.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="08-error404.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -160,7 +212,7 @@
                     <a rel="prev" href="06-selectors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="linux.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="08-error404.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

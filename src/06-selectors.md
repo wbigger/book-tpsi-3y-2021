@@ -139,42 +139,6 @@ Quale colore assumerà il paragrafo? La regola con l'ID ha la specificità più 
 
 > Per vedere tutte le regole applicate ad un certo elemento potete usare i devTools di Chrome o Firefox; trovate le regole nel tab "style". Per indagare possibili conflitti tra regole, c'è [questa](https://developer.chrome.com/docs/devtools/css/overrides/) guida ufficiale di Chrome.
 
-## Unità di misura
-Nelle dichiarazioni CSS, ci sono molti modi di specificare le dimensioni sullo schermo. Ne vediamo alcune fra le più comuni. Per maggiori dettagli vedi [qui](https://www.w3schools.com/cssref/css_units.asp).
-
-### Pixels (px)
-Il modo più semplice è specificare il numero di pixels:
-
-```css
- p {
-    margin-top: 50px;
-}
-```
-
-Questa unità può essere adatta per fissare degli elementi nello schermo, come ad esempio bottoni fluttuanti, o per specificare la distanza tra elementi vicini. Però non è responsive: al cambiare della dimensione dello schermo la distanza rimane sempre la stessa, e questo spesso non è quello che vogliamo.
-
-### Percentuale (%)
-Si può impostare la dimensione come percentuale dell'elemento _contenitore_. Ad esempio, se voglio che il mio paragrafo occupi il 50% della dimensione del proprio contenitore, posso scrivere:
-
-```css
-p {
-    width: 50%;
-}
-```
-
-In questo caso però devo stare attento alla dimensione del contenitore: se il contenitore si adatta al contenuto, ed il contenuto si adatta al contenitore in percentuale, c'è qualcosa che non va. Devo quindi fare sempre attenzione che il contenitore abbia una grandezza nota al browser, per esempio impostando una dimensione fissa in pixel.
-
-### Relativo alla dimensione del testo (rem)
-In molti casi può essere utile avere delle dimensioni che si adattano alla grandezza del testo; in questo caso si usa `rem`:
-
-```css
-/* La dimensione del testo di questo paragrafo è il doppio rispetto a quella base. */
-p.big {
-    font-size: 2rem;
-}
-```
-
-Le dimensioni relative al testo sono molto utili anche perché scalano automaticamente quando si ingrandisce o rimpicciolisce il testo della pagina.
 
 ## Riepilogo
 Ricapitolando, i selettori di base sono di 3 tipi:

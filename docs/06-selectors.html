@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-selectors.html" class="active"><strong aria-hidden="true">6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="07-error404.html"><strong aria-hidden="true">7.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">8.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">9.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">10.</strong> Git</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01-internet-web.html"><strong aria-hidden="true">1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="02-html.html"><strong aria-hidden="true">2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="03-first-page.html"><strong aria-hidden="true">3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="04-html-syntax.html"><strong aria-hidden="true">4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="05-css.html"><strong aria-hidden="true">5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="06-selectors.html" class="active"><strong aria-hidden="true">6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="07-units-colors.html"><strong aria-hidden="true">7.</strong> Unità e colori</a></li><li class="chapter-item expanded "><a href="08-error404.html"><strong aria-hidden="true">8.</strong> Progetto: error404</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="linux.html"><strong aria-hidden="true">9.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">10.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">11.</strong> Git</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -240,30 +240,6 @@ background-color: blue;
 <blockquote>
 <p>Per vedere tutte le regole applicate ad un certo elemento potete usare i devTools di Chrome o Firefox; trovate le regole nel tab &quot;style&quot;. Per indagare possibili conflitti tra regole, c'è <a href="https://developer.chrome.com/docs/devtools/css/overrides/">questa</a> guida ufficiale di Chrome.</p>
 </blockquote>
-<h2 id="unità-di-misura"><a class="header" href="#unità-di-misura">Unità di misura</a></h2>
-<p>Nelle dichiarazioni CSS, ci sono molti modi di specificare le dimensioni sullo schermo. Ne vediamo alcune fra le più comuni. Per maggiori dettagli vedi <a href="https://www.w3schools.com/cssref/css_units.asp">qui</a>.</p>
-<h3 id="pixels-px"><a class="header" href="#pixels-px">Pixels (px)</a></h3>
-<p>Il modo più semplice è specificare il numero di pixels:</p>
-<pre><code class="language-css"> p {
-    margin-top: 50px;
-}
-</code></pre>
-<p>Questa unità può essere adatta per fissare degli elementi nello schermo, come ad esempio bottoni fluttuanti, o per specificare la distanza tra elementi vicini. Però non è responsive: al cambiare della dimensione dello schermo la distanza rimane sempre la stessa, e questo spesso non è quello che vogliamo.</p>
-<h3 id="percentuale-"><a class="header" href="#percentuale-">Percentuale (%)</a></h3>
-<p>Si può impostare la dimensione come percentuale dell'elemento <em>contenitore</em>. Ad esempio, se voglio che il mio paragrafo occupi il 50% della dimensione del proprio contenitore, posso scrivere:</p>
-<pre><code class="language-css">p {
-    width: 50%;
-}
-</code></pre>
-<p>In questo caso però devo stare attento alla dimensione del contenitore: se il contenitore si adatta al contenuto, ed il contenuto si adatta al contenitore in percentuale, c'è qualcosa che non va. Devo quindi fare sempre attenzione che il contenitore abbia una grandezza nota al browser, per esempio impostando una dimensione fissa in pixel.</p>
-<h3 id="relativo-alla-dimensione-del-testo-rem"><a class="header" href="#relativo-alla-dimensione-del-testo-rem">Relativo alla dimensione del testo (rem)</a></h3>
-<p>In molti casi può essere utile avere delle dimensioni che si adattano alla grandezza del testo; in questo caso si usa <code>rem</code>:</p>
-<pre><code class="language-css">/* La dimensione del testo di questo paragrafo è il doppio rispetto a quella base. */
-p.big {
-    font-size: 2rem;
-}
-</code></pre>
-<p>Le dimensioni relative al testo sono molto utili anche perché scalano automaticamente quando si ingrandisce o rimpicciolisce il testo della pagina.</p>
 <h2 id="riepilogo"><a class="header" href="#riepilogo">Riepilogo</a></h2>
 <p>Ricapitolando, i selettori di base sono di 3 tipi:</p>
 <ul>
@@ -280,7 +256,7 @@ p.big {
                             <a rel="prev" href="05-css.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="07-error404.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="07-units-colors.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -292,7 +268,7 @@ p.big {
                     <a rel="prev" href="05-css.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="07-error404.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="07-units-colors.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -232,6 +232,57 @@ Il risultato:
 
 </details>
 
+### Centrare un elemento orizzontalmente
+Per centrare un elemento orizzontalmente, possiamo usare la proprietà `margin` con valore `auto`.
+
+```css
+p { margin:auto;}
+```
+
+Cosa significa esattamente? Il browser calcola la dimensione del paragrafo, la dimensione del suo contenitore, e imposta i margini a destra e sinistra in modo che siano uguali. Ricordiamo però che, per gli elementi block, la dimensione dell'elemento è esattamente pari a quella del contenitore, quindi verranno impostati entrambi i margini a zero. Per evitare questo, possiamo impostare la dimensione dell'elemento che vogliamo centrare con width: 
+
+```css
+p {
+  margin:auto;
+  width: 50%;
+  background-color: gray;
+}
+```
+
+Risultato:
+<style>
+  #example-2>p {
+  margin:auto;
+  width: 50%;
+  background-color: gray;
+}
+</style>
+<div id="example-2">
+ <p>Buongiorno a tutti!</p>
+</div>
+
+Attenzione: in questo caso l'elemento è centrato (come vedete dal colore di sfondo) ma non il testo al suo interno. Per centrare anche il testo all'interno dell'elemento, dobbiamo usare la proprietà `text-align:center`.
+
+```css
+p {
+  /* ... */
+  text-align: center;
+}
+```
+<style>
+  #example-3>p {
+  margin:auto;
+  width: 50%;
+  background-color: gray;
+  text-align: center;
+}
+</style>
+<div id="example-3">
+ <p>Buongiorno a tutti!</p>
+</div>
+
+> Ci sono molti altri modi per centrare un elemento orizzontalmente e verticalmente. Per una carrellata piuttosto esaustiva si rimanda [qui](https://www.w3schools.com/css/css_align.asp).
+
 ### Dove metto il tag style?
 Lo stile è considerato un metadato, quindi come tutti i metadati la [documentazione ufficiale](https://html.spec.whatwg.org/multipage/semantics.html#the-style-element) richiede di metterlo all'interno del tag `<html>`, di solito subito prima del tag di chiusura.
 
