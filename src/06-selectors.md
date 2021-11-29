@@ -60,7 +60,7 @@ Se voglio invece mettere più selettori insieme, posso separarli da virgola. Ad 
 h1, h2 {}
 ```
 ### Discendente
-Posso selezionare tutti gli elementi _discendenti_ di un elemento, mettendo semplicemente uno spazio. Per discendenti si intende figli, nipoti, pro-nipiti, etc.
+Posso selezionare tutti gli elementi _discendenti_ di un elemento, mettendo semplicemente uno spazio. Per discendenti si intende figli, nipoti, pro-nipoti, etc.
 
 Per selezionare solo i paragrafi all'interno dell'elemento con id pari a news:
 
