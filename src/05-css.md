@@ -284,7 +284,7 @@ p {
 > Ci sono molti altri modi per centrare un elemento orizzontalmente e verticalmente. Per una carrellata piuttosto esaustiva si rimanda [qui](https://www.w3schools.com/css/css_align.asp).
 
 ### Dove metto il tag style?
-Lo stile è considerato un metadato, quindi come tutti i metadati la [documentazione ufficiale](https://html.spec.whatwg.org/multipage/semantics.html#the-style-element) richiede di metterlo all'interno del tag `<html>`, di solito subito prima del tag di chiusura.
+Lo stile è considerato un metadato, quindi come tutti i metadati la [documentazione ufficiale](https://html.spec.whatwg.org/multipage/semantics.html#the-style-element) richiede di metterlo all'interno del tag `<head>`, di solito subito prima del tag di chiusura.
 
 ```html
 <head>
