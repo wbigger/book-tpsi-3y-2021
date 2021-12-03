@@ -609,7 +609,7 @@ Nel seguente esempio imposto tutti e quattro i valori in una sola linea.
 <p>Ci sono molti altri modi per centrare un elemento orizzontalmente e verticalmente. Per una carrellata piuttosto esaustiva si rimanda <a href="https://www.w3schools.com/css/css_align.asp">qui</a>.</p>
 </blockquote>
 <h3 id="dove-metto-il-tag-style"><a class="header" href="#dove-metto-il-tag-style">Dove metto il tag style?</a></h3>
-<p>Lo stile è considerato un metadato, quindi come tutti i metadati la <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element">documentazione ufficiale</a> richiede di metterlo all'interno del tag <code>&lt;html&gt;</code>, di solito subito prima del tag di chiusura.</p>
+<p>Lo stile è considerato un metadato, quindi come tutti i metadati la <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element">documentazione ufficiale</a> richiede di metterlo all'interno del tag <code>&lt;head&gt;</code>, di solito subito prima del tag di chiusura.</p>
 <pre><code class="language-html">&lt;head&gt;
   &lt;!-- altri metadati qui --&gt;
   &lt;style&gt;
@@ -657,7 +657,7 @@ Nel seguente esempio imposto tutti e quattro i valori in una sola linea.
 <pre><code class="language-css">h1, h2 {}
 </code></pre>
 <h3 id="discendente"><a class="header" href="#discendente">Discendente</a></h3>
-<p>Posso selezionare tutti gli elementi <em>discendenti</em> di un elemento, mettendo semplicemente uno spazio. Per discendenti si intende figli, nipoti, pro-nipiti, etc.</p>
+<p>Posso selezionare tutti gli elementi <em>discendenti</em> di un elemento, mettendo semplicemente uno spazio. Per discendenti si intende figli, nipoti, pro-nipoti, etc.</p>
 <p>Per selezionare solo i paragrafi all'interno dell'elemento con id pari a news:</p>
 <pre><code class="language-css">#news p {}
 </code></pre>
@@ -997,20 +997,6 @@ $ nano config
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

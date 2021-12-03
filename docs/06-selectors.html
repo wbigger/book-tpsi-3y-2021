@@ -177,7 +177,7 @@
 <pre><code class="language-css">h1, h2 {}
 </code></pre>
 <h3 id="discendente"><a class="header" href="#discendente">Discendente</a></h3>
-<p>Posso selezionare tutti gli elementi <em>discendenti</em> di un elemento, mettendo semplicemente uno spazio. Per discendenti si intende figli, nipoti, pro-nipiti, etc.</p>
+<p>Posso selezionare tutti gli elementi <em>discendenti</em> di un elemento, mettendo semplicemente uno spazio. Per discendenti si intende figli, nipoti, pro-nipoti, etc.</p>
 <p>Per selezionare solo i paragrafi all'interno dell'elemento con id pari a news:</p>
 <pre><code class="language-css">#news p {}
 </code></pre>
@@ -275,20 +275,6 @@ background-color: blue;
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
