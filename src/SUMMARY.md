@@ -12,8 +12,9 @@
 - [Il sistema operativo](./10-linux/10-readme.md)
     - [Panoramica](./10-linux/11-shell-model.md)
     - [Uso della shell](./10-linux/12-shell.md)
+    - [Gestione dei permessi](./10-linux/13-permissions.md)
 -----
-- [Allegati](./extra.md)
+- [Allegati](./extra/README.md)
     - [Comandi linux](./extra/linux.md)
-    - [HMTL template](./extra/index.md)
+    - [HTML template](./extra/index_template.md)
     - [Git](./extra/git.md)

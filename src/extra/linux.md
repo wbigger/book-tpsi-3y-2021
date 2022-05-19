@@ -154,7 +154,6 @@ drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
 ## ctrl-c
 Termina (uccide) il processo corrente.
 
-
 ## Variabili di ambiente
 Ogni terminale usa delle variabili che sono definite automaticamente quando viene aperto. Queste variabili vengono dette _variabili di ambiente_. Per visualizzarle si può usare il comando `env`.
 ```sh
@@ -219,3 +218,27 @@ Da ora in poi per collegarvi al server, potete digitare semplicemente:
 ```sh
 ssh marconi
 ```
+
+
+# Extra: utenti sulla macchina
+
+## who
+Per sapere gli utenti loggati sulla macchina su cui gira il terminale, con relativo pseudo-terminale, data di ultimo login e, in caso di accesso da remoto, indirizzo IP da cui ci si connette.
+
+```sh
+c_utente00@serverStudenti:~$ who
+c_utente00 pts/0        2022-05-12 08:53 (10.13.0.20)
+b_utente00 pts/1        2022-05-12 08:53 (10.13.0.20)
+```
+
+## write
+È un comando generalmente poco usato ma è installato di default in tutte le distribuzioni, serve per comunicare tra utenti.
+
+```sh
+c_utente00@serverStudenti:~$ write b_utente00
+Ciao come va?
+# ctrl-d
+c_utente00@serverStudenti:~$
+```
+Per uscire dal comando write, premere la combinazione di tasti ctrl-d.
+

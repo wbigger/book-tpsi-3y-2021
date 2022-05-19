@@ -51,3 +51,8 @@ Per poter interagire con la shell, abbiamo bisogno di un'applicazione specifica 
 Nell'immagine vedete l'applicazione "iTerm2", molto usata in ambito Apple come terminale. Per Windows, consiglio di usare [git bash](https://git-scm.com/downloads).
 
 
+# Risorse esterne
+Si consiglia la lettura di questo PDF con una introduzione a Linux e all'open-source.
+
+<embed src="./assets/Linux_lezione1_Introduzione.pdf" width="100%" height="600px" 
+ type="application/pdf">

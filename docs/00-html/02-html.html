@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Presentazione</a></li><li class="chapter-item expanded "><a href="../00-html/00-readme.html"><strong aria-hidden="true">2.</strong> HTML&amp;CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../00-html/01-internet-web.html"><strong aria-hidden="true">2.1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="../00-html/02-html.html" class="active"><strong aria-hidden="true">2.2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="../00-html/03-first-page.html"><strong aria-hidden="true">2.3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="../00-html/04-html-syntax.html"><strong aria-hidden="true">2.4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="../00-html/05-css.html"><strong aria-hidden="true">2.5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../00-html/06-selectors.html"><strong aria-hidden="true">2.6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="../00-html/07-units-colors.html"><strong aria-hidden="true">2.7.</strong> Unità e colori</a></li></ol></li><li class="chapter-item expanded "><a href="../10-linux/10-readme.html"><strong aria-hidden="true">3.</strong> Il sistema operativo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10-linux/11-shell-model.html"><strong aria-hidden="true">3.1.</strong> Panoramica</a></li><li class="chapter-item expanded "><a href="../10-linux/12-shell.html"><strong aria-hidden="true">3.2.</strong> Uso della shell</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../extra.html"><strong aria-hidden="true">4.</strong> Allegati</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../extra/linux.html"><strong aria-hidden="true">4.1.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="../extra/index.html"><strong aria-hidden="true">4.2.</strong> HMTL template</a></li><li class="chapter-item expanded "><a href="../extra/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Presentazione</a></li><li class="chapter-item expanded "><a href="../00-html/00-readme.html"><strong aria-hidden="true">2.</strong> HTML&amp;CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../00-html/01-internet-web.html"><strong aria-hidden="true">2.1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="../00-html/02-html.html" class="active"><strong aria-hidden="true">2.2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="../00-html/03-first-page.html"><strong aria-hidden="true">2.3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="../00-html/04-html-syntax.html"><strong aria-hidden="true">2.4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="../00-html/05-css.html"><strong aria-hidden="true">2.5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../00-html/06-selectors.html"><strong aria-hidden="true">2.6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="../00-html/07-units-colors.html"><strong aria-hidden="true">2.7.</strong> Unità e colori</a></li></ol></li><li class="chapter-item expanded "><a href="../10-linux/10-readme.html"><strong aria-hidden="true">3.</strong> Il sistema operativo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10-linux/11-shell-model.html"><strong aria-hidden="true">3.1.</strong> Panoramica</a></li><li class="chapter-item expanded "><a href="../10-linux/12-shell.html"><strong aria-hidden="true">3.2.</strong> Uso della shell</a></li><li class="chapter-item expanded "><a href="../10-linux/13-permissions.html"><strong aria-hidden="true">3.3.</strong> Gestione dei permessi</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../extra/index.html"><strong aria-hidden="true">4.</strong> Allegati</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../extra/linux.html"><strong aria-hidden="true">4.1.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="../extra/index_template.html"><strong aria-hidden="true">4.2.</strong> HTML template</a></li><li class="chapter-item expanded "><a href="../extra/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -206,6 +206,20 @@ arriviamo alle scatole più interne che saranno vuote.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
