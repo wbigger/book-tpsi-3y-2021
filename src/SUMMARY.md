@@ -13,6 +13,7 @@
     - [Panoramica](./10-linux/11-shell-model.md)
     - [Uso della shell](./10-linux/12-shell.md)
     - [Gestione dei permessi](./10-linux/13-permissions.md)
+    - [Scripting](./10-linux/14-scripting.md)
 -----
 - [Allegati](./extra/README.md)
     - [Comandi linux](./extra/linux.md)

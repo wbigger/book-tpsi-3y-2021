@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Unità e colori - TPSI - Terzo anno</title>
+        <title>Scripting - TPSI - Terzo anno</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Materiale di supporto alle lezioni.">
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Presentazione</a></li><li class="chapter-item expanded "><a href="../00-html/00-readme.html"><strong aria-hidden="true">2.</strong> HTML&amp;CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../00-html/01-internet-web.html"><strong aria-hidden="true">2.1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="../00-html/02-html.html"><strong aria-hidden="true">2.2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="../00-html/03-first-page.html"><strong aria-hidden="true">2.3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="../00-html/04-html-syntax.html"><strong aria-hidden="true">2.4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="../00-html/05-css.html"><strong aria-hidden="true">2.5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../00-html/06-selectors.html"><strong aria-hidden="true">2.6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="../00-html/07-units-colors.html" class="active"><strong aria-hidden="true">2.7.</strong> Unità e colori</a></li></ol></li><li class="chapter-item expanded "><a href="../10-linux/10-readme.html"><strong aria-hidden="true">3.</strong> Il sistema operativo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10-linux/11-shell-model.html"><strong aria-hidden="true">3.1.</strong> Panoramica</a></li><li class="chapter-item expanded "><a href="../10-linux/12-shell.html"><strong aria-hidden="true">3.2.</strong> Uso della shell</a></li><li class="chapter-item expanded "><a href="../10-linux/13-permissions.html"><strong aria-hidden="true">3.3.</strong> Gestione dei permessi</a></li><li class="chapter-item expanded "><a href="../10-linux/14-scripting.html"><strong aria-hidden="true">3.4.</strong> Scripting</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../extra/index.html"><strong aria-hidden="true">4.</strong> Allegati</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../extra/linux.html"><strong aria-hidden="true">4.1.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="../extra/index_template.html"><strong aria-hidden="true">4.2.</strong> HTML template</a></li><li class="chapter-item expanded "><a href="../extra/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Presentazione</a></li><li class="chapter-item expanded "><a href="../00-html/00-readme.html"><strong aria-hidden="true">2.</strong> HTML&amp;CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../00-html/01-internet-web.html"><strong aria-hidden="true">2.1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="../00-html/02-html.html"><strong aria-hidden="true">2.2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="../00-html/03-first-page.html"><strong aria-hidden="true">2.3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="../00-html/04-html-syntax.html"><strong aria-hidden="true">2.4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="../00-html/05-css.html"><strong aria-hidden="true">2.5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../00-html/06-selectors.html"><strong aria-hidden="true">2.6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="../00-html/07-units-colors.html"><strong aria-hidden="true">2.7.</strong> Unità e colori</a></li></ol></li><li class="chapter-item expanded "><a href="../10-linux/10-readme.html"><strong aria-hidden="true">3.</strong> Il sistema operativo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10-linux/11-shell-model.html"><strong aria-hidden="true">3.1.</strong> Panoramica</a></li><li class="chapter-item expanded "><a href="../10-linux/12-shell.html"><strong aria-hidden="true">3.2.</strong> Uso della shell</a></li><li class="chapter-item expanded "><a href="../10-linux/13-permissions.html"><strong aria-hidden="true">3.3.</strong> Gestione dei permessi</a></li><li class="chapter-item expanded "><a href="../10-linux/14-scripting.html" class="active"><strong aria-hidden="true">3.4.</strong> Scripting</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../extra/index.html"><strong aria-hidden="true">4.</strong> Allegati</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../extra/linux.html"><strong aria-hidden="true">4.1.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="../extra/index_template.html"><strong aria-hidden="true">4.2.</strong> HTML template</a></li><li class="chapter-item expanded "><a href="../extra/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,69 +138,71 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="unità-e-colori"><a class="header" href="#unità-e-colori">Unità e colori</a></h1>
-<h2 id="unità-di-misura"><a class="header" href="#unità-di-misura">Unità di misura</a></h2>
-<p>Nelle dichiarazioni CSS, ci sono molti modi di specificare le dimensioni sullo schermo. Ne vediamo alcune fra le più comuni. Per maggiori dettagli vedi <a href="https://www.w3schools.com/cssref/css_units.asp">qui</a>.</p>
-<h3 id="pixels-px"><a class="header" href="#pixels-px">Pixels (px)</a></h3>
-<p>Il modo più semplice è specificare il numero di pixels:</p>
-<pre><code class="language-css"> p {
-    margin-top: 50px;
-}
-</code></pre>
-<p>Questa unità può essere adatta per fissare degli elementi nello schermo, come ad esempio bottoni fluttuanti, o per specificare la distanza tra elementi vicini. Però non è responsive: al cambiare della dimensione dello schermo la distanza rimane sempre la stessa, e questo spesso non è quello che vogliamo.</p>
-<h3 id="percentuale-"><a class="header" href="#percentuale-">Percentuale (%)</a></h3>
-<p>Si può impostare la dimensione come percentuale dell'elemento <em>contenitore</em>. Ad esempio, se voglio che il mio paragrafo occupi il 50% della dimensione del proprio contenitore, posso scrivere:</p>
-<pre><code class="language-css">p {
-    width: 50%;
-}
-</code></pre>
-<h3 id="relativo-alla-dimensione-del-testo-rem"><a class="header" href="#relativo-alla-dimensione-del-testo-rem">Relativo alla dimensione del testo (rem)</a></h3>
-<p>In molti casi può essere utile avere delle dimensioni che si adattano alla grandezza del testo; in questo caso si usa <code>rem</code>:</p>
-<pre><code class="language-css">/* La dimensione del testo di questo paragrafo è il doppio rispetto a quella base. */
-p.big {
-    font-size: 2rem;
-}
-</code></pre>
-<p>Le dimensioni relative al testo sono molto utili anche perché scalano automaticamente quando si ingrandisce o rimpicciolisce il testo della pagina.</p>
-<h2 id="colori"><a class="header" href="#colori">Colori</a></h2>
-<p>Per scegliere un colore, abbiamo diverse possibilità.</p>
-<h3 id="nome-del-colore"><a class="header" href="#nome-del-colore">Nome del colore</a></h3>
-<p>Possiamo scegliere un colore usando il nome della paletta CSS.</p>
-<pre><code class="language-css">p {
-    background-color: lightgreen;
-}
-</code></pre>
-<div style="background-color: lightgreen;">Sono verde chiaro</div>
-<p>Potete vedere la lista completa dei colori supportata dalla maggior parte dei browser <a href="https://www.w3schools.com/colors/colors_names.asp">qui</a>.</p>
-<h3 id="rgb"><a class="header" href="#rgb">RGB</a></h3>
-<p>Un altro modo è specificare le componenti RGB:</p>
-<pre><code class="language-css">p {
-    background-color: rgb(200,200,200);
-}
-</code></pre>
-<div style="background-color: rgb(200,200,200);">Sono grigio chiaro</div>
-<p>Questo è particolarmente utile quando si usa ad esempio il color-picker per prendere un colore dallo schermo o da una immagine.</p>
-<h3 id="hex"><a class="header" href="#hex">Hex</a></h3>
-<p>Un altro modo molto usato nel web design, è usare l'RGB ma con valori esadecimali anziché decimali. Le tre cifre RGB in esadecimale si scrivono una di seguito all'altra, senza spazi, precedute da un cancelletto <code>#</code>.</p>
-<pre><code class="language-css">p {
-    background-color: #0000FF;
-}
-</code></pre>
-<div style="background-color: #0000FF;color:white">Sono blu!</div>
-<p>Ricordiamo che un byte esadecimale va da 00 (spento) a FF (255-tutto acceso).</p>
-<p>La conversione tra RGB decimale ed esadecimale è un semplice calcolo matematico, quindi è una questione di comodità e preferenze.</p>
+                        <h1 id="scripting"><a class="header" href="#scripting">Scripting</a></h1>
+<p>In questo capitolo vedremo come creare dei semplici <em>script</em>.</p>
 <blockquote>
-<p>Per convertire tra decimale ed esadecimale, potete usare <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp">questo</a>.</p>
+<p>Molti dei concetti di cui parlerò qui sono trattati anche nella guida più autorevole sullo scripting in bash, l'<em>Advanced Bash Scripting Guide</em> (<a href="https://tldp.org/LDP/abs/abs-guide.pdf">ENG</a>, <a href="https://diraimondo.dmi.unict.it/wp-content/uploads/classes/so/mirror-stuff/abs-guide.pdf">ITA</a>). Come sempre, si suggerisce la consultazione in lingua originale, per evitare problemi di traduzione.</p>
+</blockquote>
+<h2 id="cosè-uno-script"><a class="header" href="#cosè-uno-script">Cos'è uno script?</a></h2>
+<p>Uno script è un programma che non viene <em>compilato</em>, come siamo abitutati a fare con linguaggi come C, C++ o Java, ma viene <em>interpretato</em> riga per riga da un altro programma, detto appunto <em>interprete</em>. Nel nostro caso, l'inteprete è la <em>shell</em> stessa.</p>
+<p>Per chiarire meglio il concetto con un esempio:</p>
+<ul>
+<li>un file <code>.cpp</code> deve essere compilato in un file .exe, che poi può girare su tutte le macchine compatibili. Il file .cpp originale non dobbiamo distribuirlo agli utenti finali.</li>
+<li>un file <code>.sh</code> deve essere distribuito così com'é agli utenti che lo dovranno utilizzare, che lo eseguiranno direttamente.</li>
+</ul>
+<h2 id="scelta-dellinterpete"><a class="header" href="#scelta-dellinterpete">Scelta dell'interpete</a></h2>
+<p>Di default, uno script viene interpretato con l'inteprete che si usa in quel momento per lanciare lo script stesso. È possibile cambiare questo comportamento specificando l'interprete da usare nella prima riga dello script, iniziando la riga con <code>#!</code>, ad esempio per usare python invece che bash, si può scrivere:</p>
+<pre><code class="language-py">#!/usr/bin/env python3
+</code></pre>
+<p>La combinazione di caratteri <code>#!</code> viene chiamata anche <em>shebang</em>, che sta per &quot;shell bang&quot; o <em>shabang</em>, che sta per &quot;sharp bang&quot;, dai nomi in dialetto nerd dei caratteri che sono appunto rispettivamente sharp per il cancelleto e bang per il punto esclamativo.</p>
+<h1 id="creazione-di-uno-script-di-esempio-cleanupsh"><a class="header" href="#creazione-di-uno-script-di-esempio-cleanupsh">Creazione di uno script di esempio: cleanup.sh</a></h1>
+<p>Di seguito uno script di esempio creato a lezione, che illustra alcuni concetti chiave.</p>
+<pre><code class="language-sh"># Cleanup
+DIR=$1
+
+cd $DIR
+cat /dev/null &gt; messages
+cat /dev/null &gt; tmp
+echo &quot;Log files cleaned up.&quot;
+
+exit 0
+</code></pre>
+<p>Analizziamo il file riga per riga.</p>
+<pre><code class="language-sh"># Cleanup
+</code></pre>
+<p>Tutte le righe che cominciano con un cancelletto sono commenti. </p>
+<pre><code class="language-sh">DIR=$1
+</code></pre>
+<p>In questa riga dichiariamo la variabile <code>DIR</code> e gli assegniamo il valore del primo parametro in ingresso allo script. Per esempio, se lanciamo lo script con <code>cleanup.sh temp</code> il valore di <code>DIR</code> sarà <code>temp</code>. Osservazioni importanti:</p>
+<ul>
+<li>intorno all'<code>=</code> non devono esserci spazi, altrimenti la riga non viene valutata come un'assegnazione ma come un comando normale.</li>
+<li>nella dichiarazione, la nuova variabile <em>non</em> deve essere preceduta dal dollaro.</li>
+</ul>
+<pre><code class="language-sh">cd $DIR
+</code></pre>
+<p>Mi sposto nella cartella <code>$DIR</code>. Attenzione che quando <em>uso</em> una variabile, deve essere sempre preceduta dal dollaro.</p>
+<pre><code class="language-sh">cat /dev/null &gt; messages
+cat /dev/null &gt; tmp
+</code></pre>
+<p>Creo i file vuoti <code>messages</code> e <code>tmp</code> oppure, se già esistono, li svuoto.</p>
+<pre><code class="language-sh">echo &quot;Log files cleaned up.&quot;
+</code></pre>
+<p>Stampo su console l'informazione che ho eseguito il cleanup.</p>
+<pre><code class="language-sh">exit 0
+</code></pre>
+<p>Esco dall'applicazione. Se questa riga viene messa alla fine del file, l'interprete uscirebbe comunque dall'applicazione, ma è buona pratica uscire sempre esplicitamente con <code>exit</code>, specificando come argomento il valore di ritorno dello script.</p>
+<blockquote>
+<p>Negli script bash, il valore di ritorno <code>0</code> vuol dire &quot;tutto OK&quot;, mentre valor di ritorno diversi da zero di solito significano un errore. Per leggere il valore di ritorno dell'ultimo comando eseguito, si può utilizzare <code>$?</code> sia da terminale che all'interno di uno script.</p>
 </blockquote>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../00-html/06-selectors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../10-linux/13-permissions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../10-linux/10-readme.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../extra/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -209,10 +211,10 @@ p.big {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../00-html/06-selectors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../10-linux/13-permissions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../10-linux/10-readme.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../extra/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

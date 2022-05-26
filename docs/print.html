@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Presentazione</a></li><li class="chapter-item expanded "><a href="00-html/00-readme.html"><strong aria-hidden="true">2.</strong> HTML&amp;CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="00-html/01-internet-web.html"><strong aria-hidden="true">2.1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="00-html/02-html.html"><strong aria-hidden="true">2.2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="00-html/03-first-page.html"><strong aria-hidden="true">2.3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="00-html/04-html-syntax.html"><strong aria-hidden="true">2.4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="00-html/05-css.html"><strong aria-hidden="true">2.5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="00-html/06-selectors.html"><strong aria-hidden="true">2.6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="00-html/07-units-colors.html"><strong aria-hidden="true">2.7.</strong> Unità e colori</a></li></ol></li><li class="chapter-item expanded "><a href="10-linux/10-readme.html"><strong aria-hidden="true">3.</strong> Il sistema operativo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="10-linux/11-shell-model.html"><strong aria-hidden="true">3.1.</strong> Panoramica</a></li><li class="chapter-item expanded "><a href="10-linux/12-shell.html"><strong aria-hidden="true">3.2.</strong> Uso della shell</a></li><li class="chapter-item expanded "><a href="10-linux/13-permissions.html"><strong aria-hidden="true">3.3.</strong> Gestione dei permessi</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="extra/index.html"><strong aria-hidden="true">4.</strong> Allegati</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="extra/linux.html"><strong aria-hidden="true">4.1.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="extra/index_template.html"><strong aria-hidden="true">4.2.</strong> HTML template</a></li><li class="chapter-item expanded "><a href="extra/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Presentazione</a></li><li class="chapter-item expanded "><a href="00-html/00-readme.html"><strong aria-hidden="true">2.</strong> HTML&amp;CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="00-html/01-internet-web.html"><strong aria-hidden="true">2.1.</strong> Internet &amp; Web</a></li><li class="chapter-item expanded "><a href="00-html/02-html.html"><strong aria-hidden="true">2.2.</strong> HTML panoramica</a></li><li class="chapter-item expanded "><a href="00-html/03-first-page.html"><strong aria-hidden="true">2.3.</strong> La mia prima pagina: error503</a></li><li class="chapter-item expanded "><a href="00-html/04-html-syntax.html"><strong aria-hidden="true">2.4.</strong> Sintassi HTML</a></li><li class="chapter-item expanded "><a href="00-html/05-css.html"><strong aria-hidden="true">2.5.</strong> CSS</a></li><li class="chapter-item expanded "><a href="00-html/06-selectors.html"><strong aria-hidden="true">2.6.</strong> Selettori</a></li><li class="chapter-item expanded "><a href="00-html/07-units-colors.html"><strong aria-hidden="true">2.7.</strong> Unità e colori</a></li></ol></li><li class="chapter-item expanded "><a href="10-linux/10-readme.html"><strong aria-hidden="true">3.</strong> Il sistema operativo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="10-linux/11-shell-model.html"><strong aria-hidden="true">3.1.</strong> Panoramica</a></li><li class="chapter-item expanded "><a href="10-linux/12-shell.html"><strong aria-hidden="true">3.2.</strong> Uso della shell</a></li><li class="chapter-item expanded "><a href="10-linux/13-permissions.html"><strong aria-hidden="true">3.3.</strong> Gestione dei permessi</a></li><li class="chapter-item expanded "><a href="10-linux/14-scripting.html"><strong aria-hidden="true">3.4.</strong> Scripting</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="extra/index.html"><strong aria-hidden="true">4.</strong> Allegati</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="extra/linux.html"><strong aria-hidden="true">4.1.</strong> Comandi linux</a></li><li class="chapter-item expanded "><a href="extra/index_template.html"><strong aria-hidden="true">4.2.</strong> HTML template</a></li><li class="chapter-item expanded "><a href="extra/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -908,6 +908,62 @@ $ echo $PROMPT # mostra il prompt corrente
 <h2 id="risorse-esterne-1"><a class="header" href="#risorse-esterne-1">Risorse esterne</a></h2>
 <p><embed src="./assets/Linux_lezione4_Permessi.pdf" width="100%" height="600px" 
  type="application/pdf"></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scripting"><a class="header" href="#scripting">Scripting</a></h1>
+<p>In questo capitolo vedremo come creare dei semplici <em>script</em>.</p>
+<blockquote>
+<p>Molti dei concetti di cui parlerò qui sono trattati anche nella guida più autorevole sullo scripting in bash, l'<em>Advanced Bash Scripting Guide</em> (<a href="https://tldp.org/LDP/abs/abs-guide.pdf">ENG</a>, <a href="https://diraimondo.dmi.unict.it/wp-content/uploads/classes/so/mirror-stuff/abs-guide.pdf">ITA</a>). Come sempre, si suggerisce la consultazione in lingua originale, per evitare problemi di traduzione.</p>
+</blockquote>
+<h2 id="cosè-uno-script"><a class="header" href="#cosè-uno-script">Cos'è uno script?</a></h2>
+<p>Uno script è un programma che non viene <em>compilato</em>, come siamo abitutati a fare con linguaggi come C, C++ o Java, ma viene <em>interpretato</em> riga per riga da un altro programma, detto appunto <em>interprete</em>. Nel nostro caso, l'inteprete è la <em>shell</em> stessa.</p>
+<p>Per chiarire meglio il concetto con un esempio:</p>
+<ul>
+<li>un file <code>.cpp</code> deve essere compilato in un file .exe, che poi può girare su tutte le macchine compatibili. Il file .cpp originale non dobbiamo distribuirlo agli utenti finali.</li>
+<li>un file <code>.sh</code> deve essere distribuito così com'é agli utenti che lo dovranno utilizzare, che lo eseguiranno direttamente.</li>
+</ul>
+<h2 id="scelta-dellinterpete"><a class="header" href="#scelta-dellinterpete">Scelta dell'interpete</a></h2>
+<p>Di default, uno script viene interpretato con l'inteprete che si usa in quel momento per lanciare lo script stesso. È possibile cambiare questo comportamento specificando l'interprete da usare nella prima riga dello script, iniziando la riga con <code>#!</code>, ad esempio per usare python invece che bash, si può scrivere:</p>
+<pre><code class="language-py">#!/usr/bin/env python3
+</code></pre>
+<p>La combinazione di caratteri <code>#!</code> viene chiamata anche <em>shebang</em>, che sta per &quot;shell bang&quot; o <em>shabang</em>, che sta per &quot;sharp bang&quot;, dai nomi in dialetto nerd dei caratteri che sono appunto rispettivamente sharp per il cancelleto e bang per il punto esclamativo.</p>
+<h1 id="creazione-di-uno-script-di-esempio-cleanupsh"><a class="header" href="#creazione-di-uno-script-di-esempio-cleanupsh">Creazione di uno script di esempio: cleanup.sh</a></h1>
+<p>Di seguito uno script di esempio creato a lezione, che illustra alcuni concetti chiave.</p>
+<pre><code class="language-sh"># Cleanup
+DIR=$1
+
+cd $DIR
+cat /dev/null &gt; messages
+cat /dev/null &gt; tmp
+echo &quot;Log files cleaned up.&quot;
+
+exit 0
+</code></pre>
+<p>Analizziamo il file riga per riga.</p>
+<pre><code class="language-sh"># Cleanup
+</code></pre>
+<p>Tutte le righe che cominciano con un cancelletto sono commenti. </p>
+<pre><code class="language-sh">DIR=$1
+</code></pre>
+<p>In questa riga dichiariamo la variabile <code>DIR</code> e gli assegniamo il valore del primo parametro in ingresso allo script. Per esempio, se lanciamo lo script con <code>cleanup.sh temp</code> il valore di <code>DIR</code> sarà <code>temp</code>. Osservazioni importanti:</p>
+<ul>
+<li>intorno all'<code>=</code> non devono esserci spazi, altrimenti la riga non viene valutata come un'assegnazione ma come un comando normale.</li>
+<li>nella dichiarazione, la nuova variabile <em>non</em> deve essere preceduta dal dollaro.</li>
+</ul>
+<pre><code class="language-sh">cd $DIR
+</code></pre>
+<p>Mi sposto nella cartella <code>$DIR</code>. Attenzione che quando <em>uso</em> una variabile, deve essere sempre preceduta dal dollaro.</p>
+<pre><code class="language-sh">cat /dev/null &gt; messages
+cat /dev/null &gt; tmp
+</code></pre>
+<p>Creo i file vuoti <code>messages</code> e <code>tmp</code> oppure, se già esistono, li svuoto.</p>
+<pre><code class="language-sh">echo &quot;Log files cleaned up.&quot;
+</code></pre>
+<p>Stampo su console l'informazione che ho eseguito il cleanup.</p>
+<pre><code class="language-sh">exit 0
+</code></pre>
+<p>Esco dall'applicazione. Se questa riga viene messa alla fine del file, l'interprete uscirebbe comunque dall'applicazione, ma è buona pratica uscire sempre esplicitamente con <code>exit</code>, specificando come argomento il valore di ritorno dello script.</p>
+<blockquote>
+<p>Negli script bash, il valore di ritorno <code>0</code> vuol dire &quot;tutto OK&quot;, mentre valor di ritorno diversi da zero di solito significano un errore. Per leggere il valore di ritorno dell'ultimo comando eseguito, si può utilizzare <code>$?</code> sia da terminale che all'interno di uno script.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="allegati"><a class="header" href="#allegati">Allegati</a></h1>
 <p>In questa sezione trovate alcuni allegati utili.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comandi-linux"><a class="header" href="#comandi-linux">Comandi linux</a></h1>
@@ -1076,6 +1132,21 @@ $ nano config
 <p>Da ora in poi per collegarvi al server, potete digitare semplicemente:</p>
 <pre><code class="language-sh">ssh marconi
 </code></pre>
+<h1 id="extra-utenti-sulla-macchina"><a class="header" href="#extra-utenti-sulla-macchina">Extra: utenti sulla macchina</a></h1>
+<h2 id="who"><a class="header" href="#who">who</a></h2>
+<p>Per sapere gli utenti loggati sulla macchina su cui gira il terminale, con relativo pseudo-terminale, data di ultimo login e, in caso di accesso da remoto, indirizzo IP da cui ci si connette.</p>
+<pre><code class="language-sh">c_utente00@serverStudenti:~$ who
+c_utente00 pts/0        2022-05-12 08:53 (10.13.0.20)
+b_utente00 pts/1        2022-05-12 08:53 (10.13.0.20)
+</code></pre>
+<h2 id="write"><a class="header" href="#write">write</a></h2>
+<p>È un comando generalmente poco usato ma è installato di default in tutte le distribuzioni, serve per comunicare tra utenti.</p>
+<pre><code class="language-sh">c_utente00@serverStudenti:~$ write b_utente00
+Ciao come va?
+# ctrl-d
+c_utente00@serverStudenti:~$
+</code></pre>
+<p>Per uscire dal comando write, premere la combinazione di tasti ctrl-d.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="html-template"><a class="header" href="#html-template">HTML template</a></h1>
 <p>Di seguito un template per una pagina <code>.html</code> vuota.</p>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
