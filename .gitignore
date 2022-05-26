@@ -2,5 +2,4 @@ misc/
 book/
 book-*/
 *.zip
-*.pdf
 .DS_Store
