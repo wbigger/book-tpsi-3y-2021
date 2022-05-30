@@ -237,18 +237,25 @@ drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
 -rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hello
 </code></pre>
 <h2 id="mv"><a class="header" href="#mv">mv</a></h2>
-<p>Sposta un file da una cartella ad un'altra. Se la cartella di partenza e destinazione coincidono, semplicemente rinomina il file.</p>
+<p>Sposta un file da una cartella ad un'altra cartella.</p>
 <pre><code class="language-sh"># Sposta il file &quot;ciao&quot; dalla cartella corrente alla cartella &quot;food&quot;
-$ mv ciao food
-$ ls
+$ ls -l
 -rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
 -rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
 drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
 -rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hello
+$ mv ciao food
+$ ls -l
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hello
+$ ls -l food
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
 </code></pre>
-<pre><code class="language-sh"># Rinomina il file &quot;hello&quot; nella cartella corrente in &quot;hola&quot;
+<p>Se la cartella di partenza e destinazione coincidono, semplicemente rinomina il file.</p>
+<pre><code class="language-sh"># Rinomina il file &quot;hello&quot; in &quot;hola&quot;
 $ mv hello hola
-$ ls
+$ ls -l
 -rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
 drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
 -rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hola
