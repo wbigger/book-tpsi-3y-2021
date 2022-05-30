@@ -134,10 +134,20 @@ drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
 Sposta un file da una cartella ad un'altra. Se la cartella di partenza e destinazione coincidono, semplicemente rinomina il file.
 
 ```sh
-$ mv hello hola
+# Sposta il file "ciao" dalla cartella corrente alla cartella "food"
+$ mv ciao food
 $ ls
 -rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
 -rw-r--r--  1 claudio  staff   0 Oct 12 07:00 ciao
+drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
+-rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hello
+```
+
+```sh
+# Rinomina il file "hello" nella cartella corrente in "hola"
+$ mv hello hola
+$ ls
+-rw-r--r--  1 claudio  staff  22 Oct 12 07:12 buongiorno.txt
 drwxr-xr-x  2 claudio  staff  64 Oct 12 07:14 food
 -rw-r--r--  1 claudio  staff   0 Oct 12 07:20 hola
 ```
